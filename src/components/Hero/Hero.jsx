@@ -17,7 +17,7 @@ function Hero() {
       </div> 
    {/*try the button target*/}
       <Router>
-        <Link className="btn" to="/donations" >Giftify Now!</Link>
+        <Link className="btn" to="/donation/add_product_card" >Giftify Now!</Link>
       </Router>
 
     </div>
