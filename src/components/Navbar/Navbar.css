@@ -1,0 +1,177 @@
+#navbar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: baseline;
+  align-content: stretch;
+  font-family: "Roboto", sans-serif;
+  padding-top: 1%;
+  background-color: white;
+}
+
+#navbarLogo {
+  background-color: yellow;
+  margin: 0.5% 0% 0% 1.5%;
+}
+
+#navbarLinks {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: baseline;
+  align-content: stretch;
+}
+
+.eachLinksInNavbar {
+  padding: 0 15px;
+  color: #3f3b3b;
+  text-decoration: none;
+}
+
+.eachLinksInNavbar:hover {
+  color: black;
+  text-decoration: none;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transition: 0.3s;
+}
+
+#dropdown-basic-button {
+  color: #3f3b3b;
+  background-color: rgba(255, 255, 255, 0);
+  border-color: rgba(255, 255, 255, 0);
+}
+
+.btn {
+  margin-right: 5px;
+}
+
+#navbarProfile {
+  margin: 0% 1% 0% 1.5%;
+}
+
+@media only screen and (min-width: 120px) and (max-width: 767px) {
+  .navbar-mobile {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .menu-bars {
+    font-size: 2rem;
+    background: none;
+    margin: 0 0 3.5% 3.5%;
+  }
+
+  .menu-bars > svg {
+    color: black;
+  }
+
+  .nav-menu {
+    background-color: white;
+    width: 250px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    transition: 850ms;
+  }
+
+  .nav-menu.active {
+    left: 0;
+    transition: 350ms;
+  }
+
+  .nav-text {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 8px 0px 8px 16px;
+    list-style: none;
+    height: 60px;
+    list-style-type: none;
+    color: black;
+  }
+
+  .nav-text a {
+    text-decoration: none;
+    color: #f5f5f5;
+    font-size: 18px;
+    width: 95%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    border-radius: 4px;
+  }
+
+  .nav-text a:hover {
+    color: black;
+    text-decoration: none;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    transition: 0.3s;
+  }
+
+  .nav-menu-items {
+    width: 100%;
+  }
+
+  .navbar-toggle {
+    background-color: white;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .nav-li {
+    list-style-type: none;
+  }
+
+  .nav-li-lang {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: stretch;
+    margin-left: 7%;
+  }
+
+  #dropdown-basic-button {
+    color: black;
+  }
+
+  .nav-li-login-sign {
+    margin-left: 7%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: stretch;
+  }
+
+  .navbar-mobile-logo {
+    margin-right: 5%;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  #navbar {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: stretch;
+  }
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
