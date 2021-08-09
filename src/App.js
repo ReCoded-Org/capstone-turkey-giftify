@@ -14,7 +14,6 @@ function App() {
         <Route path="/about" component={About} />
         <Route path="/contactUs" component={ContactUs} /> */}
       </Router>
-
     </div>
   );
 }
