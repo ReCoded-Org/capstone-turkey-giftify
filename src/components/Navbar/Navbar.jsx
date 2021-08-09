@@ -12,60 +12,62 @@ import {
   Envelope,
   GeoAlt,
 } from "react-bootstrap-icons";
-import { Link } from "react-router-dom";
+import { Link, BrowserRouter as Router } from "react-router-dom";
 
 const NavbarForLargeScreens = () => {
   return (
-    <div id="navbar">
-      <div id="navbarLogo">
-        <Link to="/">LOGO</Link>
-      </div>
-      <div id="navbarLinks">
-        <Link to="/" className="eachLinksInNavbar">
-          Home
-        </Link>
-        <Link
-          to={{ pathname: "/", hash: "#search" }}
-          className="eachLinksInNavbar"
-        >
-          Search
-        </Link>
-        <Link to="/requests" className="eachLinksInNavbar">
-          Requests
-        </Link>
-        <Link to="/donations" className="eachLinksInNavbar">
-          Donations
-        </Link>
-        <Link to="/about" className="eachLinksInNavbar">
-          About
-        </Link>
-        <Link to="/contactUs" className="eachLinksInNavbar">
-          Contact Us
-        </Link>
-        <DropdownButton id="dropdown-basic-button" title="Language">
-          <Dropdown.Item href="#/action-1">TUR</Dropdown.Item>
-          <Dropdown.Item href="#/action-2">ENG</Dropdown.Item>
-        </DropdownButton>
-      </div>
-      <div id="navbarProfile">
-        <Link to="/logIn">
-          <Button
-            variant="primary"
-            style={{ borderRadius: "0.75rem", marginBottom: "5%" }}
+    <Router>
+      <div id="navbar">
+        <div id="navbarLogo">
+          <Link to="/">LOGO</Link>
+        </div>
+        <div id="navbarLinks">
+          <Link to="/" className="eachLinksInNavbar">
+            Home
+          </Link>
+          <Link
+            to={{ pathname: "/", hash: "#search" }}
+            className="eachLinksInNavbar"
           >
-            Log In
-          </Button>
-        </Link>
-        <Link to="/signUp">
-          <Button
-            variant="primary"
-            style={{ borderRadius: "0.75rem", marginBottom: "5%" }}
-          >
-            Sign Up
-          </Button>
-        </Link>
+            Search
+          </Link>
+          <Link to="/requests" className="eachLinksInNavbar">
+            Requests
+          </Link>
+          <Link to="/donations" className="eachLinksInNavbar">
+            Donations
+          </Link>
+          <Link to="/about" className="eachLinksInNavbar">
+            About
+          </Link>
+          <Link to="/contactUs" className="eachLinksInNavbar">
+            Contact Us
+          </Link>
+          <DropdownButton id="dropdown-basic-button" title="Language">
+            <Dropdown.Item href="#/action-1">TUR</Dropdown.Item>
+            <Dropdown.Item href="#/action-2">ENG</Dropdown.Item>
+          </DropdownButton>
+        </div>
+        <div id="navbarProfile">
+          <Link to="/logIn">
+            <Button
+              variant="primary"
+              style={{ borderRadius: "0.75rem", marginBottom: "5%" }}
+            >
+              Log In
+            </Button>
+          </Link>
+          <Link to="/signUp">
+            <Button
+              variant="primary"
+              style={{ borderRadius: "0.75rem", marginBottom: "5%" }}
+            >
+              Sign Up
+            </Button>
+          </Link>
+        </div>
       </div>
-    </div>
+    </Router>
   );
 };
 
