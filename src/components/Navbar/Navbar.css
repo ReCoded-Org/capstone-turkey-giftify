@@ -51,7 +51,7 @@
   margin: 0% 1% 0% 1.5%;
 }
 
-@media only screen and (min-width: 120px) and (max-width: 767px) {
+@media only screen and (min-width: 120px) and (max-width: 950px) {
   .navbar-mobile {
     background-color: white;
     display: flex;
@@ -159,18 +159,6 @@
 
   .navbar-mobile-logo {
     margin-right: 5%;
-  }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
-  #navbar {
-    background-color: white;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    align-content: stretch;
   }
 }
 

@@ -205,7 +205,7 @@ const useWindowDimensions = () => {
 const Navbar = () => {
   const { width } = useWindowDimensions();
 
-  if (width < 768) {
+  if (width < 950) {
     return <NavbarForSmallScreen />;
   } else {
     return <NavbarForLargeScreens />;
