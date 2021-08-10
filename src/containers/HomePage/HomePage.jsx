@@ -5,9 +5,11 @@ import "./HomePage.css";
 
 function HomePage() {
   return (
-    <Container>
-      <HomePageItems />
-    </Container>
+    <>
+      <Container>
+        <HomePageItems />
+      </Container>
+    </>
   );
 }
 
