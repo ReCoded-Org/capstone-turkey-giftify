@@ -1,7 +1,8 @@
 .homePageItemCard {
   background-color: #0077b6;
   margin: 20px 10px;
-  border: 2px solid black;
+  border-radius: 20px;
+  border: 0px
 }
 
 .cardTitle {
@@ -12,6 +13,9 @@
 }
 
 .linkTitle {
+  margin: 0px 17px;
+  padding: 10px;
+  border-radius: 20px;
   text-align: center;
   color: #0077b6;
   background-color: #f8f9fa;
