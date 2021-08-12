@@ -36,7 +36,7 @@ body {
   padding-left: 5%;
 }
 
-.texts > h1 {
+.texts > h2 {
   font-size: 60px;
   color: #3f3b3b;
   font-family: Roboto;
@@ -83,6 +83,7 @@ body {
   text-decoration: none;
   padding: 16px 72px;
 }
+
 .giftifyButton > a > button {
   background-color: #023e8a;
   border-radius: 0.75rem;
@@ -121,11 +122,12 @@ body {
     align-items: center;
     align-content: stretch;
   }
+
   .heroImg {
     display: none;
   }
 
-  .texts > h1 {
+  .texts > h2 {
     font-family: Roboto;
     font-size: 40px;
     font-style: normal;

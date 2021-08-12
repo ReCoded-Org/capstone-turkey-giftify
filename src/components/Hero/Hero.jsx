@@ -9,11 +9,11 @@ function Hero() {
     <div className="hero">
       <div className="upperPart">
         <div className="texts">
-          <h1>
+          <h2>
             Don’t need it?
             <br />
             Giftify it!
-          </h1>
+          </h2>
           <p>
             Get rid of unused stuff clogging up your living space and give a
             hand to your neighbours by gifting them!
