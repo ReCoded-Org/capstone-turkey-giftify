@@ -1,0 +1,248 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="container-fluid"
+>
+  <div
+    className="container"
+  >
+    <div
+      className="homePageItems row row-cols-xl-4 row-cols-md-3 row-cols-2"
+    >
+      <div
+        className="col"
+      >
+        <div
+          className="homePageItemCard card"
+        >
+          <img
+            className="card-img-top itemImage mx-auto"
+            src="coffeepot.jpg"
+          />
+          <div
+            className="cardTitle card-body"
+          >
+            Coffee Pot
+            1
+          </div>
+          <div
+            className="linkTitle card-body"
+          >
+            <a
+              exact={true}
+              href="/request-item"
+              onClick={[Function]}
+            >
+              Click to Request Item!
+            </a>
+          </div>
+        </div>
+      </div>
+      <div
+        className="col"
+      >
+        <div
+          className="homePageItemCard card"
+        >
+          <img
+            className="card-img-top itemImage mx-auto"
+            src="coffeepot.jpg"
+          />
+          <div
+            className="cardTitle card-body"
+          >
+            A veeerrryyy long name
+            2
+          </div>
+          <div
+            className="linkTitle card-body"
+          >
+            <a
+              exact={true}
+              href="/request-item"
+              onClick={[Function]}
+            >
+              Click to Request Item!
+            </a>
+          </div>
+        </div>
+      </div>
+      <div
+        className="col"
+      >
+        <div
+          className="homePageItemCard card"
+        >
+          <img
+            className="card-img-top itemImage mx-auto"
+            src="coffeepot.jpg"
+          />
+          <div
+            className="cardTitle card-body"
+          >
+            Coffee Pot
+            3
+          </div>
+          <div
+            className="linkTitle card-body"
+          >
+            <a
+              exact={true}
+              href="/request-item"
+              onClick={[Function]}
+            >
+              Click to Request Item!
+            </a>
+          </div>
+        </div>
+      </div>
+      <div
+        className="col"
+      >
+        <div
+          className="homePageItemCard card"
+        >
+          <img
+            className="card-img-top itemImage mx-auto"
+            src="coffeepot.jpg"
+          />
+          <div
+            className="cardTitle card-body"
+          >
+            Coffee Pot
+            4
+          </div>
+          <div
+            className="linkTitle card-body"
+          >
+            <a
+              exact={true}
+              href="/request-item"
+              onClick={[Function]}
+            >
+              Click to Request Item!
+            </a>
+          </div>
+        </div>
+      </div>
+      <div
+        className="col"
+      >
+        <div
+          className="homePageItemCard card"
+        >
+          <img
+            className="card-img-top itemImage mx-auto"
+            src="coffeepot.jpg"
+          />
+          <div
+            className="cardTitle card-body"
+          >
+            Coffee Pot
+            5
+          </div>
+          <div
+            className="linkTitle card-body"
+          >
+            <a
+              exact={true}
+              href="/request-item"
+              onClick={[Function]}
+            >
+              Click to Request Item!
+            </a>
+          </div>
+        </div>
+      </div>
+      <div
+        className="col"
+      >
+        <div
+          className="homePageItemCard card"
+        >
+          <img
+            className="card-img-top itemImage mx-auto"
+            src="coffeepot.jpg"
+          />
+          <div
+            className="cardTitle card-body"
+          >
+            Coffee Pot
+            6
+          </div>
+          <div
+            className="linkTitle card-body"
+          >
+            <a
+              exact={true}
+              href="/request-item"
+              onClick={[Function]}
+            >
+              Click to Request Item!
+            </a>
+          </div>
+        </div>
+      </div>
+      <div
+        className="col"
+      >
+        <div
+          className="homePageItemCard card"
+        >
+          <img
+            className="card-img-top itemImage mx-auto"
+            src="coffeepot.jpg"
+          />
+          <div
+            className="cardTitle card-body"
+          >
+            Coffee Pot
+            7
+          </div>
+          <div
+            className="linkTitle card-body"
+          >
+            <a
+              exact={true}
+              href="/request-item"
+              onClick={[Function]}
+            >
+              Click to Request Item!
+            </a>
+          </div>
+        </div>
+      </div>
+      <div
+        className="col"
+      >
+        <div
+          className="homePageItemCard card"
+        >
+          <img
+            className="card-img-top itemImage mx-auto"
+            src="coffeepot.jpg"
+          />
+          <div
+            className="cardTitle card-body"
+          >
+            Coffee Pot
+            8
+          </div>
+          <div
+            className="linkTitle card-body"
+          >
+            <a
+              exact={true}
+              href="/request-item"
+              onClick={[Function]}
+            >
+              Click to Request Item!
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
