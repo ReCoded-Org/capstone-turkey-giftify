@@ -13,7 +13,9 @@ function App() {
       <Container fluid>
         <Switch>
           <Route exact path="/" component={HomePage} />
-          <Route path="/request-item" component={RequestItem} />
+          <Route path="/request-item/:id">
+            <RequestItem />
+          </Route>
         </Switch>
       </Container>
     </Router>

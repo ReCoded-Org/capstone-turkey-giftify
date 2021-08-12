@@ -1,13 +1,15 @@
 import React from "react";
+import { useParams } from "react-router";
 
-function RequestItem(props) {
+function RequestItem() {
+  const { id } = useParams();
+
   return (
     <div>
-      <h3>Request Item UNDER CONSTRUCTION</h3>
-      <h4>
-        The id of the requested item is
-        {props.location.state.id}
-      </h4>
+      <h3>
+        ID:
+        {id}
+      </h3>
     </div>
   );
 }

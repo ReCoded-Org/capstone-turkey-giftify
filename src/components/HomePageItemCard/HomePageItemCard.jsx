@@ -14,14 +14,7 @@ function HomePageItemCard({
       <Card.Img className="itemImage mx-auto" variant="top" src={image} />
       <Card.Body className="cardTitle">{itemName}</Card.Body>
       <Card.Body className="linkTitle">
-        <Link
-          to={{
-            pathname: "/request-item",
-            state: { id },
-          }}
-        >
-          Click to Request Item!
-        </Link>
+        <Link to={`/request-item/${id}`}>Click to Request Item!</Link>
       </Card.Body>
     </Card>
   );
