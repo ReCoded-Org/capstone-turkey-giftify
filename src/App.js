@@ -1,15 +1,15 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 import "./App.css";
-import Footer from "./components/Footer/Footer";
+import HomePage from "./container/HomePage/HomePage";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (
     <>
       <Container>
-        <h3>Something</h3> 
+        <HomePage />
       </Container>
-      <Footer />  
     </>
   );
 }
