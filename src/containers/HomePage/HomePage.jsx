@@ -1,14 +1,10 @@
 import React from "react";
-import { Container } from "react-bootstrap";
-import HomePageItems from "../../components/HomePageItems/HomePageItems";
-import "./HomePage.css";
+import Footer from "../../components/Footer/Footer";
 
 function HomePage() {
   return (
     <>
-      <Container>
-        <HomePageItems />
-      </Container>
+      <Footer />
     </>
   );
 }
