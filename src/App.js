@@ -10,10 +10,10 @@ import RequestItem from "./containers/RequestItem/RequestItem";
 function App() {
   return (
     <Router>
-      <Container fluid>
+      <Container fluid className="mainContainer">
         <Switch>
           <Route exact path="/" component={HomePage} />
-          <Route path="/request-item/:id">
+          <Route exact path="/request-item/:id">
             <RequestItem />
           </Route>
         </Switch>
