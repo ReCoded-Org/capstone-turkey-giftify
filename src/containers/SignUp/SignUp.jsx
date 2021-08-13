@@ -1,0 +1,12 @@
+import React from "react"
+ 
+// create form elements first, with headers, have a function for email validation (look for @)
+// city may be only 
+
+function SignUp () {
+    return (
+
+    )
+}
+
+export default SignUp
