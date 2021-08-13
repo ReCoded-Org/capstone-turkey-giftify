@@ -72,7 +72,7 @@ const NavbarForSmallScreen = () => {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, boxRef);
+  }, []);
 
   return (
     <>
