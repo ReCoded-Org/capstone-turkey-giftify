@@ -8,7 +8,11 @@ function HomePageItems({ dbItems }) {
     <Row xs={2} md={3} xl={4} className="homePageItems">
       {dbItems.map((dbItem) => (
         <Col key={dbItem.id}>
-          <HomePageItemCard itemName={dbItem.itemName} id={dbItem.id} image={dbItem.image} />
+          <HomePageItemCard
+            itemName={dbItem.itemName}
+            id={dbItem.id}
+            image={dbItem.image}
+          />
         </Col>
       ))}
     </Row>

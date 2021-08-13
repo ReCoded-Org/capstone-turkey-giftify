@@ -4,30 +4,27 @@ import HomePageItems from "../../components/HomePageItems/HomePageItems";
 import "./HomePage.css";
 import db from "../../firebase";
 
-// After deciding on the database structure,the example array should be deleted and
-// replaced with a function that reads from firebase, takes 8 items by random
+// After deciding on the database structure,the example function below should be deleted and
+// replaced with a function that reads categories from firebase, takes 8 items by random
 // and passes it to HomePageItems as a prop
 
 function HomePage() {
   const [dbItems, setDbItems] = useState([]);
 
   useEffect(() => {
-    async function fetchData () {
-      const response = await db.collection("homePageItems").get()
-      console.log(response)
-    } 
-    fetchData ()
-      // .then(
-      //   (querySnapshot) => {
-      //     querySnapshot.forEach((doc) => {
-      //       itemList.push({ ...doc.data() });
-      //     });
-      //     setDbItems(itemList);
-      //   },
-      //   (error) => console.log(error)
-      // );
+    async function fetchData() {
+      try {
+        const response = await db.collection("homePageItems").get();
+        const itemList = [];
+        response.forEach((doc) => itemList.push(doc.data()));
+        setDbItems(itemList);
+      } catch (err) {
+        alert(err);
+      }
+    }
+    fetchData();
   }, []);
-  console.log(dbItems)
+
   return (
     <Container>
       <HomePageItems dbItems={dbItems} />

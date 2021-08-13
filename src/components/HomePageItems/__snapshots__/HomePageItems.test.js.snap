@@ -2,7 +2,7 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="container-fluid"
+  className="mainContainer container-fluid"
 >
   <div
     className="container"
