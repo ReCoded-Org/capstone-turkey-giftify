@@ -1,8 +1,7 @@
 import React from "react";
-import { Link, BrowserRouter as Router  } from "react-router-dom";
+import { Link, BrowserRouter as Router } from "react-router-dom";
 import { Button, Dropdown, DropdownButton } from "react-bootstrap";
 import { largeScreenNavbarData } from "./../../containers/Navbar/largeScreenNavbarData.js";
-
 
 const NavbarForLargeScreen = () => {
   return (
@@ -45,4 +44,4 @@ const NavbarForLargeScreen = () => {
   );
 };
 
-  export default NavbarForLargeScreen
+export default NavbarForLargeScreen;
