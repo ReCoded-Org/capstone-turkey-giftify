@@ -9,16 +9,16 @@ import "bootstrap/dist/css/bootstrap.min.css";
 function App() {
   return (
     <>
-      <Router>
-        <Route path="/" component={Navbar} />
-        {/* <Route exact path="/" component={Home} />
-        <Route path="/requests" component={Requests} />
-        <Route path="/donations" component={Donations} />
-        <Route path="/about" component={About} />
-        <Route path="/contactUs" component={ContactUs} /> */}
-      </Router>
       <Container>
-        <Footer />
+        <Router>
+          <Route path="/" component={Navbar} />
+          {/* <Route exact path="/" component={Home} />
+          <Route path="/requests" component={Requests} />
+          <Route path="/donations" component={Donations} />
+          <Route path="/about" component={About} />
+          <Route path="/contactUs" component={ContactUs} /> */}
+          <Footer />
+        </Router>
       </Container>
     </>
   );

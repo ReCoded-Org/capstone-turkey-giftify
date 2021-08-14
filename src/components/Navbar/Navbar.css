@@ -37,7 +37,7 @@
   transition: 0.3s;
 }
 
-#dropdown-basic-button {
+#dropdownBasicButton {
   color: #3f3b3b;
   background-color: rgba(255, 255, 255, 0);
   border-color: rgba(255, 255, 255, 0);
@@ -47,11 +47,11 @@
   margin-right: 5px;
 }
 
-#navbarProfile {
+.navbarProfile {
   margin: 0% 1% 0% 1.5%;
 }
 
-@media only screen and (min-width: 120px) and (max-width: 950px) {
+@media only screen and (min-width: 120px) and (max-width: 991px) {
   .navbarMobile {
     background-color: white;
     display: flex;
@@ -144,7 +144,7 @@
     margin-left: 7%;
   }
 
-  #dropdown-basic-button {
+  #dropdownBasicButton {
     color: black;
   }
 
