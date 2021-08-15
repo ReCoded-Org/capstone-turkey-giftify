@@ -1,0 +1,74 @@
+.aboutUsMainDiv{
+    background-color: #0077B6;
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: center;
+	align-content: stretch;
+    font-family: "Roboto", sans-serif;
+}
+
+.upperPartAbout{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: center;
+	align-content: stretch;
+}
+
+.upperPartAbout > h1{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 70px;
+    line-height: 82px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.visionMisionMainDiv{
+    background-color: #CAF0F8;
+    border-radius: 20px;
+    text-align: center;
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: stretch;
+	align-content: stretch;
+}
+
+.middleArea{
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: stretch;
+    width: 100%
+}
+
+.middleAreaTextbox{
+    width: 65%;
+    background-color: #CAF0F8;
+    border-radius: 20px;
+}
+
+.middleAreaTextbox > p{
+    margin: 5%;
+}
+
+.middleAreaImage{
+    width: 35%;
+    
+}
+
+.middleAreaImage > img{
+    max-width: 200px;
+    border-radius: 33px;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
