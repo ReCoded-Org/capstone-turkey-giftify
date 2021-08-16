@@ -1,114 +1,106 @@
-import React, {useState, useEffect} from "react"
-import { items } from "../AllItems/AllItems"
+import React, {useState} from "react";
+import Cards from "../Cards/Cards";
 import "./Board.css";
-function Boards ({setSelectedItem, setSelectedCategory}){
 
-    const [selecetBoerd, setSelecetBoerd] = useState("")
+function Boards({ allItems , testSearchValue }) {
+  const [selectedItems, setSelectedItems] = useState("")
 
-    const allIems = items.map(item=> { return (item) })
-    // const catagories = items.map(item=> { return (item.type) })
-
-    useEffect(() => {
-        setSelectedItem(allIems)
-    }, [])
-    // setSelectedItem(allIems)
-    // setSelectedCategory(catagories)
-
-    //Household Appliances Items
-    const householdAppliances = items
-    .filter( item => item.type === "Household Appliances" )
-    .map(item=> {
+ // Categories
+   const category = Object.keys(allItems).map((categ, index) => {
     return (
-        <div key = {item.id} className = "oneCard"> 
-            <h3>{item.item}</h3> 
-            <p>Use Duration: {item.useDuration} </p>
-            <br/>
-            <img className = "itemImage"  src={item.imageURL} alt = "Household Appliances" />
-        </div>)    
-    })
+      <button
+       onClick = {(event) => {
+            event.preventDefault();
+            setSelectedItems(allItems[categ].map((info) => { return (info.itemName)}))
+            setSelectedItems(categ) 
+          }
+          }
+          key={index}>{categ}</button>
+    )
+  })
 
-     // Furniture Items
-    const furniture = items
-    .filter( item => item.type === "Furniture" )
-    .map(item=> {
-        return (
-        <div key = {item.id} className = "oneCard"> 
-            <h3>{item.item}</h3> 
-            <p>Use Duration: {item.useDuration} </p>
-            <br/>
-            <img className = "itemImage"  src={item.imageURL} alt = "furniture" />
-        </div>)
-    })
+  // Filter Cards by search
+  const cardsBySearch = Object.keys(allItems) 
 
-    // Clothes Items
-    const clothes = items
-    .filter( item => item.type === "Clothes" )
-    .map(item=> {
-        return (
-        <div key = {item.id} className = "oneCard"> 
-            <h3>{item.item}</h3> 
-            <p>Use Duration: {item.useDuration} </p>
-            <br/>
-            <img className = "itemImage"  src={item.imageURL} alt = "clothes" />
-        </div>)    
-    })
- 
-     return ( 
+  ////// Q /////////
+  .filter((value) => {
+    if (value.toLowerCase().includes(testSearchValue.toLowerCase())) {
+      return value;
+    } else  {
+      return value;
+    }
+  })
+
+  .map((item,index) => {
+    return(
+      <div key={index} className="oneCard">
+        {allItems[item]
+        .filter((value) => {
+          if (testSearchValue === "") {
+            return null;
+          } else if (value.itemName.toLowerCase().includes(testSearchValue.toLowerCase())) {
+            return value;
+          } else if (value.condition.toLowerCase().includes(testSearchValue.toLowerCase())) {
+            return value;
+          }else {
+            return null
+          }
+        })
+        .map((info) => {
+          return (
+            <div key = {index}> 
+            <div key = {index} className="cards">
+
+             <h3>{info.itemName}</h3>
+             <p>{info.description}</p>
+             <p>{info.condition}</p>
+             <br />
+             <img className="itemImage" src={info.image} alt={info.itemName} />
+           </div>    
+           </div>
+          )
+        })}
+
+      </div>
+    )
+  })
+
+  //  filter Cards by category
+  const items = Object.keys(allItems)
+  .filter(type => type.includes(selectedItems) ) 
+  .map((item,index) => {
+    return(
+      <div key={index} className="oneCard">
+
+        {allItems[item].map((info) => {
+          
+          return (
+            <div key = {index}> 
+              {selectedItems === "" ? null : (
+           
+           <div key = {index} className="cards">
+
+             <h3>{info.itemName}</h3>
+             <p>{info.description}</p>
+             <p>{info.condition}</p>
+             <br />
+             <img className="itemImage" src={info.image} alt={info.itemName} />
+
+           </div>
+       
+         )}
+            </div>
+          )
+        })}
+      </div>
+    )
+  })
+
+  return (
     <div>
-        <div className = "categories">
-            <button className = "oneCategory householdAppliances" onClick ={(event) => {event.preventDefault(); setSelecetBoerd("householdAppliances")}}>Household Appliances</button>
-            {selecetBoerd === "householdAppliances" ?
-            <div>
-            <h2>Household Appliances</h2>
-            <div className = "cards">
-                {householdAppliances}
-            </div>
-            </div>
-            : null
-            }
-            <button className = "oneCategory furniture" onClick ={(event) => {event.preventDefault(); setSelecetBoerd("furniture")}}>Furniture</button>
-            {selecetBoerd === "furniture" ?
-            <div>
-            <h2>Furniture</h2>
-            <div className = "cards">
-                {furniture}
-            </div>
-            </div>
-            : null
-            }
-            <button className = "oneCategory clothes" onClick ={(event) => {event.preventDefault(); setSelecetBoerd("clothes")}}>Clothes</button>
-            {selecetBoerd === "clothes" ?
-            <div>
-            <h2>Clothes</h2>
-            <div className = "cards">
-            {clothes}
-            </div>
-            </div>
-            : null
-            }
-            <button className = "oneCategory" onClick ={(event) => {event.preventDefault(); setSelecetBoerd("All")}}>All</button>
-        </div>
-        {selecetBoerd === "All" ?
-        <div>
-        <h2>Household Appliances</h2>
-        <div className = "cards">
-            {householdAppliances}
-        </div>
-
-        <h2>Clothes</h2>
-        <div className = "cards">
-           {clothes}
-        </div>
-        <h2>Furniture</h2>
-        <div className = "cards">
-            {furniture}
-        </div>
-        </div>
-        : null
-        }
-
+    <Cards category= {category}  items = {items} cardsBySearch = {cardsBySearch}/>
     </div>
-) 
+  );
 }
 
-export default Boards
+export default Boards;

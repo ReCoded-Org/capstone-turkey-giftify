@@ -1,11 +1,10 @@
 import React from "react";
 import "./App.css";
-import SearchSection from "./containers/searchSection/SearchSection";
-
+import HomePage from "./containers/HomePage/HomePage";
 function App() {
   return (
     <div className="App">
-     <SearchSection/>
+      <HomePage />
     </div>
   );
 }

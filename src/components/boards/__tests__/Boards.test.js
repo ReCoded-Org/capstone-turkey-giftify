@@ -6,6 +6,6 @@ import renderer from "react-test-renderer";
 afterEach(cleanup);
 
 it("matches snapshot", () => {
-  const tree = renderer.create(<Boards/>).toJSON();
+  const tree = renderer.create(<Boards />).toJSON();
   expect(tree).toMatchSnapshot();
 });
