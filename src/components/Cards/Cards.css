@@ -1,60 +1,59 @@
 .itemImage {
-    display: inline;
-    justify-content: center;
-    width: 50%;
-  }
-  
-  .cards {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  .oneCard {
-    width: 20%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    transition: 0.3s;
-    margin: 5%;
-    background-color: wheat;
-  }
-  
-  .oneCard:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-  }
-  
-  .categories {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 10%;
-  }
-  
-  .oneCategory {
-    margin-left: 25%;
-    margin-right: 25%;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    height: 150px;
-    width: 50%;
-    color: black;
-    font-size: 30px;
-    border-radius: 20px;
-  }
-  
-  .householdAppliances {
-    background-image: url("https://media.istockphoto.com/photos/set-of-household-kitchen-technics-on-yellow-background-set-of-in-the-picture-id1025966854?k=6&m=1025966854&s=612x612&w=0&h=zsHZl5E0ivdJh_Zm70f1OWcj1Hzx9quZ8hG4Lx1XTq4=");
-    background-size: initial;
-  }
-  
-  .furniture {
-    background-image: url("https://image.shutterstock.com/image-photo/cover-photo-beige-sofa-standing-260nw-1032187741.jpg");
-    background-size: inherit;
-  }
-  
-  .clothes {
-    background-image: url("http://twoofhearts.ca//wp-content/uploads/2020/03/about-banner.jpg");
-    background-size: inherit;
-  }
-  
+  display: inline;
+  justify-content: center;
+  width: 50%;
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.oneCard {
+  width: 20%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  margin: 5%;
+  background-color: wheat;
+}
+
+.oneCard:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.categories {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 10%;
+}
+
+.oneCategory {
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  height: 150px;
+  width: 50%;
+  color: black;
+  font-size: 30px;
+  border-radius: 20px;
+}
+
+.householdAppliances {
+  background-image: url("https://media.istockphoto.com/photos/set-of-household-kitchen-technics-on-yellow-background-set-of-in-the-picture-id1025966854?k=6&m=1025966854&s=612x612&w=0&h=zsHZl5E0ivdJh_Zm70f1OWcj1Hzx9quZ8hG4Lx1XTq4=");
+  background-size: initial;
+}
+
+.furniture {
+  background-image: url("https://image.shutterstock.com/image-photo/cover-photo-beige-sofa-standing-260nw-1032187741.jpg");
+  background-size: inherit;
+}
+
+.clothes {
+  background-image: url("http://twoofhearts.ca//wp-content/uploads/2020/03/about-banner.jpg");
+  background-size: inherit;
+}

@@ -1,13 +1,12 @@
 import React from "react";
 
-function Cards ({category, cardsBySearch}){
-
-    return (
-        <div>
-            {cardsBySearch}
-            {category}
-        </div>
-    )
+function Cards({ category, cardsBySearch }) {
+  return (
+    <div>
+      {cardsBySearch}
+      {category}
+    </div>
+  );
 }
 
-export default Cards
+export default Cards;

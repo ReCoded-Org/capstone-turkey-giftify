@@ -2,8 +2,8 @@
   height: auto;
   width: 100%;
   margin-bottom: 2%;
-  border-top-left-radius: 10% ;
-  border-top-right-radius: 10% ;
+  border-top-left-radius: 10%;
+  border-top-right-radius: 10%;
 }
 
 .cards {
@@ -19,14 +19,14 @@
   height: auto;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
-  background-color: #ADE8F4;
+  background-color: #ade8f4;
   border-radius: 10%;
   margin: 2%;
 }
 
 .oneCard a {
   color: black;
-  text-decoration:none;
+  text-decoration: none;
   margin-bottom: 2%;
 }
 
@@ -46,7 +46,7 @@
   height: 120px;
   width: 50%;
   color: black;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 20px;
   border-radius: 20px;
 }
@@ -54,16 +54,14 @@
   box-shadow: 0 12px 16px 0 rgba(46, 42, 42, 0.767);
 }
 
-.books{
+.books {
   background-image: url("https://i.pinimg.com/736x/cf/b0/7a/cfb07a2dc2a7bfc3e19fcf4a76464c32.jpg");
-  background-size:cover;
-
+  background-size: cover;
 }
 
 .electronic {
   background-image: url("https://media.istockphoto.com/photos/set-of-household-kitchen-technics-on-yellow-background-set-of-in-the-picture-id1025966854?k=6&m=1025966854&s=612x612&w=0&h=zsHZl5E0ivdJh_Zm70f1OWcj1Hzx9quZ8hG4Lx1XTq4=");
   background-size: cover;
-  
 }
 
 .homeTextile {
@@ -75,7 +73,6 @@
   background-image: url("https://thumbs.dreamstime.com/b/colorful-clothes-hanging-rack-against-blue-background-space-text-colorful-clothes-hanging-rack-against-light-blue-168578462.jpg");
   background-size: inherit;
 }
-
 
 .constructionMarket {
   background-image: url("https://previews.123rf.com/images/kwanchaichaiudom/kwanchaichaiudom1705/kwanchaichaiudom170500071/77901140-set-tools-supplies-with-blank-notebook-on-wood-background-top-view-construction-industry-flat-lay-co.jpg");
