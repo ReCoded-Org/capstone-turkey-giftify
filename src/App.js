@@ -9,6 +9,7 @@ function App() {
   return (
     <>
       <Container>
+        <About />
         <Footer />
       </Container>
     </>
