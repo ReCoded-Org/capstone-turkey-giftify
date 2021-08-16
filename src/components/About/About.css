@@ -1,74 +1,233 @@
-.aboutUsMainDiv{
-    background-color: #0077B6;
+.aboutUsMainDiv {
+  background-color: #0077b6;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: stretch;
+  font-family: "Roboto", sans-serif;
+}
+
+.upperPartAbout {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: stretch;
+}
+
+.upperPartAbout > h1 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 70px;
+  line-height: 82px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+  margin: 5% 0 0 0;
+}
+
+.visionMisionMainDiv {
+  background-color: #caf0f8;
+  border-radius: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: stretch;
+  margin: 5% 0;
+  padding: 0% 0% 2% 0%;
+  width: 120%;
+}
+
+.visionMisionMainDiv > p {
+  margin: 2% 0 0 0;
+  width: 85%;
+  font-size: 20px;
+  line-height: 23px;
+}
+
+.spanDescription {
+  font-weight: bold;
+}
+
+.middleArea {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: stretch;
+  width: 100%;
+}
+
+.middleAreaTextbox {
+  width: 50%;
+  background-color: #caf0f8;
+  border-radius: 20px;
+  font-size: 23px;
+  line-height: 187.02%;
+}
+
+.middleAreaTextbox > p {
+  margin: 5%;
+}
+
+.middleAreaImage > img {
+  border-radius: 33px;
+}
+
+@media only screen and (min-width: 120px) and (max-width: 767px) {
+  .aboutUsMainDiv {
     display: flex;
-	flex-direction: column;
-	flex-wrap: nowrap;
-	justify-content: flex-start;
-	align-items: center;
-	align-content: stretch;
-    font-family: "Roboto", sans-serif;
-}
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: stretch;
+  }
 
-.upperPartAbout{
-	display: flex;
-	flex-direction: column;
-	flex-wrap: nowrap;
-	justify-content: space-between;
-	align-items: center;
-	align-content: stretch;
-}
+  .middleArea {
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: stretch;
+  }
 
-.upperPartAbout > h1{
+  .upperPartAbout > h1 {
     font-style: normal;
     font-weight: normal;
-    font-size: 70px;
-    line-height: 82px;
+    font-size: xxx-large;
+    line-height: 35px;
     display: flex;
     align-items: center;
     text-align: center;
-    color: #FFFFFF;
-}
+    color: #ffffff;
+    margin: 5% 0 0 0;
+  }
 
-.visionMisionMainDiv{
-    background-color: #CAF0F8;
-    border-radius: 20px;
+  .visionMisionMainDiv {
+    margin: 5% 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: stretch;
+    width: 85%;
+  }
+
+  .visionMisionMainDiv > p {
+    width: 80%;
+  }
+
+  .spanDescription {
+    font-weight: bold;
+  }
+
+  .middleAreaImage {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: stretch;
+  }
+
+  .middleAreaImage > img {
+    max-width: 80%;
+    width: 100%;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+  }
+
+  .middleAreaTextbox {
+    margin: 5% 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: stretch;
+    width: 85%;
     text-align: center;
-    display: flex;
-	flex-direction: column;
-	flex-wrap: nowrap;
-	justify-content: flex-start;
-	align-items: stretch;
-	align-content: stretch;
-}
+  }
 
-.middleArea{
-    display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: center;
-	align-items: center;
-	align-content: stretch;
-    width: 100%
-}
-
-.middleAreaTextbox{
-    width: 65%;
-    background-color: #CAF0F8;
-    border-radius: 20px;
-}
-
-.middleAreaTextbox > p{
+  .middleAreaTextbox > p {
     margin: 5%;
+  }
 }
 
-.middleAreaImage{
-    width: 35%;
-    
-}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .upperPartAbout {
+    margin: 5% 0;
+  }
 
-.middleAreaImage > img{
-    max-width: 200px;
-    border-radius: 33px;
+  .visionMisionMainDiv {
+    margin: 5% 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: stretch;
+    width: 85%;
+  }
+
+  .visionMisionMainDiv > p {
+    width: 80%;
+    font-size: 20px;
+    line-height: 23px;
+  }
+
+  .spanDescription {
+    font-weight: bold;
+  }
+
+  .middleArea {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: stretch;
+  }
+
+  .middleAreaImage {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: stretch;
+  }
+
+  .middleAreaImage > img {
+    max-width: 85%;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+  }
+
+  .middleAreaTextbox {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: stretch;
+    text-align: center;
+  }
+
+  .middleAreaTextbox > p {
+    margin: 5%;
+    font-size: 20px;
+    line-height: 187.02%;
+  }
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");

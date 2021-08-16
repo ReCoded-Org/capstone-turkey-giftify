@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  className="aboutUsMainDiv"
+>
+  <div
+    className="upperPartAbout row"
+  >
+    <h1>
+      About Us
+    </h1>
+    <div
+      className="visionMisionMainDiv"
+    >
+      <p>
+        <span
+          className="spanDescription"
+        >
+          Our Vision: 
+        </span>
+        Everyone can get what they want in a fast and easy way
+      </p>
+      <p>
+        <span
+          className="spanDescription"
+        >
+          <br />
+          Our Mision:
+        </span>
+        Trade things are no longer used between people for a clean environment
+      </p>
+    </div>
+  </div>
+  <div
+    className="middleArea row"
+  >
+    <div
+      className="middleAreaTextbox"
+    >
+      <p>
+        Giftify is a platform for trading things that are no longer used between people who stay in the same area. People have the chance to get their needs in free by giving the convincing reason of needing a specific product/service to the owner then the owner has the freedom to choose which applicant has deserved his product or service more than the other applicants.
+      </p>
+    </div>
+    <div
+      className="middleAreaImage"
+    >
+      <img
+        alt="About pic"
+        src="aboutImage.png"
+      />
+    </div>
+  </div>
+</div>
+`;
