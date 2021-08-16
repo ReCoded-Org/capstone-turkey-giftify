@@ -1,14 +1,11 @@
 import React from "react";
 
-function Cards ({category, items, cardsBySearch}){
+function Cards ({category, cardsBySearch}){
 
     return (
         <div>
-            {category}
-
-            {items}
-
             {cardsBySearch}
+            {category}
         </div>
     )
 }
