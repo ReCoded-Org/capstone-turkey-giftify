@@ -1,17 +1,17 @@
-import React from "react"
+import React from "react";
+import OurTeamForLargeScreen from "./OurTeamForLargeScreen";
+import OurTeamForSmallScreen from "./OurTeamForSmallScreen";
+import { useWindowDimensions } from "./../../hooks/windowSize";
+import "./OurTeam.css";
 
 const OurTeam = () => {
+  const { width } = useWindowDimensions();
 
+  if (width <= 991) {
+    return <OurTeamForSmallScreen />;
+  } else {
+    return <OurTeamForLargeScreen />;
+  }
+};
 
-    return(
-        <div className="ourTeamMainDiv">
-            <h1>Our Team</h1>
-            <div className="teamMembersCardMainDiv">
-                
-            </div>
-        </div>
-    )
-
-}
-
-export default OurTeam
+export default OurTeam;
