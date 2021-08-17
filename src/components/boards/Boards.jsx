@@ -1,12 +1,12 @@
-import React, {  useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Cards from "../Cards/Cards";
 import "./Board.css";
 import { VscArrowRight } from "react-icons/vsc";
 
 function Boards({ allItems, testSearchValue }) {
   const [selectedItems, setSelectedItems] = useState("");
-console.log(allItems)
-//  filter Cards by category
+  console.log(allItems);
+  //  filter Cards by category
   const items = Object.keys(allItems)
     .filter((value) => {
       if (selectedItems === "") {
