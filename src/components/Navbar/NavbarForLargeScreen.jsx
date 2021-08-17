@@ -11,8 +11,8 @@ const NavbarForLargeScreen = () => {
           <Link to="/">LOGO</Link>
         </div>
         <div className="navbarLinks">
-          {largeScreenNavbarData.map((info, index) => (
-            <Link to={info.target} className={info.cName} key={index}>
+          {largeScreenNavbarData.map((info) => (
+            <Link to={info.target} className={info.cName} key={info.id}>
               {info.name}
             </Link>
           ))}

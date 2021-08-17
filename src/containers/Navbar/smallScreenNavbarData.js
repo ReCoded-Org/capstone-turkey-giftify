@@ -10,6 +10,7 @@ import {
 
 export const smallScreenNavbarData = [
   {
+    id: "a",
     cName: "navLi",
     target: "/",
     cNameLink: "navText",
@@ -17,6 +18,7 @@ export const smallScreenNavbarData = [
     component: <HouseDoor />,
   },
   {
+    id: "b",
     cName: "navLi",
     target: { pathname: "/", hash: "#search" },
     cNameLink: "navText",
@@ -24,6 +26,7 @@ export const smallScreenNavbarData = [
     component: <Search />,
   },
   {
+    id: "c",
     cName: "navLi",
     target: "/requests",
     cNameLink: "navText",
@@ -31,6 +34,7 @@ export const smallScreenNavbarData = [
     component: <Gift />,
   },
   {
+    id: "d",
     cName: "navLi",
     target: "/donations",
     cNameLink: "navText",
@@ -38,6 +42,7 @@ export const smallScreenNavbarData = [
     component: <Heart />,
   },
   {
+    id: "e",
     cName: "navLi",
     target: "/about",
     cNameLink: "navText",
@@ -45,6 +50,7 @@ export const smallScreenNavbarData = [
     component: <InfoCircle />,
   },
   {
+    id: "f",
     cName: "navLi",
     target: "/contactUs",
     cNameLink: "navText",

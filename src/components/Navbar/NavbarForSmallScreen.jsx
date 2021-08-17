@@ -65,8 +65,8 @@ const NavbarForSmallScreen = () => {
             </Link>
           </li>
 
-          {smallScreenNavbarData.map((info, index) => (
-            <li className={info.cName} onClick={showSidebar} key={index}>
+          {smallScreenNavbarData.map((info) => (
+            <li className={info.cName} onClick={showSidebar} key={info.id}>
               <Link to={info.target} className={info.cNameLink}>
                 {info.component} &nbsp; {info.name}
               </Link>
