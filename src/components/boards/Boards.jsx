@@ -4,40 +4,40 @@ import "./Board.css";
 import { VscArrowRight } from "react-icons/vsc";
 
 function Boards({ allItems, testSearchValue }) {
-const [selectedItems, setSelectedItems] = useState("");
+  const [selectedItems, setSelectedItems] = useState("");
 
   //  filter Cards by category
   const items = Object.keys(allItems)
-  .filter((value) => {
-    if (selectedItems === "") {
-      return null;
-    } else if (value.toLowerCase().includes(selectedItems.toLowerCase())) {
-      return allItems[value];
-    } else {
-      return null;
-    }
-  })
+    .filter((value) => {
+      if (selectedItems === "") {
+        return null;
+      } else if (value.toLowerCase().includes(selectedItems.toLowerCase())) {
+        return allItems[value];
+      } else {
+        return null;
+      }
+    })
     .map((item, index) => {
       return (
         <div key={index} className="cards">
           {allItems[item].map((info) => {
             return (
               <div key={index} className="oneCard">
-              <img
-                className="itemImage"
-                src={info.image}
-                alt={info.itemName}
-              />
-              <h3>{info.itemName}</h3>
-              <a href="#">
-                See Details <VscArrowRight />{" "}
-              </a>
-            </div>
+                <img
+                  className="itemImage"
+                  src={info.image}
+                  alt={info.itemName}
+                />
+                <h3>{info.itemName}</h3>
+                <a href="#">
+                  See Details <VscArrowRight />{" "}
+                </a>
+              </div>
             );
           })}
         </div>
       );
-    })
+    });
 
   // Categories
   const category = Object.keys(allItems).map((categ, index) => {
@@ -55,9 +55,7 @@ const [selectedItems, setSelectedItems] = useState("");
         >
           {categ}
         </button>
-        <div>
-        {selectedItems === categ ? items : null } 
-        </div>
+        <div>{selectedItems === categ ? items : null}</div>
       </div>
     );
   });
@@ -118,8 +116,7 @@ const [selectedItems, setSelectedItems] = useState("");
 
   return (
     <div>
-      <Cards category={category}  cardsBySearch={cardsBySearch} />
-      
+      <Cards category={category} cardsBySearch={cardsBySearch} />
     </div>
   );
 }
