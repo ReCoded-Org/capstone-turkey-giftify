@@ -9,7 +9,7 @@ function Boards({ allItems, testSearchValue }) {
   //  filter Cards by category
 
   const items = Object.keys(allItems)
- 
+
     // .filter((type) => type.includes(selectedItems))
     .map((item, index) => {
       return (
@@ -49,10 +49,7 @@ function Boards({ allItems, testSearchValue }) {
         >
           {categ}
         </button>
-        {categ === selectedItems ? {
-          
-          
-        } : null}
+        {categ === selectedItems ? {} : null}
       </div>
     );
   });
