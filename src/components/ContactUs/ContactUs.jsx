@@ -5,7 +5,7 @@ import { GrInstagram } from "react-icons/gr";
 import db from "../../firebase";
 import "./ContactUs.css";
 
-function ConactUS() {
+function ContactUs() {
   const [inputdata, setInputData] = useState([]);
   const [inputName, setInputName] = useState("");
   const [inputEmail, setInputEmail] = useState("");
@@ -110,4 +110,4 @@ function ConactUS() {
   );
 }
 
-export default ConactUS;
+export default ContactUs;

@@ -1,9 +1,9 @@
 import React from "react";
-import ConactUS from "../components/ContactUs/ContuctUS";
+import ContactUs from "../components/ContactUs/ContactUs";
 function ConactUSPage() {
   return (
     <div>
-      <ConactUS />
+      <ContactUs />
     </div>
   );
 }
