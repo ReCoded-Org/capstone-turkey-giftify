@@ -12,7 +12,7 @@ const NavbarForLargeScreen = () => {
         </div>
         <div className="navbarLinks">
           {largeScreenNavbarData.map((info) => (
-            <Link to={info.target} className={info.cName} key={info.id}>
+            <Link to={info.target} className="eachLinksInNavbar" key={info.id}>
               {info.name}
             </Link>
           ))}

@@ -64,10 +64,9 @@ const NavbarForSmallScreen = () => {
               </Button>
             </Link>
           </li>
-
           {smallScreenNavbarData.map((info) => (
-            <li className={info.cName} onClick={showSidebar} key={info.id}>
-              <Link to={info.target} className={info.cNameLink}>
+            <li className="navLi" onClick={showSidebar} key={info.id}>
+              <Link to={info.target} className="navText">
                 {info.component} &nbsp; {info.name}
               </Link>
             </li>
