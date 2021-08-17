@@ -17,7 +17,7 @@ function UserProfile() {
   useEffect(() => {
     fetchUser();
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
-  
+
   //edit button will be functional
 
   return (
