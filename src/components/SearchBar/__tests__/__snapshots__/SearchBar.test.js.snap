@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div>
+  <h2
+    className="parag"
+  >
+    Or would you like to search for yourself ?
+  </h2>
+  <form
+    className="form"
+    onSubmit={[Function]}
+  >
+    <label>
+      <input
+        className="searchBar"
+        name="name"
+        onChange={[Function]}
+        type="text"
+        value=""
+      />
+    </label>
+    <input
+      className="submit"
+      type="submit"
+      value="Submit"
+    />
+  </form>
+  <div>
+    <div />
+  </div>
+</div>
+`;

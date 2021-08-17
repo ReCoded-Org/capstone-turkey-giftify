@@ -9,7 +9,8 @@ function Boards({ allItems, testSearchValue }) {
   //  filter Cards by category
 
   const items = Object.keys(allItems)
-    .filter((type) => type.includes(selectedItems))
+ 
+    // .filter((type) => type.includes(selectedItems))
     .map((item, index) => {
       return (
         <div key={index} className="cards">
@@ -48,7 +49,10 @@ function Boards({ allItems, testSearchValue }) {
         >
           {categ}
         </button>
-        {categ === selectedItems ? items : null}
+        {categ === selectedItems ? {
+          
+          
+        } : null}
       </div>
     );
   });
