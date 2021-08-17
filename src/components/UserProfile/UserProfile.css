@@ -4,7 +4,6 @@ body {
 }
 
 #userProfile {
-  //height: 400px;
   height: 200px;
   width: 54%;
   background-color: #caf0f8;
@@ -84,7 +83,7 @@ hr {
   text-align: center;
 }
 
-//tablet
+/*tablet*/
 @media (min-width: 768px) and (max-width: 1024px) {
   #userProfile {
     width: 66%;
@@ -92,6 +91,6 @@ hr {
   }
 }
 
-//mobile
+/*mobile*/
 @media only screen and (min-width: 120px) and (max-width: 767px) {
 }
