@@ -1,150 +1,144 @@
-.container{
-    background-color: #0077B6;
-    padding: 10px;
+.container {
+  background-color: #0077b6;
+  padding: 10px;
 }
 
-.container h1{
-    color: white;
-    text-align: center;
-    margin-bottom: 20px;
+.container h1 {
+  color: white;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-.contatctinfo{
-    color: white;
-    padding: 20px;
-    height: 400px;
-    width: 350px;
+.contatctinfo {
+  color: white;
+  padding: 20px;
+  height: 400px;
+  width: 350px;
 }
-.contatctinfo a{
-    color: white;
+.contatctinfo a {
+  color: white;
 }
 
-.inpurForm{
-    background-color: #CAF0F8;
-    width: 400px;
-    height: 400px;
-    display: flex;
-    flex-direction: column;
-    border-radius: 10px;
-    padding: 20px;
-    justify-content: space-around;
-    margin: 20px;
+.inpurForm {
+  background-color: #caf0f8;
+  width: 400px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  padding: 20px;
+  justify-content: space-around;
+  margin: 20px;
 }
 
 .inpurForm h5 {
-    text-align: center;
+  text-align: center;
 }
 
-.inpurForm label input{
-    width: 100%;
-    border-color: #006EFF;
-    border-radius: 10px;
-    background-color: white;
-    color: black;   
+.inpurForm label input {
+  width: 100%;
+  border-color: #006eff;
+  border-radius: 10px;
+  background-color: white;
+  color: black;
 }
 
-.submitData{
-    align-self: center;
-    width: 100px;
-    background-color: #023E8A;
-    color: white;
-    border-radius: 20px;
+.submitData {
+  align-self: center;
+  width: 100px;
+  background-color: #023e8a;
+  color: white;
+  border-radius: 20px;
 }
 
-.massege{
-    height: 100px;
+.massege {
+  height: 100px;
 }
 
-.icon{
-    color:  #0077B6;
-    background-color: rgba(255, 255, 255, 0.568);
-    padding: 2px;
-    border-color: #0077B6;
-    border-radius: 5px;
+.icon {
+  color: #0077b6;
+  background-color: rgba(255, 255, 255, 0.568);
+  padding: 2px;
+  border-color: #0077b6;
+  border-radius: 5px;
 }
 
-.instagram{
-    color:  #d46aa6;
+.instagram {
+  color: #d46aa6;
 }
 
-.facebook{
-    color: #0050f1;
+.facebook {
+  color: #0050f1;
 }
-
 
 @media screen and (min-width: 800px) {
- .box{
-     display: flex;
-     flex-direction: row;
-     justify-content: center;
-
- }
- .contatctinfo{
-     display: flex;
-     flex-direction: column;
-     justify-content: space-between;
+  .box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .contatctinfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     margin: 20px;
- }
- .sosyalMed{
+  }
+  .sosyalMed {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100px;
- }
+  }
 }
 
 @media only screen and (max-width: 600px) {
-    .box{
-        display: flex;
-        flex-direction: column;
-        justify-content: start;
-        align-items: center ;
-    }
-    .contatctinfo{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        text-align: start;
-        width: 250px;
-        height: 300px;
-        
-    }
-    .sosyalMed{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-     }
-     .inpurForm{
-        width: 350px;
-        height: 350px;
-    }
-   }
-
-
-   @media (min-width: 600px) and (max-width: 800px) {
-  
-    .box{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-    .contatctinfo{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        flex-wrap: wrap;
-    }
-    .sosyalMed{
-       display: flex;
-       flex-direction: column;
-       justify-content: space-between;
-       height: 100px;
-       flex-wrap: wrap;
-    }
-    .inpurForm{
-        width: 350px;
-        height: 350px;
-    }
+  .box {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
   }
-  
+  .contatctinfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: start;
+    width: 250px;
+    height: 300px;
+  }
+  .sosyalMed {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .inpurForm {
+    width: 350px;
+    height: 350px;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 800px) {
+  .box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .contatctinfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .sosyalMed {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100px;
+    flex-wrap: wrap;
+  }
+  .inpurForm {
+    width: 350px;
+    height: 350px;
+  }
+}

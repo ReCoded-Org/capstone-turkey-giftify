@@ -3,7 +3,7 @@ import ConactUS from "../components/ContactUs/ContuctUS";
 function ConactUSPage() {
   return (
     <div>
-        <ConactUS />
+      <ConactUS />
     </div>
   );
 }
