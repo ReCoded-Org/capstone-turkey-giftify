@@ -8,8 +8,8 @@ const OurTeamForLargeScreen = () => {
     <div className="ourTeamMainDiv">
       <h1>Our Team</h1>
       <div className="teamMembersCardMainDiv">
-        {ourTeamData.map((info, index) => (
-          <Card key={index}>
+        {ourTeamData.map((info) => (
+          <Card key={info.id}>
             <Card.Img variant="top" src={info.image} />
             <Card.Body className="CardUpperPart">
               <Card.Title>{info.name}</Card.Title>

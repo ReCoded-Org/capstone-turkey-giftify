@@ -3,7 +3,7 @@ import { Card } from "react-bootstrap";
 import { Linkedin, Github } from "react-bootstrap-icons";
 import { ourTeamData } from "./../../containers/OurTeam/ourTeamData";
 
-const OurTeamForLargeScreen = () => {
+const OurTeamForSmallScreen = () => {
   return (
     <div className="ourTeamMainDiv">
       <h1>Our Team</h1>
@@ -27,7 +27,7 @@ const OurTeamForLargeScreen = () => {
                 </Card.Body>
               </Card>
             ) : (
-              <span></span>
+              <span key={index}></span>
             );
           })}
         </div>
@@ -38,7 +38,7 @@ const OurTeamForLargeScreen = () => {
                 <Card.Img variant="top" src={info.image} />
                 <Card.Body className="CardUpperPart">
                   <Card.Title>{info.name}</Card.Title>
-                  <Card.Text>{info.speciality}</Card.Text>
+                  <Card.Text>Junior Frontend Developer</Card.Text>
                 </Card.Body>
                 <Card.Body className="CardLowerPart">
                   <Card.Link href={info.linkedInLink} target="_blank">
@@ -50,7 +50,7 @@ const OurTeamForLargeScreen = () => {
                 </Card.Body>
               </Card>
             ) : (
-              <span></span>
+              <span key={index}></span>
             );
           })}
         </div>
@@ -59,4 +59,4 @@ const OurTeamForLargeScreen = () => {
   );
 };
 
-export default OurTeamForLargeScreen;
+export default OurTeamForSmallScreen;
