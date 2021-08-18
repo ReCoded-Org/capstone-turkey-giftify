@@ -1,11 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`matches Received 1`] = `
+exports[`matches Snapshot 1`] = `
 <div
-  className="container"
+  className="container-fluid container"
 >
   <div
-    className="container"
+    className="container-fluid"
+    id="container"
   >
     <div>
       <h2

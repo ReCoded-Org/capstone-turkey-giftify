@@ -93,10 +93,9 @@
 }
 
 @media only screen and (max-width: 600px) {
-  
   .itemImage {
     height: auto;
-    width: 100px
+    width: 100px;
   }
 
   .oneCard {
