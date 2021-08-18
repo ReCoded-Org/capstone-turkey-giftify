@@ -9,17 +9,17 @@
   margin-bottom: 20px;
 }
 
-.contatctinfo {
+.contactInfo {
   color: white;
   padding: 20px;
   height: 400px;
   width: 350px;
 }
-.contatctinfo a {
+.contactInfo a {
   color: white;
 }
 
-.inpurForm {
+.inputForm {
   background-color: #caf0f8;
   width: 400px;
   height: 400px;
@@ -31,16 +31,17 @@
   margin: 20px;
 }
 
-.inpurForm h5 {
+.inputForm h5 {
   text-align: center;
 }
 
-.inpurForm label input {
+.inputForm label input {
   width: 100%;
   border-color: #006eff;
   border-radius: 10px;
   background-color: white;
   color: black;
+  border-width: 1px;
 }
 
 .submitData {
@@ -51,8 +52,13 @@
   border-radius: 20px;
 }
 
-.massege {
+.Message {
   height: 100px;
+  width: 100%;
+  border-color: #006eff;
+  border-radius: 10px;
+  background-color: white;
+  color: black;
 }
 
 .icon {
@@ -77,7 +83,7 @@
     flex-direction: row;
     justify-content: center;
   }
-  .contatctinfo {
+  .contactInfo {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -98,7 +104,7 @@
     justify-content: start;
     align-items: center;
   }
-  .contatctinfo {
+  .contactInfo {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -111,7 +117,7 @@
     flex-direction: row;
     justify-content: space-between;
   }
-  .inpurForm {
+  .inputForm {
     width: 350px;
     height: 350px;
   }
@@ -124,7 +130,7 @@
     justify-content: center;
     flex-wrap: wrap;
   }
-  .contatctinfo {
+  .contactInfo {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -137,7 +143,7 @@
     height: 100px;
     flex-wrap: wrap;
   }
-  .inpurForm {
+  .inputForm {
     width: 350px;
     height: 350px;
   }

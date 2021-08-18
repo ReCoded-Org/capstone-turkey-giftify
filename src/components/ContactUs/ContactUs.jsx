@@ -9,21 +9,20 @@ function ContactUs() {
   const [inputdata, setInputData] = useState([]);
   const [inputName, setInputName] = useState("");
   const [inputEmail, setInputEmail] = useState("");
-  const [inputMassege, setInputMassege] = useState("");
+  const [inputMessage, setInputMessage] = useState("");
 
   function handleSubmit(e) {
     e.preventDefault();
-    console.log(inputName);
     db.collection("contactUs")
       .add({
         name: inputName,
         email: inputEmail,
-        massege: inputMassege,
+        Message: inputMessage,
       })
       .then(() => {
         setInputName("");
         setInputEmail("");
-        setInputMassege("");
+        setInputMessage("");
       });
   }
 
@@ -35,7 +34,7 @@ function ContactUs() {
             ...doc.data(),
             name: doc.data().inputName,
             email: doc.data().inputEmail,
-            massege: doc.data().inputMassege,
+            Message: doc.data().inputMessage,
           }))
         );
       });
@@ -47,7 +46,7 @@ function ContactUs() {
     <div className="container">
       <h1>Contact Us</h1>
       <div className="box">
-        <div className="contatctinfo">
+        <div className="contactInfo" >
           <h5>
             {" "}
             <FiMapPin className="icon" /> Turkey - Istanbul
@@ -73,7 +72,8 @@ function ContactUs() {
           </div>
         </div>
         <div>
-          <form className="inpurForm" onSubmit={handleSubmit}>
+          <form className="inputForm" onSubmit={handleSubmit}>
+            
             <h5>Get In Touch</h5>
             <label>
               <h6>Name</h6>
@@ -92,14 +92,25 @@ function ContactUs() {
                 onChange={(e) => setInputEmail(e.target.value)}
               />{" "}
               <br />
-              <h6>Massege</h6>
-              <input
-                className="massege"
-                type="text"
-                name="massege"
-                value={inputMassege}
-                onChange={(e) => setInputMassege(e.target.value)}
+              <h6>Message</h6>
+              {/* <input
+                className="Message"
+                type="Message"
+                name="Message"
+                value={inputMessage}
+                onChange={(e) => setInputMessage(e.target.value)}
+              /> */}
+               <textarea 
+               
+               className="Message"
+                type="Message"
+                name="Message"
+                value={inputMessage}
+                onChange={(e) => setInputMessage(e.target.value)}
+              
+              
               />
+
             </label>
             <input className="submitData" type="submit" value="Submit" />
           </form>

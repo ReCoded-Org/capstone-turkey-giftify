@@ -3,15 +3,15 @@ import { Container } from "react-bootstrap";
 import "./App.css";
 import Footer from "./components/Footer/Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
-import ConactUSPage from "./Container/ContactUSPage";
+import ContactUSPage from "./Container/ContactUSPage";
 
 function App() {
   return (
     <>
       <Container>
-        <Footer />
+      <ContactUSPage />
+      <Footer />
       </Container>
-      <ConactUSPage />
     </>
   );
 }
