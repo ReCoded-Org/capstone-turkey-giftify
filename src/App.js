@@ -8,7 +8,7 @@ import HomePageSecond from "./containers/HomePage/HomePageSecond";
 function App() {
   return (
     <>
-      <Container  className="container-fluid">
+      <Container className="container-fluid">
         <HomePageSecond />
         <Footer />
       </Container>
