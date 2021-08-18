@@ -1,18 +1,11 @@
 import React from "react";
-import { Container } from "react-bootstrap";
 import "./App.css";
-import Footer from "./components/Footer/Footer";
-import "bootstrap/dist/css/bootstrap.min.css";
-import HomePageSecond from "./containers/HomePage/HomePageSecond";
-
+import HomePage from "./containers/HomePage/HomePage";
 function App() {
   return (
-    <>
-      <Container>
-        <HomePageSecond />
-        <Footer />
-      </Container>
-    </>
+    <div className="App">
+      <HomePage />
+    </div>
   );
 }
 

@@ -7,16 +7,9 @@ function Boards({ allItems, testSearchValue }) {
   const [selectedItems, setSelectedItems] = useState("");
 
   //  filter Cards by category
+
   const items = Object.keys(allItems)
-    .filter((value) => {
-      if (selectedItems === "") {
-        return null;
-      } else if (value.toLowerCase().includes(selectedItems.toLowerCase())) {
-        return allItems[value];
-      } else {
-        return null;
-      }
-    })
+    .filter((type) => type.includes(selectedItems))
     .map((item, index) => {
       return (
         <div key={index} className="cards">
@@ -28,7 +21,7 @@ function Boards({ allItems, testSearchValue }) {
                   src={info.image}
                   alt={info.itemName}
                 />
-                <h5>{info.itemName}</h5>
+                <h3>{info.itemName}</h3>
                 <a href="#link">
                   See Details <VscArrowRight />{" "}
                 </a>
@@ -48,13 +41,14 @@ function Boards({ allItems, testSearchValue }) {
           className={categ}
           onClick={(event) => {
             event.preventDefault();
+            // setSelectedItems(allItems[categ].map((info) => { return (info.itemName)}))
             setSelectedItems(categ);
           }}
           key={index}
         >
           {categ}
         </button>
-        <div>{selectedItems === categ ? items : null}</div>
+        {categ === selectedItems ? items : null}
       </div>
     );
   });
@@ -82,6 +76,7 @@ function Boards({ allItems, testSearchValue }) {
                   .toLowerCase()
                   .includes(testSearchValue.toLowerCase())
               ) {
+                console.log(value);
                 return value;
               } else if (
                 value.condition
@@ -101,7 +96,7 @@ function Boards({ allItems, testSearchValue }) {
                     src={info.image}
                     alt={info.itemName}
                   />
-                  <h5>{info.itemName}</h5>
+                  <h3>{info.itemName}</h3>
                   <a href="#link">
                     See Details <VscArrowRight />{" "}
                   </a>
