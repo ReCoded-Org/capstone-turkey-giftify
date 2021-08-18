@@ -1,5 +1,5 @@
 import React from "react";
-import HomePageSecond from "./../SearchBar";
+import HomePageSecond from "./../HomePageSecond";
 import { cleanup } from "@testing-library/react";
 import renderer from "react-test-renderer";
 
