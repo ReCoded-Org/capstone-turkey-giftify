@@ -1,4 +1,4 @@
-//Button is not working from react-bootstrap
+/*Button is not working from react-bootstrap*/
 
 body {
   background-color: #0077b6;
@@ -98,7 +98,7 @@ body {
   white-space: nowrap;
 }
 
-//tablet
+/*tablet*/
 @media (min-width: 768px) and (max-width: 1024px) {
   .hero {
     width: 100%;
@@ -110,7 +110,7 @@ body {
   }
 }
 
-//mobile
+/*mobile*/
 @media only screen and (min-width: 120px) and (max-width: 767px) {
   .hero {
     width: 100%;

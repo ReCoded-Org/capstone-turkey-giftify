@@ -5,7 +5,7 @@ import renderer from "react-test-renderer";
 
 afterEach(cleanup);
 
-it("matches snapshot", () => {
+it("hero section renders corrrectly", () => {
   const tree = renderer.create(<Hero />).toJSON();
   expect(tree).toMatchSnapshot();
 });
