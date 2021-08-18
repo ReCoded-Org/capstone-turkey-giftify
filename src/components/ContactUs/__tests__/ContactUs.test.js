@@ -5,7 +5,7 @@ import renderer from "react-test-renderer";
 
 afterEach(cleanup);
 
-it("matches Received", () => {
+it("matches Snapshot", () => {
   const tree = renderer.create(<ContactUs />).toJSON();
   expect(tree).toMatchSnapshot();
 });

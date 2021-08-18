@@ -9,8 +9,8 @@ function App() {
   return (
     <>
       <Container>
-      <ContactUSPage />
-      <Footer />
+        <ContactUSPage />
+        <Footer />
       </Container>
     </>
   );

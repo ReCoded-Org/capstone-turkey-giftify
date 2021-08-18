@@ -46,7 +46,7 @@ function ContactUs() {
     <div className="container">
       <h1>Contact Us</h1>
       <div className="box">
-        <div className="contactInfo" >
+        <div className="contactInfo">
           <h5>
             {" "}
             <FiMapPin className="icon" /> Turkey - Istanbul
@@ -73,7 +73,6 @@ function ContactUs() {
         </div>
         <div>
           <form className="inputForm" onSubmit={handleSubmit}>
-            
             <h5>Get In Touch</h5>
             <label>
               <h6>Name</h6>
@@ -93,24 +92,13 @@ function ContactUs() {
               />{" "}
               <br />
               <h6>Message</h6>
-              {/* <input
+              <textarea
                 className="Message"
                 type="Message"
                 name="Message"
                 value={inputMessage}
                 onChange={(e) => setInputMessage(e.target.value)}
-              /> */}
-               <textarea 
-               
-               className="Message"
-                type="Message"
-                name="Message"
-                value={inputMessage}
-                onChange={(e) => setInputMessage(e.target.value)}
-              
-              
               />
-
             </label>
             <input className="submitData" type="submit" value="Submit" />
           </form>

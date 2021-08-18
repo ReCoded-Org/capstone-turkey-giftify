@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`matches Received 1`] = `
+exports[`matches Snapshot 1`] = `
 <div
   className="container"
 >
@@ -11,7 +11,7 @@ exports[`matches Received 1`] = `
     className="box"
   >
     <div
-      className="contatctinfo"
+      className="contactInfo"
     >
       <h5>
          
@@ -156,7 +156,7 @@ exports[`matches Received 1`] = `
     </div>
     <div>
       <form
-        className="inpurForm"
+        className="inputForm"
         onSubmit={[Function]}
       >
         <h5>
@@ -186,13 +186,13 @@ exports[`matches Received 1`] = `
            
           <br />
           <h6>
-            Massege
+            Message
           </h6>
-          <input
-            className="massege"
-            name="massege"
+          <textarea
+            className="Message"
+            name="Message"
             onChange={[Function]}
-            type="text"
+            type="Message"
             value=""
           />
         </label>
