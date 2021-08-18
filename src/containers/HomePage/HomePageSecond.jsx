@@ -1,9 +1,9 @@
 import React from "react";
-import "./HomePage.css";
+import "./HomePageSecond.css";
 
 import SearchBar from "../../components/SearchBar/SearchBar";
 
-function HomePage() {
+function HomePageSecond() {
   return (
     <div className="container">
       <SearchBar />
@@ -11,4 +11,4 @@ function HomePage() {
   );
 }
 
-export default HomePage;
+export default HomePageSecond;

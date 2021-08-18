@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Cards from "../Cards/Cards";
 import "./Board.css";
 import { VscArrowRight } from "react-icons/vsc";
 
 function Boards({ allItems, testSearchValue }) {
   const [selectedItems, setSelectedItems] = useState("");
-  console.log(allItems);
+  
   //  filter Cards by category
   const items = Object.keys(allItems)
     .filter((value) => {
@@ -29,7 +29,7 @@ function Boards({ allItems, testSearchValue }) {
                   alt={info.itemName}
                 />
                 <h3>{info.itemName}</h3>
-                <a href="#">
+                <a href="#link">
                   See Details <VscArrowRight />{" "}
                 </a>
               </div>
@@ -82,7 +82,6 @@ function Boards({ allItems, testSearchValue }) {
                   .toLowerCase()
                   .includes(testSearchValue.toLowerCase())
               ) {
-                console.log(value);
                 return value;
               } else if (
                 value.condition
@@ -103,7 +102,7 @@ function Boards({ allItems, testSearchValue }) {
                     alt={info.itemName}
                   />
                   <h3>{info.itemName}</h3>
-                  <a href="#">
+                  <a href="#link">
                     See Details <VscArrowRight />{" "}
                   </a>
                 </div>
