@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`matches snapshot 1`] = `
+exports[`matches Received 1`] = `
 <div
   className="container"
 >
@@ -99,7 +99,7 @@ exports[`matches snapshot 1`] = `
       >
         <h5>
           <a
-            href="#"
+            href="#link"
           >
             <svg
               className="facebook"
@@ -126,7 +126,7 @@ exports[`matches snapshot 1`] = `
         </h5>
         <h5>
           <a
-            href="#"
+            href="#link"
           >
              
             <svg

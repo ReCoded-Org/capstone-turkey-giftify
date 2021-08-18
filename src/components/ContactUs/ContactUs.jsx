@@ -27,10 +27,8 @@ function ContactUs() {
       });
   }
 
-  
-
   useEffect(() => {
-   const getData = () => {
+    const getData = () => {
       db.collection("contactUs").onSnapshot(function (querySnapshot) {
         setInputData(
           querySnapshot.docs.map((doc) => ({
@@ -41,12 +39,10 @@ function ContactUs() {
           }))
         );
       });
-    }
-    getData()
+    };
+    getData();
   }, [inputdata]);
 
-
-  
   return (
     <div className="container">
       <h1>Contact Us</h1>
