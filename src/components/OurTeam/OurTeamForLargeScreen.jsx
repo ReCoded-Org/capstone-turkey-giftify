@@ -9,11 +9,11 @@ const OurTeamForLargeScreen = () => {
       <h1>Our Team</h1>
       <div className="teamMembersCardMainDiv">
         {ourTeamData.map((info, index) => (
-            <Card key={index}>
+          <Card key={index}>
             <Card.Img variant="top" src={info.image} />
             <Card.Body className="CardUpperPart">
               <Card.Title>{info.name}</Card.Title>
-              <Card.Text>{info.speciality}</Card.Text>
+              <Card.Text>Junior Frontend Developer</Card.Text>
             </Card.Body>
             <Card.Body className="CardLowerPart">
               <Card.Link href={info.linkedInLink} target="_blank">

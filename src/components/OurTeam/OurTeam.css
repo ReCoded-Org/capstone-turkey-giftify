@@ -1,3 +1,18 @@
+.ourTeamMainDiv {
+  background-color: #0077b6;
+}
+
+.ourTeamMainDiv > h1 {
+  color: #ffffff;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 4rem;
+  line-height: 82px;
+  text-align: center;
+  margin-top: 1.5%;
+}
+
 .teamMembersCardMainDiv {
   display: flex;
   flex-direction: row;
@@ -19,11 +34,11 @@
   justify-content: space-between;
   align-items: stretch;
   align-content: stretch;
-  background-color: #CAF0F8;
+  background-color: #caf0f8;
   border-radius: 20px;
 }
 
-.card > .card-img-top{
+.card > .card-img-top {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
@@ -54,9 +69,93 @@
   font-size: 1.75rem;
 }
 
-@media only screen and (min-width: 120px) and (max-width: 991px){
-    html{background-color: chartreuse;}
+@media only screen and (min-width: 120px) and (max-width: 767px) {
+  .ourTeamMainDiv > h1 {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 3em;
+    line-height: 35px;
+    text-align: center;
+    margin-top: 1.5%;
+  }
 
-    
-    
+  .teamMembersCardMainDiv {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    align-content: stretch;
+  }
+
+  .teamMembersCard {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: stretch;
+  }
+
+  .teamMembersCard > .card {
+    max-height: 378px;
+    min-height: 450px;
+    width: 80%;
+    margin: 0.75%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: stretch;
+    align-content: stretch;
+    background-color: #caf0f8;
+    border-radius: 20px;
+  }
 }
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .ourTeamMainDiv > h1 {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 3em;
+    line-height: 59px;
+    text-align: center;
+  }
+
+  .teamMembersCardMainDiv {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    align-content: stretch;
+  }
+
+  .teamMembersCard {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: stretch;
+  }
+
+  .teamMembersCard > .card {
+    max-height: 378px;
+    min-height: 480px;
+    width: 80%;
+    margin: 0.75%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: stretch;
+    align-content: stretch;
+    background-color: #caf0f8;
+    border-radius: 20px;
+  }
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
