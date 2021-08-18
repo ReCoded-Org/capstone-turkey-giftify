@@ -27,23 +27,26 @@ function ContactUs() {
       });
   }
 
-  const getData = () => {
-    db.collection("contactUs").onSnapshot(function (querySnapshot) {
-      setInputData(
-        querySnapshot.docs.map((doc) => ({
-          ...doc.data(),
-          name: doc.data().inputName,
-          email: doc.data().inputEmail,
-          massege: doc.data().inputMassege,
-        }))
-      );
-    });
-  };
+  
 
   useEffect(() => {
-    getData();
-  }, []);
+   const getData = () => {
+      db.collection("contactUs").onSnapshot(function (querySnapshot) {
+        setInputData(
+          querySnapshot.docs.map((doc) => ({
+            ...doc.data(),
+            name: doc.data().inputName,
+            email: doc.data().inputEmail,
+            massege: doc.data().inputMassege,
+          }))
+        );
+      });
+    }
+    getData()
+  }, [inputdata]);
 
+
+  
   return (
     <div className="container">
       <h1>Contact Us</h1>
@@ -61,12 +64,12 @@ function ContactUs() {
           </h5>
           <div className="sosyalMed">
             <h5>
-              <a href="#">
+              <a href="#link">
                 <ImFacebook2 className="facebook" /> Giftify
               </a>
             </h5>
             <h5>
-              <a href="#">
+              <a href="#link">
                 {" "}
                 <GrInstagram className="instagram" /> Giftify
               </a>{" "}
