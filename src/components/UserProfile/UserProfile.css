@@ -1,96 +1,72 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 body {
   background-color: #0077b6;
 }
 
-#userProfile {
-  height: 200px;
-  width: 54%;
+.profileRender {
+  display: flex;
+  justify-content: center;
+}
+
+.profilePage {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  align-content: stretch;
   background-color: #caf0f8;
-  margin-left: 23%;
-  align-items: center;
-  border-radius: 21px;
-  padding: 4%;
+  box-shadow: 0px 0px 1px rgba(40, 41, 61, 0.04),
+    0px 2px 4px rgba(96, 97, 112, 0.16);
+  border-radius: 20px;
+  margin-top: 5%;
+  padding: 6%;
+  width: 85%;
 }
 
-img {
-  float: left;
-  width: 100.64px;
-  height: 90.64px;
-  background-color: blueviolet;
-  margin-left: 5%;
-  margin-bottom: 0%;
-  padding-bottom: 0;
+.profilePic > img {
+  width: 200px;
+  height: 200px;
 }
 
-#myCont {
-  float: right;
-  width: 70%;
-  margin-bottom: 0;
-  padding-bottom: 0;
-  text-align: left;
-  padding-top: 3%;
-  margin-right: 5%;
-}
-
-h3 {
-  color: #212529;
-  font-family: Roboto;
-  font-style: bold;
-  white-space: nowrap;
-}
-
-button {
-  float: right;
-  display: inline;
-  width: 47%;
-  margin-left: 0;
-  margin-right: 0%;
+.editBtn > button {
   border: 1px solid #023e8a;
   box-sizing: border-box;
-  border-radius: 2px;
   background-color: #caf0f8;
   color: #023e8a;
   font-family: Roboto;
   font-style: normal;
   text-align: center;
+  padding: 0 20px;
 }
+
+h2,
 p {
-  color: #6c757d;
-}
-#belowSection {
-  margin-left: 5%;
-  margin-top: 3%;
-}
-h5 {
-  text-align: left;
+  color: #212529;
   font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 25.16px;
-  line-height: 43px;
-  color: #495057;
-}
-
-hr {
-  background-color: #0096c7;
-  margin: 0 5%;
-}
-
-#navbarCosplay {
-  height: 30px;
-  margin-bottom: 30px;
-  text-align: center;
 }
 
 /*tablet*/
-@media (min-width: 768px) and (max-width: 1024px) {
-  #userProfile {
-    width: 66%;
-    margin-left: 17%;
+@media (min-width: 768px) and (max-width: 991px) {
+  .profilePage {
+    width: 105%;
   }
 }
 
 /*mobile*/
 @media only screen and (min-width: 120px) and (max-width: 767px) {
+  .profilePage {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: stretch;
+  }
+
+  .texts {
+    margin: 5% 0%;
+    text-align: center;
+  }
 }
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
