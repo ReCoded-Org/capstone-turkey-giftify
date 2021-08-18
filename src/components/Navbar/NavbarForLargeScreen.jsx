@@ -16,7 +16,7 @@ const NavbarForLargeScreen = () => {
               {info.name}
             </Link>
           ))}
-          <DropdownButton id="dropdownBasicButton" title="Language">
+          <DropdownButton className="dropdownBasicButton" title="Language">
             <Dropdown.Item href="#/action-1">TUR</Dropdown.Item>
             <Dropdown.Item href="#/action-2">ENG</Dropdown.Item>
           </DropdownButton>

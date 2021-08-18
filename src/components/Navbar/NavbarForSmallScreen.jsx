@@ -73,7 +73,7 @@ const NavbarForSmallScreen = () => {
           ))}
           <li className="navLi navLiLang">
             <GeoAlt style={{ color: "black" }} />
-            <DropdownButton id="dropdownBasicButton" title="Language">
+            <DropdownButton className="dropdownBasicButton" title="Language">
               <Dropdown.Item href="#/action-1" onClick={showSidebar}>
                 TUR
               </Dropdown.Item>

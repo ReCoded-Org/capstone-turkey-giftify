@@ -277,14 +277,13 @@ Array [
           />
         </svg>
         <div
-          className="dropdown"
+          className="dropdownBasicButton dropdown"
         >
           <button
             aria-expanded={false}
             aria-haspopup={true}
             className="dropdown-toggle btn btn-primary"
             disabled={false}
-            id="dropdownBasicButton"
             onClick={[Function]}
             type="button"
           >
