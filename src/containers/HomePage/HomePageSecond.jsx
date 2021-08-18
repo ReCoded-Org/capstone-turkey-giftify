@@ -1,14 +1,17 @@
 import React from "react";
 import "./HomePageSecond.css";
-
+import { Container } from "react-bootstrap";
 import SearchBar from "../../components/SearchBar/SearchBar";
 
 function HomePageSecond() {
   return (
-    <div className="container">
+    <>
+    
+    <Container  fluid id = "container">
       <SearchBar />
-    </div>
-  );
+      </Container>
+    </>  
+    );
 }
 
 export default HomePageSecond;

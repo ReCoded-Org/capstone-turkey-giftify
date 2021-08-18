@@ -1,3 +1,5 @@
+
+
 .itemImage {
   height: 150px;
 }
@@ -35,7 +37,8 @@
 }
 
 .submit {
-  height: 30px;
+  height: 40px;
+  width: 100px;
   border-radius: 20px;
   margin-top: 20px;
   background-color: #023e8a;
@@ -44,4 +47,6 @@
 
 .parag {
   color: white;
+  text-align: center;
+  margin-bottom: 20px;
 }

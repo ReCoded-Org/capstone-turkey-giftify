@@ -28,7 +28,7 @@ function Boards({ allItems, testSearchValue }) {
                   src={info.image}
                   alt={info.itemName}
                 />
-                <h3>{info.itemName}</h3>
+                <h5>{info.itemName}</h5>
                 <a href="#link">
                   See Details <VscArrowRight />{" "}
                 </a>
@@ -101,7 +101,7 @@ function Boards({ allItems, testSearchValue }) {
                     src={info.image}
                     alt={info.itemName}
                   />
-                  <h3>{info.itemName}</h3>
+                  <h5>{info.itemName}</h5>
                   <a href="#link">
                     See Details <VscArrowRight />{" "}
                   </a>
