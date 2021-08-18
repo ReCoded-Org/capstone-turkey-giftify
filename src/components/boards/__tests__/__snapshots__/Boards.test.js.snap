@@ -5,36 +5,3 @@ exports[`matches Received 1`] = `
   <div />
 </div>
 `;
-
-exports[`matches snapshot 1`] = `
-<div>
-  <div
-    className="categories"
-  >
-    <button
-      className="oneCategory householdAppliances"
-      onClick={[Function]}
-    >
-      Household Appliances
-    </button>
-    <button
-      className="oneCategory furniture"
-      onClick={[Function]}
-    >
-      Furniture
-    </button>
-    <button
-      className="oneCategory clothes"
-      onClick={[Function]}
-    >
-      Clothes
-    </button>
-    <button
-      className="oneCategory"
-      onClick={[Function]}
-    >
-      All
-    </button>
-  </div>
-</div>
-`;

@@ -5,7 +5,7 @@ import { VscArrowRight } from "react-icons/vsc";
 
 function Boards({ allItems, testSearchValue }) {
   const [selectedItems, setSelectedItems] = useState("");
-  
+
   //  filter Cards by category
   const items = Object.keys(allItems)
     .filter((value) => {
