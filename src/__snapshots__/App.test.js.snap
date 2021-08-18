@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`matches Received 1`] = `
+exports[`matches snapshot 1`] = `
 <div
   className="App"
 >
@@ -29,8 +29,40 @@ exports[`matches Received 1`] = `
         value="Submit"
       />
     </form>
+    <div
+      className="cards"
+    />
     <div>
-      <div />
+      <div>
+        <div
+          className="categories"
+        >
+          <button
+            className="oneCategory householdAppliances"
+            onClick={[Function]}
+          >
+            Household Appliances
+          </button>
+          <button
+            className="oneCategory furniture"
+            onClick={[Function]}
+          >
+            Furniture
+          </button>
+          <button
+            className="oneCategory clothes"
+            onClick={[Function]}
+          >
+            Clothes
+          </button>
+          <button
+            className="oneCategory"
+            onClick={[Function]}
+          >
+            All
+          </button>
+        </div>
+      </div>
     </div>
   </div>
 </div>

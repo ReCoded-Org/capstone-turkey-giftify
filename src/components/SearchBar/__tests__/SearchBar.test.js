@@ -5,7 +5,7 @@ import renderer from "react-test-renderer";
 
 afterEach(cleanup);
 
-it("matches Received", () => {
+it("matches snapshot", () => {
   const tree = renderer.create(<SearchBar />).toJSON();
   expect(tree).toMatchSnapshot();
 });
