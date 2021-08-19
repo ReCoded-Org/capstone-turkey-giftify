@@ -41,7 +41,6 @@ function Boards({ allItems, testSearchValue }) {
           className={categ}
           onClick={(event) => {
             event.preventDefault();
-            // setSelectedItems(allItems[categ].map((info) => { return (info.itemName)}))
             setSelectedItems(categ);
           }}
           key={index}
