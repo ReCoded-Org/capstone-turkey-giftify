@@ -10,7 +10,6 @@ import Navbar from "./components/Navbar/Navbar";
 import HomePage from "./containers/HomePage/HomePage";
 import RequestItem from "./containers/RequestItem/RequestItem";
 
-
 function App() {
   return (
     <>
@@ -22,11 +21,10 @@ function App() {
           {/* <Route path="/donations" component={Donations} />
           <Route path="/about" component={About} />
           <Route path="/contactUs" component={ContactUs} /> */}
-          <ContactUSPage />    
+          <ContactUSPage />
           <Route path="/" component={Footer} />
         </Router>
       </Container>
-
     </>
   );
 }
