@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 .App {
   text-align: center;
   background-color: #0077b6;
@@ -38,9 +37,3 @@
     transform: rotate(360deg);
   }
 }
-=======
-.mainContainer {
-  padding: 0 !important;
-  background-color: #0077b6;
-}
->>>>>>> dev
