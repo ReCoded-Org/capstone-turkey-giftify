@@ -5,7 +5,7 @@ import renderer from "react-test-renderer";
 
 afterEach(cleanup);
 
-it("matches snapshot", () => {
+it("about rendered correctly", () => {
   const tree = renderer.create(<About />).toJSON();
   expect(tree).toMatchSnapshot();
 });
