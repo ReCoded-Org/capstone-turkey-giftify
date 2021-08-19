@@ -22,6 +22,9 @@
   background-color: #ade8f4;
   border-radius: 10%;
   margin: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .oneCard a {

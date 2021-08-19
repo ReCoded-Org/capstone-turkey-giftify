@@ -7,7 +7,6 @@ function Boards({ allItems, testSearchValue }) {
   const [selectedItems, setSelectedItems] = useState("");
 
   //  filter Cards by category
-
   const items = Object.keys(allItems)
     .filter((type) => type.includes(selectedItems))
     .map((item, index) => {
@@ -41,7 +40,6 @@ function Boards({ allItems, testSearchValue }) {
           className={categ}
           onClick={(event) => {
             event.preventDefault();
-            // setSelectedItems(allItems[categ].map((info) => { return (info.itemName)}))
             setSelectedItems(categ);
           }}
           key={index}
