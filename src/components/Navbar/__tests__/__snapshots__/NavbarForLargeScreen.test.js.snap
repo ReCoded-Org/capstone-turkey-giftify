@@ -1,0 +1,118 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavbarForLargeScreen rendered correctly 1`] = `
+<div
+  className="navbar"
+>
+  <div
+    className="navbarLogo"
+  >
+    <a
+      href="/"
+      onClick={[Function]}
+    >
+      LOGO
+    </a>
+  </div>
+  <div
+    className="navbarLinks"
+  >
+    <a
+      className="eachLinksInNavbar"
+      href="/"
+      onClick={[Function]}
+    >
+      Home
+    </a>
+    <a
+      className="eachLinksInNavbar"
+      href="/#search"
+      onClick={[Function]}
+    >
+      Search
+    </a>
+    <a
+      className="eachLinksInNavbar"
+      href="/requests"
+      onClick={[Function]}
+    >
+      Requests
+    </a>
+    <a
+      className="eachLinksInNavbar"
+      href="/donations"
+      onClick={[Function]}
+    >
+      Donations
+    </a>
+    <a
+      className="eachLinksInNavbar"
+      href="/about"
+      onClick={[Function]}
+    >
+      About
+    </a>
+    <a
+      className="eachLinksInNavbar"
+      href="/contactUs"
+      onClick={[Function]}
+    >
+      Contact Us
+    </a>
+    <div
+      className="dropdownBasicButton dropdown"
+    >
+      <button
+        aria-expanded={false}
+        aria-haspopup={true}
+        className="dropdown-toggle btn btn-primary"
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      >
+        Language
+      </button>
+    </div>
+  </div>
+  <div
+    className="navbarProfile"
+  >
+    <a
+      href="/logIn"
+      onClick={[Function]}
+    >
+      <button
+        className="btn btn-primary"
+        disabled={false}
+        style={
+          Object {
+            "borderRadius": "0.75rem",
+            "marginBottom": "5%",
+          }
+        }
+        type="button"
+      >
+        Log In
+      </button>
+    </a>
+    <a
+      href="/signUp"
+      onClick={[Function]}
+    >
+      <button
+        className="btn btn-primary"
+        disabled={false}
+        style={
+          Object {
+            "borderRadius": "0.75rem",
+            "marginBottom": "5%",
+          }
+        }
+        type="button"
+      >
+        Sign Up
+      </button>
+    </a>
+  </div>
+</div>
+`;
