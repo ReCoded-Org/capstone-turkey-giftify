@@ -8,7 +8,6 @@ import Footer from "./components/Footer/Footer";
 import Navbar from "./components/Navbar/Navbar";
 import HomePage from "./containers/HomePage/HomePage";
 import RequestItem from "./containers/RequestItem/RequestItem";
-import { BrowserRouter as Router, Route } from "react-router-dom";
 
 function App() {
   return (
@@ -24,7 +23,7 @@ function App() {
           <Route path="/" component={Footer} />
         </Router>
       </Container>
-    </Router>
+    </>
   );
 }
 
