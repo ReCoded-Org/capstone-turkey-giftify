@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`matches snapshot 1`] = `
+exports[`NavbarForSmallScreen rendered correctly 1`] = `
 Array [
   <div
     className="navbarMobile"

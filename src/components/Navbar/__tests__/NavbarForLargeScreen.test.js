@@ -5,7 +5,7 @@ import renderer from "react-test-renderer";
 
 afterEach(cleanup);
 
-it("matches snapshot", () => {
+it("NavbarForLargeScreen  rendered correctly", () => {
   const tree = renderer.create(<NavbarForLargeScreen />).toJSON();
   expect(tree).toMatchSnapshot();
 });
