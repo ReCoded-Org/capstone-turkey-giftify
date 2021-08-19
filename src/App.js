@@ -13,15 +13,12 @@ function App() {
       <Container>
         <Router>
           <Route path="/" component={Navbar} />
-          {/* 
-          <Route exact path="/" component={Home} />
+          {/* <Route exact path="/" component={Home} />
           <Route path="/requests" component={Requests} />
           <Route path="/donations" component={Donations} />
-          <Route path="/contactUs" component={ContactUs} /> 
-          */}
-          <Route exact path="/about">
-            <About />
-          </Route>
+          <Route path="/about" component={About} />
+          <Route path="/contactUs" component={ContactUs} /> */}
+          <Route path="/about" component={About} />
           <Route path="/" component={Footer} />
         </Router>
       </Container>
