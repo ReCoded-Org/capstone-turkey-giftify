@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { Link, BrowserRouter as Router } from "react-router-dom";
 import { List, GeoAlt } from "react-bootstrap-icons";
 import { Button, Dropdown, DropdownButton } from "react-bootstrap";
-import { smallScreenNavbarData } from "./../../containers/Navbar/smallScreenNavbarData.js";
+import { smallScreenNavbarData } from "./../../data/Navbar/smallScreenNavbarData.js";
 
 const NavbarForSmallScreen = () => {
   const [sidebar, setSidebar] = useState(false);
