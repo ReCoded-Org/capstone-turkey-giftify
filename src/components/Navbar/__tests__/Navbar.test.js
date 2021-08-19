@@ -5,7 +5,7 @@ import renderer from "react-test-renderer";
 
 afterEach(cleanup);
 
-it("Navbar  rendered correctly", () => {
+it("Navbar rendered correctly", () => {
   const tree = renderer.create(<Navbar />).toJSON();
   expect(tree).toMatchSnapshot();
 });
