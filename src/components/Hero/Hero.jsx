@@ -2,7 +2,6 @@ import React from "react";
 import "./Hero.css";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 import { Button } from "react-bootstrap";
-//Button is not working from react-bootstrap
 
 function Hero() {
   return (
