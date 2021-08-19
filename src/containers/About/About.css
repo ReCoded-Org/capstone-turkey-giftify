@@ -144,7 +144,6 @@
   .middleAreaImage > img {
     max-width: 80%;
     width: 100%;
-    transform: matrix(-1, 0, 0, 1, 0, 0);
   }
 
   .middleAreaTextbox {

@@ -1,11 +1,11 @@
 import React from "react";
-import About from "./../../../containers/About/About";
+import Navbar from "./../Navbar";
 import { cleanup } from "@testing-library/react";
 import renderer from "react-test-renderer";
 
 afterEach(cleanup);
 
-it("About rendered correctly", () => {
-  const tree = renderer.create(<About />).toJSON();
+it("Navbar rendered correctly", () => {
+  const tree = renderer.create(<Navbar />).toJSON();
   expect(tree).toMatchSnapshot();
 });
