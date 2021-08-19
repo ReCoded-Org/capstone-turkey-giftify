@@ -5,3 +5,9 @@ exports[`matches Received 1`] = `
   <div />
 </div>
 `;
+
+exports[`renders boards correctly 1`] = `
+<div>
+  <div />
+</div>
+`;
