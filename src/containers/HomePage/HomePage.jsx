@@ -3,6 +3,7 @@ import { Container } from "react-bootstrap";
 import HomePageItems from "../../components/HomePageItems/HomePageItems";
 import "./HomePage.css";
 import db from "../../firebase";
+import Hero from "../../components/Hero/Hero";
 
 // After deciding on the database structure,the example function below should be deleted and
 // replaced with a function that reads categories from firebase, takes 8 items by random
@@ -27,6 +28,7 @@ function HomePage() {
 
   return (
     <Container>
+      <Hero />
       <HomePageItems dbItems={dbItems} />
     </Container>
   );

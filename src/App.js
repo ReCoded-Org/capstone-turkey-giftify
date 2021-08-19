@@ -16,7 +16,7 @@ function App() {
       <Container fluid className="mainContainer">
         <Router>
           <Route path="/" component={Navbar} />
-          <Route exact path="/" component={Hero} />
+          <Route exact path="/" component={HomePage} />
           {/* <Route path="/requests" component={Requests} />
           <Route path="/donations" component={Donations} />
           <Route path="/about" component={About} />
