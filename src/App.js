@@ -19,7 +19,9 @@ function App() {
           <Route path="/donations" component={Donations} />
           <Route path="/contactUs" component={ContactUs} /> 
           */}
-          <Route exact path="/about" component={About} />
+          <Route exact path="/about">
+            <About />
+          </Route>
           <Route path="/" component={Footer} />
         </Router>
       </Container>
