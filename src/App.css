@@ -6,3 +6,8 @@
   align-items: stretch;
   align-content: stretch;
 }
+
+.mainContainer {
+  padding: 0 !important;
+  background-color: #0077b6;
+}
