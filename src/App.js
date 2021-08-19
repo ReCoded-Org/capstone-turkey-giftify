@@ -20,10 +20,9 @@ function App() {
           {/* <Route path="/donations" component={Donations} />
           <Route path="/about" component={About} />
           <Route path="/contactUs" component={ContactUs} /> */}
-            <HomePageSecondPart/>
+          <HomePageSecondPart />
           <Route path="/" component={Footer} />
         </Router>
-      
       </Container>
     </>
   );
