@@ -1,11 +1,11 @@
 import React from "react";
-import ContactUs from "./../ContactUs";
+import Navbar from "./../Navbar";
 import { cleanup } from "@testing-library/react";
 import renderer from "react-test-renderer";
 
 afterEach(cleanup);
 
-it("ContactUs renders correctly ", () => {
-  const tree = renderer.create(<ContactUs />).toJSON();
+it("Navbar rendered correctly", () => {
+  const tree = renderer.create(<Navbar />).toJSON();
   expect(tree).toMatchSnapshot();
 });
