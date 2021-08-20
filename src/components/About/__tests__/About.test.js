@@ -1,5 +1,5 @@
 import React from "react";
-import About from "./../../../containers/About/About";
+import About from "./../About";
 import { cleanup } from "@testing-library/react";
 import renderer from "react-test-renderer";
 
