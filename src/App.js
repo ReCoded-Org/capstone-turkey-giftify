@@ -7,7 +7,7 @@ import "./App.css";
 import Footer from "./components/Footer/Footer";
 import Navbar from "./components/Navbar/Navbar";
 import HomePage from "./containers/HomePage/HomePage"; // eslint-disable-next-line
-import RequestItem from "./containers/RequestItem/RequestItem"; 
+import RequestItem from "./containers/RequestItem/RequestItem";
 
 function App() {
   return (
