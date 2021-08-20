@@ -16,7 +16,7 @@ const About = () => {
           <p>
             <span className="spanDescription">
               <br />
-              Our Mision: 
+              Our Mision:{" "}
             </span>
             Trade things are no longer used between people for a clean
             environment

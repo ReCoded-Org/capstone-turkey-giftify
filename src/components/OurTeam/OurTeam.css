@@ -25,7 +25,7 @@
 
 .teamMembersCardMainDiv > .card {
   max-height: 378px;
-  min-height: 450px;
+  min-height: 600px;
   width: 80%;
   margin: 0.5%;
   display: flex;
@@ -100,7 +100,24 @@
 
   .teamMembersCard > .card {
     max-height: 378px;
-    min-height: 450px;
+    min-height: 500px;
+    width: 80%;
+    margin: 0.75%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: stretch;
+    align-content: stretch;
+    background-color: #caf0f8;
+    border-radius: 20px;
+  }
+}
+
+@media only screen and (min-width: 120px) and (max-width: 531px) {
+  .teamMembersCard > .card {
+    max-height: 378px;
+    min-height: 385px;
     width: 80%;
     margin: 0.75%;
     display: flex;
@@ -144,7 +161,7 @@
 
   .teamMembersCard > .card {
     max-height: 378px;
-    min-height: 480px;
+    min-height: 625px;
     width: 80%;
     margin: 0.75%;
     display: flex;
