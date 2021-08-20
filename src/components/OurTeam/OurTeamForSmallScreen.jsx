@@ -1,7 +1,7 @@
 import React from "react";
 import { Card } from "react-bootstrap";
 import { Linkedin, Github } from "react-bootstrap-icons";
-import { ourTeamData } from "./../../containers/OurTeam/ourTeamData";
+import { ourTeamData } from "./../../data/OurTeam/ourTeamData";
 
 const OurTeamForSmallScreen = () => {
   return (
