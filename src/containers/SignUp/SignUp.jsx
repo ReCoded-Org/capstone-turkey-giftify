@@ -1,7 +1,7 @@
 import React from "react";
-import { Form, Button, Container } from "react-bootstrap";
+import { Form, Button, Container, Row, Col } from "react-bootstrap";
 import { useState } from "react";
-import cities from "./cities.json";
+import cities from "../../data/SignUp/cities.json";
 
 //Create form fields first with bootstrap, then connect it to firebase
 
@@ -28,13 +28,17 @@ function SignUp() {
     }
 
     setValidated(true);
+
+    //need to implement writing to firebase here
   };
 
   return (
-    <Container>
+    <Container className="fluid">
       <Form noValidate validated={validated} onSubmit={handleSubmit}>
-        <Form.Group>
-          <Form.File id="profileImg" label="Profile Picture" />
+        <Form.Group as={Row}>
+          <Col sm={{ span: 10, offset: 5 }}>
+            <Form.File id="profileImg" label="Profile Picture" />
+          </Col>
         </Form.Group>
 
         <Form.Group controlId="formFirstName">
@@ -68,7 +72,7 @@ function SignUp() {
             placeholder="Enter email"
             required
           />
-          <Form.Text className="text-muted">
+          <Form.Text className="text-warning">
             We'll never share your email with anyone else.
           </Form.Text>
         </Form.Group>
@@ -112,6 +116,10 @@ function SignUp() {
 
         <Button variant="primary" type="submit">
           Sign Up!
+        </Button>
+
+        <Button variant="light" type="button">
+          Log In!
         </Button>
       </Form>
     </Container>
