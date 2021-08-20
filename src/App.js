@@ -5,10 +5,9 @@ import { Route } from "react-router";
 import { BrowserRouter as Router } from "react-router-dom";
 import "./App.css";
 import Footer from "./components/Footer/Footer";
-import Hero from "./components/Hero/Hero";
 import Navbar from "./components/Navbar/Navbar";
-import HomePage from "./containers/HomePage/HomePage";
-import RequestItem from "./containers/RequestItem/RequestItem";
+import HomePage from "./containers/HomePage/HomePage"; // eslint-disable-next-line
+import RequestItem from "./containers/RequestItem/RequestItem"; 
 
 function App() {
   return (
