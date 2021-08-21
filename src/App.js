@@ -6,7 +6,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import "./App.css";
 import Footer from "./components/Footer/Footer";
 import Navbar from "./components/Navbar/Navbar";
-import HomePage from "./containers/HomePage/HomePage"; // eslint-disable-next-line
+import HomePage from "./containers/HomePage/HomePage";
 import RequestItem from "./containers/RequestItem/RequestItem";
 
 function App() {
