@@ -76,7 +76,6 @@ function Boards({ allItems, testSearchValue }) {
                   .toLowerCase()
                   .includes(testSearchValue.toLowerCase())
               ) {
-                console.log(value);
                 return value;
               } else if (
                 value.condition
