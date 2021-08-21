@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`matches Received 1`] = `
+exports[`App rendered correctly 1`] = `
 <div
   className="mainContainer container-fluid"
 >
@@ -124,34 +124,34 @@ exports[`matches Received 1`] = `
     <div
       className="homePageItems row row-cols-xl-4 row-cols-md-3 row-cols-2"
     />
-  </div>
-  <div>
-    <h2
-      className="parag"
-    >
-      Or would you like to search for yourself ?
-    </h2>
-    <form
-      className="form"
-      onSubmit={[Function]}
-    >
-      <label>
-        <input
-          className="searchBar"
-          name="name"
-          onChange={[Function]}
-          type="text"
-          value=""
-        />
-      </label>
-      <input
-        className="submit"
-        type="submit"
-        value="Submit"
-      />
-    </form>
     <div>
-      <div />
+      <h2
+        className="parag"
+      >
+        Or would you like to search for yourself ?
+      </h2>
+      <form
+        className="form"
+        onSubmit={[Function]}
+      >
+        <label>
+          <input
+            className="searchBar"
+            name="name"
+            onChange={[Function]}
+            type="text"
+            value=""
+          />
+        </label>
+        <input
+          className="submit"
+          type="submit"
+          value="Submit"
+        />
+      </form>
+      <div>
+        <div />
+      </div>
     </div>
   </div>
   <nav
