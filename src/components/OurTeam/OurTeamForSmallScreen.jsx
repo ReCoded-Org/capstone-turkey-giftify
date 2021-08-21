@@ -9,8 +9,9 @@ const OurTeamForSmallScreen = () => {
       <h1>Our Team</h1>
       <div className="teamMembersCardMainDiv">
         <div className="teamMembersCard">
-          {ourTeamData.map((info, index) => {
-            return index < 2 ? (
+          {ourTeamData
+            .filter((info, index) => index < 2)
+            .map((info) => (
               <Card key={info.id}>
                 <Card.Img variant="top" src={info.image} />
                 <Card.Body className="CardUpperPart">
@@ -26,14 +27,12 @@ const OurTeamForSmallScreen = () => {
                   </Card.Link>
                 </Card.Body>
               </Card>
-            ) : (
-              <span key={index}></span>
-            );
-          })}
+            ))}
         </div>
         <div className="teamMembersCard">
-          {ourTeamData.map((info, index) => {
-            return 1 < index ? (
+          {ourTeamData
+            .filter((info, index) => index > 1)
+            .map((info) => (
               <Card key={info.id}>
                 <Card.Img variant="top" src={info.image} />
                 <Card.Body className="CardUpperPart">
@@ -49,10 +48,7 @@ const OurTeamForSmallScreen = () => {
                   </Card.Link>
                 </Card.Body>
               </Card>
-            ) : (
-              <span key={index}></span>
-            );
-          })}
+            ))}
         </div>
       </div>
     </div>
@@ -60,3 +56,48 @@ const OurTeamForSmallScreen = () => {
 };
 
 export default OurTeamForSmallScreen;
+
+// {ourTeamData.map((info, index) => {
+//   return index < 2 ? (
+//     <Card key={info.id}>
+//       <Card.Img variant="top" src={info.image} />
+//       <Card.Body className="CardUpperPart">
+//         <Card.Title>{info.name}</Card.Title>
+//         <Card.Text>Junior Frontend Developer</Card.Text>
+//       </Card.Body>
+//       <Card.Body className="CardLowerPart">
+//         <Card.Link href={info.linkedInLink} target="_blank">
+//           <Linkedin />
+//         </Card.Link>
+//         <Card.Link href={info.githubLink} target="_blank">
+//           <Github />
+//         </Card.Link>
+//       </Card.Body>
+//     </Card>
+//   ) : (
+//     <span key={index}></span>
+//   );
+// })}
+// </div>
+// <div className="teamMembersCard">
+// {ourTeamData.map((info, index) => {
+//   return 1 < index ? (
+//     <Card key={info.id}>
+//       <Card.Img variant="top" src={info.image} />
+//       <Card.Body className="CardUpperPart">
+//         <Card.Title>{info.name}</Card.Title>
+//         <Card.Text>Junior Frontend Developer</Card.Text>
+//       </Card.Body>
+//       <Card.Body className="CardLowerPart">
+//         <Card.Link href={info.linkedInLink} target="_blank">
+//           <Linkedin />
+//         </Card.Link>
+//         <Card.Link href={info.githubLink} target="_blank">
+//           <Github />
+//         </Card.Link>
+//       </Card.Body>
+//     </Card>
+//   ) : (
+//     <span key={index}></span>
+//   );
+// })}

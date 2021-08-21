@@ -133,14 +133,10 @@ exports[`OurTeamForSmallScreen rendered correctly 1`] = `
           </a>
         </div>
       </div>
-      <span />
-      <span />
     </div>
     <div
       className="teamMembersCard"
     >
-      <span />
-      <span />
       <div
         className="card"
       >
