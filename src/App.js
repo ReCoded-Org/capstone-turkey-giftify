@@ -9,7 +9,6 @@ import AboutUs from "./containers/About/AboutUs";
 import Navbar from "./components/Navbar/Navbar";
 import HomePage from "./containers/HomePage/HomePage";
 import RequestItem from "./containers/RequestItem/RequestItem";
-import HomePageSecondPart from "./containers/HomePageSecondPart/HomePageSecondPart";
 function App() {
   return (
     <>
@@ -17,7 +16,6 @@ function App() {
         <Router>
           <Route path="/" component={Navbar} />
           <Route exact path="/" component={HomePage} />
-          <Route exact path="/" component={HomePageSecondPart} />
           <Route exact path="/request-item/:id" component={RequestItem} />
           {/* <Route path="/donations" component={Donations} />
           <Route path="/about" component={About} />

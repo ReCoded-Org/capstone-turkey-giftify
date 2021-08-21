@@ -5,7 +5,7 @@ import renderer from "react-test-renderer";
 
 afterEach(cleanup);
 
-it("matches Received", () => {
+it("App rendered correctly", () => {
   const tree = renderer.create(<App />).toJSON();
   expect(tree).toMatchSnapshot();
 });
