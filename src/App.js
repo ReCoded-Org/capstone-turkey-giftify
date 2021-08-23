@@ -9,6 +9,7 @@ import AboutUs from "./containers/About/AboutUs";
 import Navbar from "./components/Navbar/Navbar";
 import HomePage from "./containers/HomePage/HomePage";
 import RequestItem from "./containers/RequestItem/RequestItem";
+import RequestsPage from "./components/RequestsPage/RequestsPage"
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/contactUs" component={ContactUs} /> */}
           <Route exact path="/about" component={AboutUs} />
           <Route path="/" component={Footer} />
+          <Route exact path="/requestsPage" component={RequestsPage}/>
         </Router>
       </Container>
     </>
