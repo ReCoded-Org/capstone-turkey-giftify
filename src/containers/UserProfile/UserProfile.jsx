@@ -7,10 +7,10 @@ function UserProfile() {
   const [edit, setEdit] = useState(false);
 
   function handleClick() {
-    console.log("tıkladım :D");
     setEdit((edit) => !edit);
   }
 
+  //needs work
   function handleSubmit() {
     console.log("Data Edited");
   }
