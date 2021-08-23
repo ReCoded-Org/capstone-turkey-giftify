@@ -5,7 +5,7 @@ import React from "react"
 
 function SignUp () {
     return (
-
+      <h4>SignUp</h4>
     )
 }
 
