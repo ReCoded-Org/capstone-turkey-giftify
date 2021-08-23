@@ -11,6 +11,18 @@ function ContactUs() {
   const [inputEmail, setInputEmail] = useState("");
   const [inputMessage, setInputMessage] = useState("");
 
+  // const [inputs, setInputs] = useState ({
+  //   inputName: "",
+  //   inputEmail: "",
+  //   inputMessage: ""
+  // });
+
+
+  // useEffect(() => {
+  //   setInputName(inputName: "yor name")
+  //   console.log(inputs.inputName)
+  // }, [inputs])
+
   function handleSubmit(e) {
     e.preventDefault();
     db.collection("contactUs")
@@ -26,21 +38,24 @@ function ContactUs() {
       });
   }
 
-  useEffect(() => {
-    const getData = () => {
-      db.collection("contactUs").onSnapshot(function (querySnapshot) {
-        setInputData(
-          querySnapshot.docs.map((doc) => ({
-            ...doc.data(),
-            name: doc.data().inputName,
-            email: doc.data().inputEmail,
-            Message: doc.data().inputMessage,
-          }))
-        );
-      });
-    };
+  const getData = () => {
+    db.collection("contactUs").onSnapshot(function (querySnapshot) {
+      setInputData(
+        querySnapshot.docs.map((doc) => ({
+          ...doc.data(),
+          name: doc.data().inputName,
+          email: doc.data().inputEmail,
+          Message: doc.data().inputMessage,
+        }))
+      );
+    });
+  };
+
+  useEffect(() => {    
     getData();
   }, [inputdata]);
+
+  
 
   return (
     <div className="container">
@@ -93,9 +108,9 @@ function ContactUs() {
               <br />
               <h6>Message</h6>
               <textarea
-                className="Message"
-                type="Message"
-                name="Message"
+                className="message"
+                type="text"
+                name="text"
                 value={inputMessage}
                 onChange={(e) => setInputMessage(e.target.value)}
               />

@@ -15,6 +15,7 @@
   height: 400px;
   width: 350px;
 }
+
 .contactInfo a {
   color: white;
 }
@@ -52,7 +53,7 @@
   border-radius: 20px;
 }
 
-.Message {
+.message {
   height: 100px;
   width: 100%;
   border-color: #006eff;
