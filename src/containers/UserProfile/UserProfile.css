@@ -23,6 +23,17 @@ body {
   width: 85%;
 }
 
+.profilePic {
+  width: 200px;
+  height: 200px;
+}
+
+.profilePicEntry {
+  background-color: #0077b6;
+  width: 130px;
+  height: 130px;
+}
+
 .profilePic > img {
   width: 200px;
   height: 200px;
@@ -39,8 +50,32 @@ body {
   padding: 0 20px;
 }
 
+.submitBtn {
+  border: 1px solid #023e8a;
+  box-sizing: border-box;
+  background-color: #caf0f8;
+  color: #023e8a;
+  font-family: Roboto;
+  font-style: normal;
+  text-align: center;
+  padding: 0 20px;
+}
+
 h2,
 p {
+  color: #212529;
+  font-family: Roboto;
+}
+
+form > label,
+input {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+label {
   color: #212529;
   font-family: Roboto;
 }
