@@ -109,8 +109,9 @@ function ContactUs() {
               <h6>Message</h6>
               <textarea
                 className="message"
-                type="text"
-                name="text"
+                type="message"
+                name="message"
+                data-gramm_editor="false"
                 value={inputMessage}
                 onChange={(e) => setInputMessage(e.target.value)}
               />
