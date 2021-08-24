@@ -19,10 +19,10 @@ function App() {
           <Route path="/" component={Navbar} />
           <Route exact path="/" component={HomePage} />
           <Route exact path="/request-item/:id" component={RequestItem} />
+          <Route exact path="/signUp" component={SignUp} />
           {/* <Route path="/donations" component={Donations} />
           <Route path="/about" component={About} />
           <Route path="/contactUs" component={ContactUs} /> */}
-          <Route exact path="/sign-up" component={SignUp} />
           <Route exact path="/about" component={AboutUs} />
           <Route path="/" component={Footer} />
         </Router>
