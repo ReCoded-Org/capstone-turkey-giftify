@@ -5,54 +5,72 @@ const RequestsPage = () => {
 
     const[userId, setUserId] = useState("2")
     const[usersElements, setUsersElements] = useState([])
+    let categoriesName = []   
 
-        const nameRef = db
-        .collection('categories')
-        .doc('clothing')
-        .collection('items')
+        // const nameRef = db
+        // .collection('categories')
+        // .doc('clothing')
+        // .collection('items')
         // .doc('oDl10Lun1w94lowtpbRc')
 
 
         const getElements = async () => {
-            const itemRef = await db
-            .collection('categories')
-            .doc('clothing')
-            .collection('items')
+            //YAY ITS WORKING
+            // // const itemRef = await db
+            // // .collection('categories')
+            // // .doc('clothing')
+            // // .collection('items')
 
-            // PREVSTATE IS NOT WORKING YET
-            itemRef.get().then((querySnapshot) => {
+            // // itemRef.where("userID", "==", userId).get()
+            // //     .then((querySnapshot) => {
+            // //         querySnapshot.forEach((doc) =>{
+            // //             setUsersElements((prevState) => {
+            // //                 console.log("data: ", doc.data().itemName)
+            // //                 return {...prevState, [doc.id] : [(doc.data().itemName)]}
+            // //             })
+            // //         })
+            // //     })
+            // //     .catch((error) => {
+            // //         console.log("Error getting documents: ", error);
+            // //     });
+
+            // //     console.log("usersElements: ", usersElements);
+            
+
+                     
+            const categoriesPath = db.collection('categories')
+            //bug
+            await categoriesPath.get().then((querySnapshot) => {
                 querySnapshot.forEach((doc) => {
-                    setUsersElements((prevState) => {
-                        return {...prevState, ...Object.values(doc.data())}
+                    categoriesName.push(doc.id)
+                    categoriesName.map((category) => {
+                        // console.log(`categoriesPath.doc("${category}")`)
+                        categoriesPath.doc(`'${category}'`).where("userID", "==", userId).collection('items').get()
+                        .then((querySnapshot) => {
+                                querySnapshot.forEach((doc) =>{
+                                    setUsersElements((prevState) => {
+                                        console.log("data: ", doc.data().itemName)
+                                        return {...prevState, [doc.id] : [(doc.data().itemName)]}
+                                    })
+                                })
+                            })                        
+                        
                     })
+                    // categoriesName.map((categories) => {
+                    //     categoriesPath.doc(categories).where("userID", "==", userId).get()
+                    //     .then((querySnapshot) => {
+                    //     querySnapshot.forEach((doc) =>{
+                    //         setUsersElements((prevState) => {
+                    //             console.log("data: ", doc.data().itemName)
+                    //             return {...prevState, [doc.id] : [(doc.data().itemName)]}
+                    //         })
+                    //     })
+                    // })
+                    // })
                 })
             })
-
-            console.log("usersElements: ", usersElements);
-
-            // // TEST1
-            // // const snapshot = await nameRef.get()
-            // // return snapshot.docs.map(doc =>{
-            // //     console.log("doc.data: ", doc.data())
-
-            // //     setUsersElements((prevState) =>{
-            // //         return {...prevState, ...Object.values(doc.data())}
-            // //     })
-
-            // //     // let query = nameRef.where("userID", "==", "2")
-
-            // //     // console.log("query: ", query)
-
-            // //     // if(userId === doc.data().userID){
-            // //     //     console.log("Match: ", doc.data());
-            // //     //     setUsersElements((prevState) =>{
-            // //     //         return {...prevState, ...Object.values(doc.data())}
-            // //     //     })
-            // //     // }
-            // //     // else{
-            // //     //     console.log("No match")
-            // //     // }
-            // // })
+            
+            console.log("categoriesName: ", categoriesName)
 
         }
 
@@ -63,6 +81,7 @@ const RequestsPage = () => {
             // eslint-disable-next-line
           }, []);
 
+          
           console.log("usersElements: ", usersElements);
 
 
