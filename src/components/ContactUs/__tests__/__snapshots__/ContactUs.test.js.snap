@@ -157,6 +157,7 @@ exports[`ContactUs renders correctly  1`] = `
     <div>
       <form
         className="inputForm"
+        method="POST"
         onSubmit={[Function]}
       >
         <h5>
@@ -167,7 +168,7 @@ exports[`ContactUs renders correctly  1`] = `
             Name
           </h6>
           <input
-            name="name"
+            name="inputName"
             onChange={[Function]}
             type="text"
             value=""
@@ -178,7 +179,7 @@ exports[`ContactUs renders correctly  1`] = `
             Email
           </h6>
           <input
-            name="email"
+            name="inputEmail"
             onChange={[Function]}
             type="text"
             value=""
@@ -189,10 +190,11 @@ exports[`ContactUs renders correctly  1`] = `
             Message
           </h6>
           <textarea
-            className="Message"
-            name="Message"
+            className="message"
+            data-gramm_editor="false"
+            name="inputMessage"
             onChange={[Function]}
-            type="Message"
+            type="message"
             value=""
           />
         </label>

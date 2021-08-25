@@ -8,45 +8,34 @@ import "./ContactUs.css";
 function ContactUs() {
   const [inputdata, setInputData] = useState([]);
 
-  const [inputs, setInputs] = useState ({
-    inputName : "",
+  const [inputs, setInputs] = useState({
+    inputName: "",
     inputEmail: "",
-    inputMessage : ""
+    inputMessage: "",
   });
-
 
   function handleSubmit(e) {
     e.preventDefault();
 
-    
-  
-    // admin.firestore().collection('mail').add({
-    //   to: 'someone@example.com',
-    //   message: {
-    //     subject: 'Hello from Firebase!',
-    //     html: 'This is an <code>HTML</code> email body.',
-    //   },
-    // })
-
-    
     db.collection("contactUs")
       .add({
-        to: 'ayshe.997@gmail.com',
-        userMassege :{
-        name: inputs.inputName,
-        email: inputs.inputEmail,
-        Message: inputs.inputMessage,
-      }
+        to: "ayshe.997@gmail.com",
+        userMassege: {
+          name: inputs.inputName,
+          email: inputs.inputEmail,
+          Message: inputs.inputMessage,
+        },
       })
       .then(() => {
         setInputs({
-          inputName : "",
+          inputName: "",
           inputEmail: "",
-          inputMessage: ""
+          inputMessage: "",
         });
       })
-      
-  
+      .then(() => {
+        alert("Your message has been successfully submitted");
+      })
   }
 
   const getData = () => {
@@ -62,7 +51,7 @@ function ContactUs() {
     });
   };
 
-  useEffect(() => {    
+  useEffect(() => {
     getData();
   }, [inputdata]);
 
@@ -70,7 +59,7 @@ function ContactUs() {
     const value = evt.target.value;
     setInputs({
       ...inputs,
-      [evt.target.name]: value
+      [evt.target.name]: value,
     });
   }
 
@@ -104,10 +93,7 @@ function ContactUs() {
           </div>
         </div>
         <div>
-          <form className="inputForm"
-           onSubmit={handleSubmit}
-           method="POST"
-           >
+          <form className="inputForm" onSubmit={handleSubmit} method="POST">
             <h5>Get In Touch</h5>
             <label>
               <h6>Name</h6>
