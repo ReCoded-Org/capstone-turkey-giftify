@@ -7,35 +7,46 @@ import "./ContactUs.css";
 
 function ContactUs() {
   const [inputdata, setInputData] = useState([]);
-  const [inputName, setInputName] = useState("");
-  const [inputEmail, setInputEmail] = useState("");
-  const [inputMessage, setInputMessage] = useState("");
 
-  // const [inputs, setInputs] = useState ({
-  //   inputName: "",
-  //   inputEmail: "",
-  //   inputMessage: ""
-  // });
+  const [inputs, setInputs] = useState ({
+    inputName : "",
+    inputEmail: "",
+    inputMessage : ""
+  });
 
-
-  // useEffect(() => {
-  //   setInputName(inputName: "yor name")
-  //   console.log(inputs.inputName)
-  // }, [inputs])
 
   function handleSubmit(e) {
     e.preventDefault();
+
+    
+  
+    // admin.firestore().collection('mail').add({
+    //   to: 'someone@example.com',
+    //   message: {
+    //     subject: 'Hello from Firebase!',
+    //     html: 'This is an <code>HTML</code> email body.',
+    //   },
+    // })
+
+    
     db.collection("contactUs")
       .add({
-        name: inputName,
-        email: inputEmail,
-        Message: inputMessage,
+        to: 'ayshe.997@gmail.com',
+        userMassege :{
+        name: inputs.inputName,
+        email: inputs.inputEmail,
+        Message: inputs.inputMessage,
+      }
       })
       .then(() => {
-        setInputName("");
-        setInputEmail("");
-        setInputMessage("");
-      });
+        setInputs({
+          inputName : "",
+          inputEmail: "",
+          inputMessage: ""
+        });
+      })
+      
+  
   }
 
   const getData = () => {
@@ -43,9 +54,9 @@ function ContactUs() {
       setInputData(
         querySnapshot.docs.map((doc) => ({
           ...doc.data(),
-          name: doc.data().inputName,
-          email: doc.data().inputEmail,
-          Message: doc.data().inputMessage,
+          name: doc.data().name,
+          email: doc.data().email,
+          Message: doc.data().Message,
         }))
       );
     });
@@ -55,7 +66,13 @@ function ContactUs() {
     getData();
   }, [inputdata]);
 
-  
+  function handleChange(evt) {
+    const value = evt.target.value;
+    setInputs({
+      ...inputs,
+      [evt.target.name]: value
+    });
+  }
 
   return (
     <div className="container">
@@ -87,33 +104,36 @@ function ContactUs() {
           </div>
         </div>
         <div>
-          <form className="inputForm" onSubmit={handleSubmit}>
+          <form className="inputForm"
+           onSubmit={handleSubmit}
+           method="POST"
+           >
             <h5>Get In Touch</h5>
             <label>
               <h6>Name</h6>
               <input
                 type="text"
-                name="name"
-                value={inputName}
-                onChange={(e) => setInputName(e.target.value)}
+                name="inputName"
+                value={inputs.inputName}
+                onChange={handleChange}
               />{" "}
               <br />
               <h6>Email</h6>
               <input
                 type="text"
-                name="email"
-                value={inputEmail}
-                onChange={(e) => setInputEmail(e.target.value)}
+                name="inputEmail"
+                value={inputs.inputEmail}
+                onChange={handleChange}
               />{" "}
               <br />
               <h6>Message</h6>
               <textarea
                 className="message"
                 type="message"
-                name="message"
+                name="inputMessage"
                 data-gramm_editor="false"
-                value={inputMessage}
-                onChange={(e) => setInputMessage(e.target.value)}
+                value={inputs.inputMessage}
+                onChange={handleChange}
               />
             </label>
             <input className="submitData" type="submit" value="Submit" />
