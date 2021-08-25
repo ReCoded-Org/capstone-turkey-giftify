@@ -1,77 +1,36 @@
 import React, {useState, useEffect} from 'react';
 import db from "./../../firebase";
+import { Card } from "react-bootstrap";
 
 const RequestsPage = () => {
 
+    // need redux
+    // hangi user loggedin
     const[userId, setUserId] = useState("2")
-    const[usersElements, setUsersElements] = useState([])
+    const[usersProducts, setUsersProducts] = useState([])
+
     let categoriesName = []   
 
-        // const nameRef = db
-        // .collection('categories')
-        // .doc('clothing')
-        // .collection('items')
-        // .doc('oDl10Lun1w94lowtpbRc')
-
-
         const getElements = async () => {
-            //YAY ITS WORKING
-            // // const itemRef = await db
-            // // .collection('categories')
-            // // .doc('clothing')
-            // // .collection('items')
-
-            // // itemRef.where("userID", "==", userId).get()
-            // //     .then((querySnapshot) => {
-            // //         querySnapshot.forEach((doc) =>{
-            // //             setUsersElements((prevState) => {
-            // //                 console.log("data: ", doc.data().itemName)
-            // //                 return {...prevState, [doc.id] : [(doc.data().itemName)]}
-            // //             })
-            // //         })
-            // //     })
-            // //     .catch((error) => {
-            // //         console.log("Error getting documents: ", error);
-            // //     });
-
-            // //     console.log("usersElements: ", usersElements);
-            
-
-                     
+    
             const categoriesPath = db.collection('categories')
-            //bug
             await categoriesPath.get().then((querySnapshot) => {
                 querySnapshot.forEach((doc) => {
                     categoriesName.push(doc.id)
                     categoriesName.map((category) => {
-                        // console.log(`categoriesPath.doc("${category}")`)
-                        categoriesPath.doc(`'${category}'`).where("userID", "==", userId).collection('items').get()
+                        return categoriesPath.doc(`${category}`).collection('items').where("userID", "==", userId).get()
                         .then((querySnapshot) => {
                                 querySnapshot.forEach((doc) =>{
-                                    setUsersElements((prevState) => {
-                                        console.log("data: ", doc.data().itemName)
-                                        return {...prevState, [doc.id] : [(doc.data().itemName)]}
+                                    setUsersProducts((prevState) => {
+                                        return {...prevState, [doc.id] : [doc.data().itemName, doc.data().image]}
                                     })
                                 })
                             })                        
                         
                     })
-                    // categoriesName.map((categories) => {
-                    //     categoriesPath.doc(categories).where("userID", "==", userId).get()
-                    //     .then((querySnapshot) => {
-                    //     querySnapshot.forEach((doc) =>{
-                    //         setUsersElements((prevState) => {
-                    //             console.log("data: ", doc.data().itemName)
-                    //             return {...prevState, [doc.id] : [(doc.data().itemName)]}
-                    //         })
-                    //     })
-                    // })
-                    // })
+
                 })
             })
-            
-            console.log("categoriesName: ", categoriesName)
-
         }
 
 
@@ -82,12 +41,68 @@ const RequestsPage = () => {
           }, []);
 
           
-          console.log("usersElements: ", usersElements);
+          console.log("usersProducts: ", usersProducts);
+        //   Object.values(usersProducts).map((info) => (
+        //     console.log("usersProducts info[0]: ", info)
+        //     ));
+
+        //   console.log("usersProductsImage: ", usersProductsImage);
+        //   Object.values(usersProductsImage).map((info) => (
+        //     console.log("usersProductsImage info[0]: ", info)
+        //     ));
+
 
 
     return(
-        <p>TEST</p>
+        <div className="requstsPageContainer">
+
+        </div>
     )
 }
 
 export default RequestsPage
+
+
+{
+    /*
+    
+
+[
+  [
+    [
+      "tshirt"
+    ],
+    [
+      "shoe"
+    ],
+    [
+      "tools"
+    ],
+    [
+      "Coffee Pot"
+    ],
+    [
+      "Backpack"
+    ]
+  ],
+  [
+    [
+      "tshirt_imtagggge"
+    ],
+    [
+      "shoe_img"
+    ],
+    [
+      "tools_zaten"
+    ],
+    [
+      "https://www.grandbazaarist.com/wp-content/uploads/2020/11/Turkish-Electric-Coffee-Maker-Beko-Black.jpg"
+    ],
+    [
+      "https://i.sportisimo.com/products/images/1243/1243145/450x450/pacsafe-pacsafe-go-15l-backpack_10.jpg"
+    ]
+  ]
+]
+
+    */
+}
