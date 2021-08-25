@@ -68,7 +68,7 @@ function SignUp() {
         });
     }
   };
-
+  // LogIn with Google
   const logInGoogle = () => {
     const provider = new firebase.auth.GoogleAuthProvider();
     firebase
@@ -77,11 +77,43 @@ function SignUp() {
       .then((result) => {
         /** @type {firebase.auth.OAuthCredential} */
         const { credential } = result;
+        console.log(credential);
 
         // This gives you a Google Access Token. You can use it to access the Google API.
-        const token = credential.accessToken;
+        // const token = credential.accessToken;
+        // The signed-in user info.
+        // const { user } = result;
+        // ...
+      })
+      .catch((error) => {
+        // Handle Errors here.
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log(errorCode, errorMessage);
+        // The email of the user's account used.
+        // const { email } = error;
+        // The firebase.auth.AuthCredential type that was used.
+        // const { credential } = error;
+        // ...
+      });
+  };
+
+  // LogIn with Facebook
+  const logInFacebook = () => {
+    const provider = new firebase.auth.FacebookAuthProvider();
+    firebase
+      .auth()
+      .signInWithPopup(provider)
+      .then((result) => {
+        /** @type {firebase.auth.OAuthCredential} */
+        const { credential } = result;
+
         // The signed-in user info.
         const { user } = result;
+
+        // This gives you a Facebook Access Token. You can use it to access the Facebook API.
+        const { accessToken } = credential;
+        console.log(accessToken, user);
         // ...
       })
       .catch((error) => {
@@ -89,9 +121,10 @@ function SignUp() {
         const errorCode = error.code;
         const errorMessage = error.message;
         // The email of the user's account used.
-        const { email } = error;
+        // const {email} = error;
         // The firebase.auth.AuthCredential type that was used.
-        const { credential } = error;
+        // const {credential} = error;
+        console.log(errorCode, errorMessage);
         // ...
       });
   };
@@ -201,7 +234,12 @@ function SignUp() {
           Sign Up!
         </Button>
 
-        <Button variant="light" type="button" className="button">
+        <Button
+          variant="light"
+          type="button"
+          className="button"
+          onClick={logInFacebook}
+        >
           Log In!
         </Button>
 
