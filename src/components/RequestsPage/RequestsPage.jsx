@@ -2,12 +2,13 @@ import React, { useState, useEffect } from "react";
 import db from "./../../firebase";
 import { Card } from "react-bootstrap";
 import { ArrowRight } from "react-bootstrap-icons";
+import "./RequestsPage.css"
 
 const RequestsPage = () => {
   // need redux
   // hangi user loggedin
   // eslint-disable-next-line
-  const [userId, setUserId] = useState("2");
+  const [userId, setUserId] = useState("1");
   const [usersProducts, setUsersProducts] = useState([]);
 
   let categoriesName = [];
@@ -50,7 +51,7 @@ const RequestsPage = () => {
   return (
     <div className="requstsPageContainer">
       {Object.values(usersProducts).map((info) => (
-        <Card key={info[0]}>
+        <Card key={info[0]} className="cardInRequestPage">
           <Card.Img variant="top" src={info[1]} />
           <Card.Body className="CardUpperPart">
             <Card.Title>{info[0]}</Card.Title>
