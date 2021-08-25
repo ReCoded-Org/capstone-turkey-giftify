@@ -14,7 +14,7 @@ function ContactUs() {
     inputMessage: "",
   });
 
-  function handleSubmit(e) {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
     db.collection("contactUs")
@@ -55,7 +55,7 @@ function ContactUs() {
     getData();
   }, [inputdata]);
 
-  function handleChange(evt) {
+  const handleChange = (evt) => {
     const value = evt.target.value;
     setInputs({
       ...inputs,

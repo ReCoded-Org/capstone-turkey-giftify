@@ -5,7 +5,7 @@ import { Route } from "react-router";
 import { BrowserRouter as Router } from "react-router-dom";
 import "./App.css";
 import Footer from "./components/Footer/Footer";
-import ContactUSPage from "./containers/ContactUsPage/ContactUsPage";
+import ContactUsPage from "./containers/ContactUsPage/ContactUsPage";
 import AboutUs from "./containers/About/AboutUs";
 import Navbar from "./components/Navbar/Navbar";
 import HomePage from "./containers/HomePage/HomePage";
@@ -20,7 +20,7 @@ function App() {
           <Route exact path="/" component={HomePage} />
           <Route exact path="/request-item/:id" component={RequestItem} />
           {/* <Route path="/donations" component={Donations} /> */}
-          <Route path="/contactUs" component={ContactUSPage} />
+          <Route path="/contactUs" component={ContactUsPage} />
           <Route exact path="/about" component={AboutUs} />
           <Route path="/" component={Footer} />
         </Router>

@@ -84,12 +84,14 @@
     flex-direction: row;
     justify-content: center;
   }
+
   .contactInfo {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     margin: 20px;
   }
+
   .sosyalMed {
     display: flex;
     flex-direction: column;
@@ -114,11 +116,13 @@
     width: 250px;
     height: 300px;
   }
+
   .sosyalMed {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
+
   .inputForm {
     width: 350px;
     height: 350px;
@@ -141,11 +145,13 @@
     width: 250px;
     height: 300px;
   }
+
   .sosyalMed {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
+
   .inputForm {
     width: 350px;
     height: 350px;
