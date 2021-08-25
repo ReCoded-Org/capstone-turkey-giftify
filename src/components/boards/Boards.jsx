@@ -23,7 +23,7 @@ function Boards({ allItems, testSearchValue }) {
                 <p>
                   <b>{info.itemName}</b>
                 </p>
-                <a href="#link">
+                <a href="/link">
                   See Details <VscArrowRight />{" "}
                 </a>
               </div>
