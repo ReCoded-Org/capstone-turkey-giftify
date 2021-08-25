@@ -36,7 +36,7 @@ function ContactUs() {
       .then(() => {
         alert("Your message has been successfully submitted");
       });
-  }
+  };
 
   const getData = () => {
     db.collection("contactUs").onSnapshot(function (querySnapshot) {
@@ -61,7 +61,7 @@ function ContactUs() {
       ...inputs,
       [evt.target.name]: value,
     });
-  }
+  };
 
   return (
     <div className="container">
