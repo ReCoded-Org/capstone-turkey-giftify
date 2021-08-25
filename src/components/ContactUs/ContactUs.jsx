@@ -35,7 +35,7 @@ function ContactUs() {
       })
       .then(() => {
         alert("Your message has been successfully submitted");
-      })
+      });
   }
 
   const getData = () => {
