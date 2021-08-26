@@ -6,7 +6,6 @@ import db from "../../firebase";
 import Hero from "../../components/Hero/Hero";
 import SearchBar from "../../components/SearchBar/SearchBar";
 
-
 // After deciding on the database structure,the example function below should be deleted and
 // replaced with a function that reads categories from firebase, takes 8 items by random
 // and passes it to HomePageItems as a prop
