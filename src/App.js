@@ -26,7 +26,11 @@ function App() {
           <Route exact path="/about" component={AboutUs} />
           <Route path="/" component={Footer} />
           <Route exact path="/requestsPage" component={RequestsPage} />
-          <Route exact path="/donatersMessagePage/:id" component={DonatersMessagePage} />
+          <Route
+            exact
+            path="/donatersMessagePage/:id"
+            component={DonatersMessagePage}
+          />
         </Router>
       </Container>
     </>

@@ -3,7 +3,7 @@ import db from "./../../firebase";
 import { Card } from "react-bootstrap";
 import { ArrowRight } from "react-bootstrap-icons";
 import { Link } from "react-router-dom";
-import "./RequestsPage.css"
+import "./RequestsPage.css";
 
 const RequestsPage = () => {
   // need redux
@@ -54,7 +54,9 @@ const RequestsPage = () => {
           <Card.Body className="CardUpperPart">
             <Card.Title>{info[0]}</Card.Title>
             <Card.Link>
-              <Link to={`/donatersMessagePage/${info[2]}`}>See Details <ArrowRight /></Link>
+              <Link to={`/donatersMessagePage/${info[2]}`}>
+                See Details <ArrowRight />
+              </Link>
             </Card.Link>
           </Card.Body>
         </Card>
