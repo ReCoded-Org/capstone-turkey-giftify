@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`HomePageItems renders correctly 1`] = `
+exports[`App rendered correctly 1`] = `
 <div
   className="mainContainer container-fluid"
 >
@@ -121,50 +121,6 @@ exports[`HomePageItems renders correctly 1`] = `
   <div
     className="container"
   >
-    <div
-      className="hero"
-    >
-      <div
-        className="upperPart"
-      >
-        <div
-          className="texts"
-        >
-          <h2>
-            Don’t need it?
-            <br />
-            Giftify it!
-          </h2>
-          <p>
-            Get rid of unused stuff clogging up your living space and give a hand to your neighbours by gifting them!
-          </p>
-        </div>
-        <div
-          className="heroImg"
-        >
-          <img
-            alt="giftify"
-            src="#"
-          />
-        </div>
-      </div>
-      <div
-        className="giftifyButton"
-      >
-        <a
-          href="/donation/add_product_card"
-          onClick={[Function]}
-        >
-          <button
-            className="btn btn-primary"
-            disabled={false}
-            type="button"
-          >
-            Giftify Now!
-          </button>
-        </a>
-      </div>
-    </div>
     <div
       className="homePageItems row row-cols-xl-4 row-cols-md-3 row-cols-2"
     />
