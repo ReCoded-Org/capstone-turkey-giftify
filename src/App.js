@@ -9,6 +9,7 @@ import AboutUs from "./containers/About/AboutUs";
 import Navbar from "./components/Navbar/Navbar";
 import HomePage from "./containers/HomePage/HomePage";
 import RequestItem from "./containers/RequestItem/RequestItem";
+import Donations from "./containers/Donations/Donations";
 
 function App() {
   return (
@@ -18,8 +19,8 @@ function App() {
           <Route path="/" component={Navbar} />
           <Route exact path="/" component={HomePage} />
           <Route exact path="/request-item/:id" component={RequestItem} />
-          {/* <Route path="/donations" component={Donations} />
-          <Route path="/about" component={About} />
+          <Route exact path="/donations" component={Donations} />
+          {/*  <Route path="/about" component={About} />
           <Route path="/contactUs" component={ContactUs} /> */}
           <Route exact path="/about" component={AboutUs} />
           <Route path="/" component={Footer} />
