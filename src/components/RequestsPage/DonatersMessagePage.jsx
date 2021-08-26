@@ -70,7 +70,7 @@ const DonatersMessagePage = () => {
     <div className="donatersMessageContainer">
       <div className="mainProductDetails">
         <p>SADECE CIGLIK ATIYORUM ARTIK</p>
-
+        {/* returns undefined state and after an action call returns the state correctly */}
         {/* {Object.values(productDetails).map((info) => (
                     <Card key={info}>
 
