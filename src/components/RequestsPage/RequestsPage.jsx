@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import db from "./../../firebase";
 import { Card } from "react-bootstrap";
 import { ArrowRight } from "react-bootstrap-icons";
+import { Link } from "react-router-dom";
 import "./RequestsPage.css"
 
 const RequestsPage = () => {
@@ -10,7 +11,6 @@ const RequestsPage = () => {
   // eslint-disable-next-line
   const [userId, setUserId] = useState("2");
   const [usersProducts, setUsersProducts] = useState([]);
-
   let categoriesName = [];
 
   const getElements = async () => {
@@ -29,7 +29,7 @@ const RequestsPage = () => {
                 setUsersProducts((prevState) => {
                   return {
                     ...prevState,
-                    [doc.id]: [doc.data().itemName, doc.data().image],
+                    [doc.id]: [doc.data().itemName, doc.data().image, doc.id],
                   };
                 });
               });
@@ -46,8 +46,6 @@ const RequestsPage = () => {
 
   console.log("usersProducts: ", usersProducts);
 
-  // item id firebase param homepage request
-
   return (
     <div className="requstsPageContainer">
       {Object.values(usersProducts).map((info) => (
@@ -55,8 +53,8 @@ const RequestsPage = () => {
           <Card.Img variant="top" src={info[1]} />
           <Card.Body className="CardUpperPart">
             <Card.Title>{info[0]}</Card.Title>
-            <Card.Link href="/gonnaChange">
-              See Details <ArrowRight />
+            <Card.Link>
+              <Link to={`/donatersMessagePage/${info[2]}`}>See Details <ArrowRight /></Link>
             </Card.Link>
           </Card.Body>
         </Card>
