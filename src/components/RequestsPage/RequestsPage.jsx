@@ -54,6 +54,7 @@ const RequestsPage = () => {
           <Card.Body className="CardUpperPart">
             <Card.Title>{info[0]}</Card.Title>
             <Card.Link>
+              {/* add category  */}
               <Link to={`/donatersMessagePage/${info[2]}`}>
                 See Details <ArrowRight />
               </Link>

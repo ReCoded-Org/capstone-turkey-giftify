@@ -41,20 +41,18 @@ const DonatersMessagePage = () => {
 
   const getProductDetails = async () => {
     const categoriesPath = db.collection("categories");
-    await categoriesPath.get().then((querySnapshot) => {
-      querySnapshot.forEach((doc) => {
-        categoriesName.map((category) => {
-          return categoriesPath
-            .doc(`${category}`)
-            .collection("items")
-            .doc(`${id}`)
-            .get()
-            .then((querySnapshot) => {
-              setProductDetails(querySnapshot.data());
-            });
-        });
+      categoriesName.map((category) => {
+        return categoriesPath
+        // use category
+          .doc(`${category}`)
+          .collection("items")
+          .doc(`${id}`)
+          .get()
+          .then((querySnapshot) => {
+            console.log("querySnapshot.data(): ", querySnapshot.data());
+            setProductDetails(querySnapshot.data());
+          });
       });
-    });
   };
 
   console.log("usersMessages: ", usersMessages);
