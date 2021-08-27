@@ -6,8 +6,8 @@ import { Link } from "react-router-dom";
 import "./RequestsPage.css";
 
 const RequestsPage = () => {
-  // need redux
-  // hangi user loggedin
+  // need redux for which user loggedin, now waiting Deniz
+  // line 11 going to remove
   // eslint-disable-next-line
   const [userId, setUserId] = useState("2");
   const [usersProducts, setUsersProducts] = useState([]);
@@ -44,12 +44,7 @@ const RequestsPage = () => {
     });
   };
 
-  useEffect(() => {
-    getElements();
-    // eslint-disable-next-line
-  }, []);
-
-  console.log("usersProducts: ", usersProducts);
+  useEffect(getElements, []);
 
   return (
     <div className="requstsPageContainer">
@@ -59,7 +54,6 @@ const RequestsPage = () => {
           <Card.Body className="CardUpperPart">
             <Card.Title>{info[0]}</Card.Title>
             <Card.Link>
-              {/* add category  */}
               <Link to={`/donatersMessagePage/${info[3]}/${info[2]}`}>
                 See Details <ArrowRight />
               </Link>

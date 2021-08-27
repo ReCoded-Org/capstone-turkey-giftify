@@ -25,7 +25,6 @@ const DonatersMessagePage = () => {
             .get()
             .then((querySnapshot) => {
               querySnapshot.forEach((doc) => {
-                console.log("docc: ", doc.data());
                 setUsersMessages((prevState) => {
                   return {
                     ...prevState,
@@ -47,7 +46,6 @@ const DonatersMessagePage = () => {
       .doc(`${id}`)
       .get()
       .then((doc) => {
-        console.log("querySnapshot: ", doc.data());
         setProductDetails((prevState) => {
           return {
             ...prevState,
@@ -66,9 +64,6 @@ const DonatersMessagePage = () => {
     getProductDetails();
     // eslint-disable-next-line
   }, []);
-
-  console.log("usersMessages: ", usersMessages);
-  console.log("productDetails: ", productDetails);
 
   return (
     <div className="donatersMessageContainer">
