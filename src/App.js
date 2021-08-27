@@ -28,7 +28,7 @@ function App() {
           <Route exact path="/requestsPage" component={RequestsPage} />
           <Route
             exact
-            path="/donatersMessagePage/:id"
+            path="/donatersMessagePage/:category/:id"
             component={DonatersMessagePage}
           />
         </Router>

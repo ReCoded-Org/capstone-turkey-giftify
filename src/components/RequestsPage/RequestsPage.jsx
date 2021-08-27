@@ -29,7 +29,12 @@ const RequestsPage = () => {
                 setUsersProducts((prevState) => {
                   return {
                     ...prevState,
-                    [doc.id]: [doc.data().itemName, doc.data().image, doc.id],
+                    [doc.id]: [
+                      doc.data().itemName,
+                      doc.data().image,
+                      doc.id,
+                      category,
+                    ],
                   };
                 });
               });
@@ -55,7 +60,7 @@ const RequestsPage = () => {
             <Card.Title>{info[0]}</Card.Title>
             <Card.Link>
               {/* add category  */}
-              <Link to={`/donatersMessagePage/${info[2]}`}>
+              <Link to={`/donatersMessagePage/${info[3]}/${info[2]}`}>
                 See Details <ArrowRight />
               </Link>
             </Card.Link>
