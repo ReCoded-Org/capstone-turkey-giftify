@@ -16,7 +16,8 @@ function App() {
           <Route path="/" component={Navbar} />
           <Route exact path="/" component={HomePage} />
           <Route exact path="/request-item/:id" component={RequestItem} />
-          {/* <Route path="/donations" component={Donations} />
+          {/* <Route path="/requests" component={Requests} />
+          <Route path="/donations" component={Donations} />
           <Route path="/about" component={About} />
           <Route path="/contactUs" component={ContactUs} /> */}
           <Route exact path="/about" component={AboutUs} />
