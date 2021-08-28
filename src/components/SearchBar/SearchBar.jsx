@@ -21,10 +21,18 @@ function SearchSection() {
                 .collection("items");
               docRef.get().then((querySnapshot) => {
                 querySnapshot.forEach((item) => {
+                  // setAllItems((prevState) => {
+                  //   return { ...prevState, [doc.id]:  [item.data()] };
+                  // });
                   setAllItems((prevState) => {
-                    return { ...prevState, [doc.id]: [item.data()] };
-                  });
+                  return { ...prevState, 
+                    [doc.id]: 
+                    { [item.id]: [item.data()] }
+                    };
                 });
+
+                });
+                
               });
             });
           });
@@ -43,6 +51,8 @@ function SearchSection() {
     event.preventDefault();
     setTestSearchValue(input);
   }
+
+  console.log(allItems)
 
   return (
     <div>

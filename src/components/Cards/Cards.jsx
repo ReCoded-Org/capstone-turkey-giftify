@@ -1,10 +1,12 @@
 import React from "react";
+import SingleCard from "../SingleCard/SingleCard";
 
-function Cards({ category, cardsBySearch }) {
+function Cards({ category, cardsBySearch, singleCard, itemsDetails}) {
   return (
     <div>
-      {cardsBySearch}
-      {category}
+    {singleCard === true ? <SingleCard itemsDetails={itemsDetails}/> : 
+        <div>  {cardsBySearch} {category} </div>     
+    }
     </div>
   );
 }

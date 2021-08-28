@@ -5,7 +5,8 @@ import { VscArrowRight } from "react-icons/vsc";
 
 function Boards({ allItems, testSearchValue }) {
   const [selectedItems, setSelectedItems] = useState("");
-
+  const [singleCard, setSingleCard] = useState(false);
+  const [itemsDetails, setItemsDetails] = useState ({})
   //  filter Cards by category
   const items = Object.keys(allItems)
     .filter((type) => type.includes(selectedItems))
@@ -23,7 +24,20 @@ function Boards({ allItems, testSearchValue }) {
                 <p>
                   <b>{info.itemName}</b>
                 </p>
-                <a href="/link">
+                <a href={info.itemName} 
+                  onClick={(event) => {
+                    event.preventDefault();
+                    setSingleCard(true);
+                    setItemsDetails({
+                      productName: info.itemName,
+                      productImage: info.image,
+                      productType: item,
+                      ProductDescription: info.description,
+                      ItemCondition: info.condition,
+
+                    })
+                  }}
+                >
                   See Details <VscArrowRight />{" "}
                 </a>
               </div>
@@ -110,7 +124,7 @@ function Boards({ allItems, testSearchValue }) {
 
   return (
     <div>
-      <Cards category={category} cardsBySearch={cardsBySearch} />
+      {  <Cards itemsDetails= {itemsDetails} category={category} cardsBySearch={cardsBySearch} singleCard = {singleCard} setSingleCard = {setSingleCard} />}
     </div>
   );
 }
