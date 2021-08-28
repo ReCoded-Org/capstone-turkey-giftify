@@ -44,7 +44,10 @@ const RequestsPage = () => {
     });
   };
 
-  useEffect(getElements, []);
+  useEffect(() => {
+    getElements();
+    // eslint-disable-next-line
+  }, []);
 
   return (
     <div className="requstsPageContainer">
