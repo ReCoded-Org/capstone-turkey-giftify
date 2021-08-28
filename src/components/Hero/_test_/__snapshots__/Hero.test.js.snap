@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`hero section renders corrrectly 1`] = `
+<div
+  className="hero"
+>
+  <div
+    className="upperPart"
+  >
+    <div
+      className="texts"
+    >
+      <h2>
+        Don’t need it?
+        <br />
+        Giftify it!
+      </h2>
+      <p>
+        Get rid of unused stuff clogging up your living space and give a hand to your neighbours by gifting them!
+      </p>
+    </div>
+    <div
+      className="heroImg"
+    >
+      <img
+        alt="giftify"
+        src="#"
+      />
+    </div>
+  </div>
+  <div
+    className="giftifyButton"
+  >
+    <a
+      href="/donation/add_product_card"
+      onClick={[Function]}
+    >
+      <button
+        className="btn btn-primary"
+        disabled={false}
+        type="button"
+      >
+        Giftify Now!
+      </button>
+    </a>
+  </div>
+</div>
+`;

@@ -1,8 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Container } from "react-bootstrap";
-import { Route } from "react-router";
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import "./App.css";
 import Footer from "./components/Footer/Footer";
 import ContactUsPage from "./containers/ContactUsPage/ContactUsPage";
@@ -21,6 +20,10 @@ function App() {
           <Route exact path="/request-item/:id" component={RequestItem} />
           {/* <Route path="/donations" component={Donations} /> */}
           <Route path="/contactUs" component={ContactUsPage} />
+          {/* <Route path="/requests" component={Requests} />
+          <Route path="/donations" component={Donations} />
+          <Route path="/about" component={About} />
+          <Route path="/contactUs" component={ContactUs} /> */}
           <Route exact path="/about" component={AboutUs} />
           <Route path="/" component={Footer} />
         </Router>
