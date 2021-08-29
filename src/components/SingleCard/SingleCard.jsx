@@ -5,6 +5,9 @@ import db from "../../firebase";
 function SingleCard({ itemsDetails }) {
   const [inputUserMassge, setInputUserMassge] = useState("");
   const [userComments, setUserComments] = useState([]);
+
+  // whait for user logged in component
+
   const [userId, setUserId] = useState("2");
 
   const handleSubmit = (event) => {
