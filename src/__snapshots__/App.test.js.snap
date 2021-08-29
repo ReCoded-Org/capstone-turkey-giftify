@@ -194,7 +194,13 @@ exports[`App rendered correctly 1`] = `
         />
       </form>
       <div>
-        <div />
+        <div>
+          <div>
+             
+             
+             
+          </div>
+        </div>
       </div>
     </div>
   </div>

@@ -6,6 +6,6 @@ import renderer from "react-test-renderer";
 afterEach(cleanup);
 
 it("Single Card Page rendered correctly", () => {
-  const tree = renderer.create(<SingleCard />).toJSON();
+  const tree = renderer.create(<SingleCard itemsDetails />).toJSON();
   expect(tree).toMatchSnapshot();
 });

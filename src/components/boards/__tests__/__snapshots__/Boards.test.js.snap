@@ -2,6 +2,12 @@
 
 exports[`Boards rendered correctly 1`] = `
 <div>
-  <div />
+  <div>
+    <div>
+       
+       
+       
+    </div>
+  </div>
 </div>
 `;
