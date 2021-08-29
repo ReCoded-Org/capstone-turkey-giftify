@@ -1,12 +1,22 @@
 import React from "react";
 import SingleCard from "../SingleCard/SingleCard";
 
-function Cards({ category, cardsBySearch, singleCard, itemsDetails}) {
+function Cards({ category, cardsBySearch, singleCard, itemsDetails }) {
   return (
     <div>
-    {singleCard === true ? <SingleCard itemsDetails={itemsDetails}/> : 
-        <div>  {cardsBySearch} {category} </div>     
-    }
+      {singleCard === true ? (
+                
+        <div>
+        {cardsBySearch}
+        <SingleCard cardsBySearch={cardsBySearch} itemsDetails={itemsDetails} />
+        </div>
+
+      ) : (
+        <div>
+          {" "}
+          {cardsBySearch} {category}{" "}
+        </div>
+      )}
     </div>
   );
 }

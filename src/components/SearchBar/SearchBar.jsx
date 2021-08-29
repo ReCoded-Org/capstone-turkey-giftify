@@ -3,6 +3,7 @@ import "./SearchBar.css";
 import db from "../../firebase";
 import Boards from "../boards/Boards";
 
+
 function SearchSection() {
   const [allItems, setAllItems] = useState([]);
   const [input, setInput] = useState("");
@@ -19,20 +20,23 @@ function SearchSection() {
                 .collection("categories")
                 .doc(doc.id)
                 .collection("items");
+              const itemData = [];
+              const nArray = [];
+
               docRef.get().then((querySnapshot) => {
                 querySnapshot.forEach((item) => {
-                  // setAllItems((prevState) => {
-                  //   return { ...prevState, [doc.id]:  [item.data()] };
-                  // });
-                  setAllItems((prevState) => {
-                  return { ...prevState, 
-                    [doc.id]: 
-                    { [item.id]: [item.data()] }
-                    };
-                });
+                  nArray.push(item.id);
+                  const object = item.data();
+                  object["itemDocID"] = item.id;
+                  itemData.push(object);
 
+                  setAllItems((prevState) => {
+                    return {
+                      ...prevState,
+                      [doc.id]: itemData,
+                    };
+                  });
                 });
-                
               });
             });
           });
@@ -51,8 +55,6 @@ function SearchSection() {
     event.preventDefault();
     setTestSearchValue(input);
   }
-
-  console.log(allItems)
 
   return (
     <div>
@@ -76,6 +78,7 @@ function SearchSection() {
         input={input}
         testSearchValue={testSearchValue}
       />
+
     </div>
   );
 }

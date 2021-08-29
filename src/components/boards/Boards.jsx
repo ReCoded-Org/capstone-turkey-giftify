@@ -6,14 +6,16 @@ import { VscArrowRight } from "react-icons/vsc";
 function Boards({ allItems, testSearchValue }) {
   const [selectedItems, setSelectedItems] = useState("");
   const [singleCard, setSingleCard] = useState(false);
-  const [itemsDetails, setItemsDetails] = useState ({})
+  const [itemsDetails, setItemsDetails] = useState({});
+
+    
   //  filter Cards by category
   const items = Object.keys(allItems)
     .filter((type) => type.includes(selectedItems))
     .map((item, index) => {
       return (
         <div key={index} className="cards">
-          {allItems[item].map((info) => {
+          {allItems[item].map((info, index) => {
             return (
               <div key={index} className="oneCard">
                 <img
@@ -24,7 +26,8 @@ function Boards({ allItems, testSearchValue }) {
                 <p>
                   <b>{info.itemName}</b>
                 </p>
-                <a href={info.itemName} 
+                <a
+                  href={info.itemName}
                   onClick={(event) => {
                     event.preventDefault();
                     setSingleCard(true);
@@ -34,8 +37,8 @@ function Boards({ allItems, testSearchValue }) {
                       productType: item,
                       ProductDescription: info.description,
                       ItemCondition: info.condition,
-
-                    })
+                      ItemDocID: info.itemDocID,
+                    });
                   }}
                 >
                   See Details <VscArrowRight />{" "}
@@ -101,7 +104,7 @@ function Boards({ allItems, testSearchValue }) {
                 return value;
               }
             })
-            .map((info) => {
+            .map((info, index) => {
               return (
                 <div key={index} className="oneCard">
                   <img
@@ -112,7 +115,21 @@ function Boards({ allItems, testSearchValue }) {
                   <p>
                     <b>{info.itemName}</b>
                   </p>
-                  <a href="#link">
+                  <a
+                    href={info.itemName}
+                    onClick={(event) => {
+                      event.preventDefault();
+                      setSingleCard(true);
+                      setItemsDetails({
+                        productName: info.itemName,
+                        productImage: info.image,
+                        productType: item,
+                        ProductDescription: info.description,
+                        ItemCondition: info.condition,
+                        ItemDocID: info.itemDocID,
+                      });
+                    }}
+                  >
                     See Details <VscArrowRight />{" "}
                   </a>
                 </div>
@@ -124,7 +141,14 @@ function Boards({ allItems, testSearchValue }) {
 
   return (
     <div>
-      {  <Cards itemsDetails= {itemsDetails} category={category} cardsBySearch={cardsBySearch} singleCard = {singleCard} setSingleCard = {setSingleCard} />}
+      {
+        <Cards
+          itemsDetails={itemsDetails}
+          category={category}
+          cardsBySearch={cardsBySearch}
+          singleCard={singleCard}
+        />
+      }
     </div>
   );
 }
