@@ -5,12 +5,13 @@ function Cards({ category, cardsBySearch, singleCard, itemsDetails }) {
   return (
     <div>
       {singleCard === true ? (
-                
         <div>
-        {cardsBySearch}
-        <SingleCard cardsBySearch={cardsBySearch} itemsDetails={itemsDetails} />
+          {cardsBySearch}
+          <SingleCard
+            cardsBySearch={cardsBySearch}
+            itemsDetails={itemsDetails}
+          />
         </div>
-
       ) : (
         <div>
           {" "}

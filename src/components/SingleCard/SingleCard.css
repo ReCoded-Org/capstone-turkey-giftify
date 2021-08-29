@@ -22,7 +22,7 @@
 
 .pruductDetails {
   margin-left: 5%;
-  width: 60% ;
+  width: 60%;
 }
 
 .productCard form {
@@ -77,13 +77,10 @@
 
   .pruductDetails {
     margin-left: 0%;
-
   }
-
 }
 
-@media only screen and (min-width: 120px) and (max-width: 767px){
-
+@media only screen and (min-width: 120px) and (max-width: 767px) {
   .productCard {
     margin: 10%;
     padding: 5%;
@@ -101,7 +98,5 @@
 
   .pruductDetails {
     margin-left: 0%;
-
   }
-  
 }

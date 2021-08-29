@@ -1,0 +1,147 @@
+/*Button is not working from react-bootstrap*/
+
+HTML {
+  background-color: #0077b6;
+  font-family: Roboto;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+.App {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: stretch;
+  background-color: #0077b6;
+}
+
+.hero {
+  background-color: #ade8f4;
+  width: 75%;
+  border-radius: 20px;
+  margin-left: 15%;
+}
+
+.upperPart {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: baseline;
+  align-content: stretch;
+  margin-top: 5%;
+}
+
+.texts {
+  width: 65%;
+  padding-left: 5%;
+}
+
+.texts > h2 {
+  font-size: 60px;
+  color: #3f3b3b;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 70px;
+  letter-spacing: -0.7px;
+}
+
+.texts > p {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 30px;
+  color: #3f3b3b;
+  width: 70%;
+}
+
+.heroImg {
+  background: linear-gradient(180deg, #4b99ff 0%, #ff8a8a 100%);
+  border-radius: 40px;
+  width: 17vw;
+  height: 17vw;
+  margin-right: 5%;
+}
+
+.giftifyButton {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: stretch;
+}
+
+.giftifyButton > a {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: stretch;
+  text-decoration: none;
+  padding: 16px 72px;
+}
+
+.giftifyButton > a > button {
+  background-color: #023e8a;
+  border-radius: 0.75rem;
+  color: #ffffff;
+  font-family: Roboto;
+  padding: 10% 50%;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: normal;
+  clear: both;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+/*tablet*/
+@media (min-width: 768px) and (max-width: 1024px) {
+  .hero {
+    width: 100%;
+    border-radius: 0%;
+  }
+
+  .texts > p {
+    width: 80%;
+  }
+}
+
+/*mobile*/
+@media only screen and (min-width: 120px) and (max-width: 767px) {
+  .hero {
+    width: 100%;
+    border-radius: 0%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: stretch;
+  }
+
+  .heroImg {
+    display: none;
+  }
+
+  .texts > h2 {
+    font-family: Roboto;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 48px;
+    letter-spacing: -0.4000000059604645px;
+    text-align: left;
+  }
+
+  .texts {
+    width: 80%;
+    padding-left: 20%;
+  }
+}

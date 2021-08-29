@@ -8,7 +8,6 @@ function Boards({ allItems, testSearchValue }) {
   const [singleCard, setSingleCard] = useState(false);
   const [itemsDetails, setItemsDetails] = useState({});
 
-    
   //  filter Cards by category
   const items = Object.keys(allItems)
     .filter((type) => type.includes(selectedItems))

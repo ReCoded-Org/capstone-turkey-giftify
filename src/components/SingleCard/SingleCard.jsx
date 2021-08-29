@@ -43,7 +43,6 @@ function SingleCard({ itemsDetails }) {
             }))
           );
         });
-        
     };
     getData();
   }, [itemsDetails.productType]);
@@ -69,17 +68,17 @@ function SingleCard({ itemsDetails }) {
         <form onSubmit={handleSubmit}>
           <label>
             <h5>Why do you need?</h5>
-             <textarea
-                className="message"
-                type="message"
-                name="name"
-                data-gramm_editor="false"
-                value={inputUserMassge}
-                onChange ={(e) => setInputUserMassge(e.target.value)}
-              />
+            <textarea
+              className="message"
+              type="message"
+              name="name"
+              data-gramm_editor="false"
+              value={inputUserMassge}
+              onChange={(e) => setInputUserMassge(e.target.value)}
+            />
           </label>
-          <br/>
-          <input className = "submit" type="submit" value="Submit" />
+          <br />
+          <input className="submit" type="submit" value="Submit" />
         </form>
       </div>
     </div>

@@ -3,7 +3,6 @@ import "./SearchBar.css";
 import db from "../../firebase";
 import Boards from "../boards/Boards";
 
-
 function SearchSection() {
   const [allItems, setAllItems] = useState([]);
   const [input, setInput] = useState("");
@@ -78,7 +77,6 @@ function SearchSection() {
         input={input}
         testSearchValue={testSearchValue}
       />
-
     </div>
   );
 }
