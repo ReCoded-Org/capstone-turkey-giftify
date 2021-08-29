@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./UserProfile.css";
 import db from "../../firebase";
-import { getAuth, onAuthStateChanged } from "firebase/auth";
+//import { getAuth, onAuthStateChanged } from "firebase/auth";
 
 function UserProfile() {
   const [edit, setEdit] = useState(false);
@@ -10,6 +10,8 @@ function UserProfile() {
     setEdit((edit) => !edit);
   }
 
+  //to get logged in user data
+  /*
   const auth = getAuth();
   const user = auth.currentUser;
   if (user !== null) {
@@ -27,47 +29,36 @@ function UserProfile() {
     const uid = user.uid;
   }
 
+  //to update profile info
+  updateProfile(auth.currentUser, {
+  displayFirstName: {setName}, displayLastName: {setLastName}, email: {setEmail}, city: {setCity} photoURL: {setPic}
+}).then(() => {
+  // Profile updated!
+  // ...
+}).catch((error) => {
+  // An error occurred
+  // ...
+});
+*/
+
   //needs work
   function handleSubmit() {
     console.log("Data Edited");
   }
 
-  const [name, setName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [pic, setPic] = useState("");
-  const [city, setCity] = useState("");
-  const [email, setEmail] = useState("");
-  const sub = (e) => {
-    e.preventDefault();
-
-    // Add data to the store
-    db.collection("users")
-      .set({
-        firstName: name,
-        lastName: lastName,
-        city: city,
-        email: email,
-        photoURL: pic,
-      })
-      .then((docRef) => {
-        alert("Data Successfully Submitted");
-      })
-      .catch((error) => {
-        console.error("Error adding document: ", error);
-      });
-  };
-
-  {
-    /*const [user, setUser] = useState({
+  /*
+    const [user, setUser] = useState({
     firstName: name,
     lastName: lastName,
     city: city,
     email: email,
-    photoURL: pic,});*/
-  }
+    photoURL: pic,});
+    */
+
+  const [user, setUser] = useState([]);
 
   const fetchUser = async () => {
-    const response = db.collection("users").doc();
+    const response = db.collection("users");
     const data = await response.get();
     data.docs.forEach((item) => {
       setUser([...user, { id: item.id, ...item.data() }]);
@@ -77,27 +68,35 @@ function UserProfile() {
   //to fetch data from db
   useEffect(() => {
     fetchUser();
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+  }, []);
 
   //func to render existing user data
   function Card() {
     return (
       <div className="profileRender">
-        <div key={user.id} className="profilePage">
-          <div className="profilePic">
-            <img src={user.photoURL} alt="profilePic" />
-          </div>
-          <div className="texts">
-            <h2>
-              {user.firstName} {user.lastName}
-            </h2>
-            <p>{user.email}</p>
-            <p>{user.city}</p>
-          </div>
-          <div className="editBtn">
-            <button onClick={handleClick}>Edit</button>
-          </div>
-        </div>
+        {user &&
+          user.map((singleUser) => {
+            return (
+              <div key={singleUser.id} className="profilePage">
+                <div className="profilePic">
+                  <img
+                    src="https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg"
+                    alt="profilePic"
+                  />
+                </div>
+                <div className="texts">
+                  <h2>
+                    {singleUser.firstName} {singleUser.lastName}
+                  </h2>
+                  <p>{singleUser.email}</p>
+                  <p>{singleUser.city}</p>
+                </div>
+                <div className="editBtn">
+                  <button onClick={handleClick}>Edit</button>
+                </div>
+              </div>
+            );
+          })}
       </div>
     );
   }
@@ -106,12 +105,7 @@ function UserProfile() {
     return (
       <div className="profileRender">
         <div className="profilePage">
-          <form
-            onSubmit={handleSubmit}
-            onSubmit={(event) => {
-              sub(event);
-            }}
-          >
+          <form onSubmit={handleSubmit}>
             <div className="profilePage">
               <input type="file" className="profilePicEntry" />
             </div>
@@ -119,49 +113,25 @@ function UserProfile() {
               <div>
                 <label className="importantText">
                   First Name
-                  <input
-                    type="text"
-                    value={name}
-                    onChange={(e) => {
-                      setName(e.target.value);
-                    }}
-                  />
+                  <input type="text" />
                 </label>
               </div>
               <div>
                 <label className="importantText">
                   Last Name
-                  <input
-                    type="text"
-                    value={lastName}
-                    onChange={(e) => {
-                      setLastName(e.target.value);
-                    }}
-                  />
+                  <input type="text" />
                 </label>
               </div>
               <div>
                 <label className="regularText">
                   E-Mail
-                  <input
-                    type="email"
-                    value={email}
-                    onChange={(e) => {
-                      setEmail(e.target.value);
-                    }}
-                  />
+                  <input type="email" />
                 </label>
               </div>
               <div>
                 <label className="regularText">
                   City
-                  <input
-                    type="text"
-                    value={city}
-                    onChange={(e) => {
-                      setCity(e.target.value);
-                    }}
-                  />
+                  <input type="text" />
                 </label>
               </div>
             </div>
