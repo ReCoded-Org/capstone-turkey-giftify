@@ -5,6 +5,8 @@ import { BsArrowRight } from "react-icons/bs";
 import db from "../../firebase";
 import Dropdown from "react-bootstrap/Dropdown";
 import { BsPlusCircle } from "react-icons/bs";
+import { BsGear } from "react-icons/bs";
+import { BsXCircle } from "react-icons/bs";
 
 //fetch database for donations - DONE
 //render add product button, which redirects to add product card - DONE
@@ -91,55 +93,57 @@ function Donations() {
 
   function DonationForm() {
     return (
-      <form onSubmit={handleSubmit}>
-        <label>Images</label>
-        <input
-          type="file"
-          className="primaryPic"
-          onSubmit={(e) => {
-            setImage(e.target.value);
-          }}
-        ></input>
-        <label>Product Name</label>
-        <input
-          type="text"
-          onSubmit={(e) => {
-            setName(e.target.value);
-          }}
-        ></input>
-        <label>Product Description</label>
-        <input
-          type="text"
-          onSubmit={(e) => {
-            setDescription(e.target.value);
-          }}
-        ></input>
-        <label>Short Brief of Product</label>
-        <input
-          type="text"
-          onSubmit={(e) => {
-            setCondition(e.target.value);
-          }}
-        ></input>
-        <Dropdown>
-          <Dropdown.Toggle variant="success" id="dropdown-basic">
-            Category
-          </Dropdown.Toggle>
-          <Dropdown.Menu>
-            <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-            <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-            <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-          </Dropdown.Menu>
-        </Dropdown>
-        <button
-          onClick={handleClick}
-          onSubmit={(e) => {
-            setCategory(e.target.value);
-          }}
-        >
-          Donate
-        </button>
-      </form>
+      <div className="formDiv">
+        <form className="addForm" onSubmit={handleSubmit}>
+          <div className="leftSection">
+            <label className="label">Images</label>
+            <input
+              className="picInput"
+              type="file"
+              className="primaryPic"
+              onSubmit={(e) => {
+                setImage(e.target.value);
+              }}
+            ></input>
+          </div>
+          <div className="rightSection">
+            <label className="label">Product Name</label>
+            <input
+              className="textInput"
+              type="text"
+              onSubmit={(e) => {
+                setName(e.target.value);
+              }}
+            ></input>
+            <label className="label">Product Description</label>
+            <input
+              className="textInput"
+              type="text"
+              onSubmit={(e) => {
+                setDescription(e.target.value);
+              }}
+            ></input>
+
+            <Dropdown>
+              <Dropdown.Toggle className="label">Product Type</Dropdown.Toggle>
+              <Dropdown.Menu>
+                <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+                <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
+            <button
+              className="addCardBtn"
+              onClick={handleClick}
+              onSubmit={(e) => {
+                setCategory(e.target.value);
+              }}
+            >
+              Donate
+            </button>
+          </div>
+        </form>
+      </div>
     );
   }
 
@@ -158,6 +162,10 @@ function Donations() {
           return (
             <div>
               <Card className="itemCard cards">
+                <div className="upperIcons">
+                  <BsXCircle className="toLeft" />
+                  <BsGear className="toRight" />
+                </div>
                 <Card.Img
                   className="itemImage"
                   variant="top"
