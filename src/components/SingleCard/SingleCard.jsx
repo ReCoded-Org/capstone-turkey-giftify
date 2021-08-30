@@ -19,7 +19,7 @@ function SingleCard({ itemsDetails }) {
       .collection("requests")
       .add({
         // userId: userId,
-        readon: inputUserMassge,
+        reason: inputUserMassge,
       })
       .then(() => {
         setInputUserMassge("");
@@ -39,7 +39,7 @@ function SingleCard({ itemsDetails }) {
             querySnapshot.docs.map((doc) => ({
               ...doc.data(),
               // userId: doc.data().userId,
-              readon: doc.data().readon,
+              readon: doc.data().reason,
             }))
           );
         });
