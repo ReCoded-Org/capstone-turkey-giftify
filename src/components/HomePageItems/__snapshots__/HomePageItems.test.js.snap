@@ -203,7 +203,8 @@ exports[`HomePageItems renders correctly 1`] = `
   >
     <a
       className="navbar-brand"
-      href="#home"
+      href="/"
+      onClick={[Function]}
     >
       <img
         alt="brand logo"
