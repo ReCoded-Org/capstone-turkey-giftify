@@ -19,7 +19,6 @@ function ContactUs() {
 
     db.collection("contactUs")
       .add({
-        to: "ayshe.997@gmail.com",
         userMassege: {
           name: inputs.inputName,
           email: inputs.inputEmail,
