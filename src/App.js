@@ -8,17 +8,21 @@ import AboutUs from "./containers/About/AboutUs";
 import Navbar from "./components/Navbar/Navbar";
 import HomePage from "./containers/HomePage/HomePage";
 import RequestItem from "./containers/RequestItem/RequestItem";
+import SearchBar from "./components/SearchBar/SearchBar";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
+
 function App() {
   return (
     <>
       <Container fluid className="mainContainer">
         <Router>
+          <ScrollToTop />
           <Route path="/" component={Navbar} />
           <Route exact path="/" component={HomePage} />
           <Route exact path="/request-item/:id" component={RequestItem} />
+          <Route path="/search" component={SearchBar} />
           {/* <Route path="/requests" component={Requests} />
           <Route path="/donations" component={Donations} />
-          <Route path="/about" component={About} />
           <Route path="/contactUs" component={ContactUs} /> */}
           <Route exact path="/about" component={AboutUs} />
           <Route path="/" component={Footer} />
