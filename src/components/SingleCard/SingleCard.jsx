@@ -8,7 +8,7 @@ function SingleCard({ itemsDetails }) {
 
   // whait for user logged in component
 
-  const [userId, setUserId] = useState("2");
+  // const [userId, setUserId] = useState("2");
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -18,7 +18,7 @@ function SingleCard({ itemsDetails }) {
       .doc(itemsDetails.ItemDocID)
       .collection("requests")
       .add({
-        userId: userId,
+        // userId: userId,
         readon: inputUserMassge,
       })
       .then(() => {
@@ -38,14 +38,14 @@ function SingleCard({ itemsDetails }) {
           setUserComments(
             querySnapshot.docs.map((doc) => ({
               ...doc.data(),
-              userId: doc.data().userId,
+              // userId: doc.data().userId,
               readon: doc.data().readon,
             }))
           );
         });
     };
     getData();
-  }, [itemsDetails.productType]);
+  }, [itemsDetails.productType, userComments]);
 
   return (
     <div className="productCard">
