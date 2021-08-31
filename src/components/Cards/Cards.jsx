@@ -1,7 +1,12 @@
 import React from "react";
 import SingleCard from "../SingleCard/SingleCard";
 
-function Cards({ cardBySelectedCategory, cardsBySearch, singleCard, itemsDetails }) {
+function Cards({
+  cardBySelectedCategory,
+  cardsBySearch,
+  singleCard,
+  itemsDetails,
+}) {
   return (
     <div>
       {singleCard === true ? (
