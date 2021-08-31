@@ -1,7 +1,7 @@
 import React from "react";
 import SingleCard from "../SingleCard/SingleCard";
 
-function Cards({ category, cardsBySearch, singleCard, itemsDetails }) {
+function Cards({ cardBySelectedCategory, cardsBySearch, singleCard, itemsDetails }) {
   return (
     <div>
       {singleCard === true ? (
@@ -15,7 +15,7 @@ function Cards({ category, cardsBySearch, singleCard, itemsDetails }) {
       ) : (
         <div>
           {" "}
-          {cardsBySearch} {category}{" "}
+          {cardsBySearch} {cardBySelectedCategory}{" "}
         </div>
       )}
     </div>

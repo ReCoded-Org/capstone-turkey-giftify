@@ -8,7 +8,7 @@ function Boards({ allItems, testSearchValue }) {
   const [singleCard, setSingleCard] = useState(false);
   const [itemsDetails, setItemsDetails] = useState({});
 
-  //  filter Cards by category
+  //  filter Cards by cardBySelectedCategory
   const items = Object.keys(allItems)
     .filter((type) => type.includes(selectedItems))
     .map((item, index) => {
@@ -50,7 +50,7 @@ function Boards({ allItems, testSearchValue }) {
     });
 
   // Categories
-  const category = Object.keys(allItems).map((categ, index) => {
+  const cardBySelectedCategory = Object.keys(allItems).map((categ, index) => {
     return (
       <div key={index} className="categories">
         <button
@@ -143,7 +143,7 @@ function Boards({ allItems, testSearchValue }) {
       {
         <Cards
           itemsDetails={itemsDetails}
-          category={category}
+          cardBySelectedCategory={cardBySelectedCategory}
           cardsBySearch={cardsBySearch}
           singleCard={singleCard}
         />
