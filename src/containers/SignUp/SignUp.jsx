@@ -44,6 +44,7 @@ function SignUp() {
               lastName: formData.lastName,
               photoURL: formData.photoURL,
               city: formData.city,
+              email: formData.email,
             })
             .then(() => {
               alert("Sign Up Successful!");
@@ -57,15 +58,24 @@ function SignUp() {
                 city: "",
               });
             })
-            .catch((error) => {
-              console.error("Error writing document: ", error);
-            });
+            .catch((error) => {});
         })
         .catch((error) => {
           const errorCode = error.code;
           const errorMessage = error.message;
-          console.log(errorCode, errorMessage);
         });
+    } else if (formData.password !== formData.password2) {
+      event.preventDefault();
+      alert("Passwords don't match!");
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        password: "",
+        password2: "",
+        photoURL: "",
+        city: "",
+      });
     }
   };
   // LogIn with Google
@@ -76,25 +86,22 @@ function SignUp() {
       .signInWithPopup(provider)
       .then((result) => {
         /** @type {firebase.auth.OAuthCredential} */
-        const { credential } = result;
-        console.log(credential);
-
         // This gives you a Google Access Token. You can use it to access the Google API.
-        // const token = credential.accessToken;
-        // The signed-in user info.
-        // const { user } = result;
-        // ...
+        const { credential } = result;
+        const token = credential.accessToken;
+        // The signed-in user info, we create an entry in users to store data in database
+        const { user } = result;
+        db.collection("users").doc(user.uid).set({
+          firstName: user.displayName,
+          lastName: user.displayName,
+          photoURL: user.photoURL,
+          city: "",
+          email: user.email,
+        });
       })
       .catch((error) => {
-        // Handle Errors here.
         const errorCode = error.code;
         const errorMessage = error.message;
-        console.log(errorCode, errorMessage);
-        // The email of the user's account used.
-        // const { email } = error;
-        // The firebase.auth.AuthCredential type that was used.
-        // const { credential } = error;
-        // ...
       });
   };
 
@@ -108,24 +115,22 @@ function SignUp() {
         /** @type {firebase.auth.OAuthCredential} */
         const { credential } = result;
 
-        // The signed-in user info.
+        // The signed-in user info, we create an entry in users to store data in database
         const { user } = result;
-
+        db.collection("users").doc(user.uid).set({
+          firstName: user.displayName,
+          lastName: user.displayName,
+          photoURL: user.photoURL,
+          city: "",
+          email: user.email,
+        });
         // This gives you a Facebook Access Token. You can use it to access the Facebook API.
         const { accessToken } = credential;
-        console.log(accessToken, user);
-        // ...
       })
       .catch((error) => {
         // Handle Errors here.
         const errorCode = error.code;
         const errorMessage = error.message;
-        // The email of the user's account used.
-        // const {email} = error;
-        // The firebase.auth.AuthCredential type that was used.
-        // const {credential} = error;
-        console.log(errorCode, errorMessage);
-        // ...
       });
   };
 
