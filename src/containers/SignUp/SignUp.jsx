@@ -16,6 +16,7 @@ function SignUp() {
     password2: "",
     photoURL: "",
     city: "",
+    uid: "",
   });
 
   const handleChange = (event) => {
@@ -45,6 +46,7 @@ function SignUp() {
               photoURL: formData.photoURL,
               city: formData.city,
               email: formData.email,
+              uid: user.uid,
             })
             .then(() => {
               alert("Sign Up Successful!");
@@ -89,6 +91,7 @@ function SignUp() {
           photoURL: user.photoURL,
           city: "",
           email: user.email,
+          uid: user.uid,
         });
       });
   };
@@ -110,6 +113,7 @@ function SignUp() {
           photoURL: user.photoURL,
           city: "",
           email: user.email,
+          uid: user.uid,
         });
       });
   };
