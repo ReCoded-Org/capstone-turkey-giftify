@@ -8,6 +8,8 @@ import AboutUs from "./containers/About/AboutUs";
 import Navbar from "./components/Navbar/Navbar";
 import HomePage from "./containers/HomePage/HomePage";
 import RequestItem from "./containers/RequestItem/RequestItem";
+import Login from "./containers/Login/Login"
+
 function App() {
   return (
     <>
@@ -20,6 +22,7 @@ function App() {
           <Route path="/about" component={About} />
           <Route path="/contactUs" component={ContactUs} /> */}
           <Route exact path="/about" component={AboutUs} />
+          <Route exact path="/login" component={Login} />
           <Route path="/" component={Footer} />
         </Router>
       </Container>

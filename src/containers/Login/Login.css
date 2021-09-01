@@ -1,0 +1,13 @@
+.loginContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.loginWindow{
+    display: flex;
+    justify-content: center;
+    height: 70vh;
+    width: 70vw;
+    background-color: #ADE8F4;
+}
+
