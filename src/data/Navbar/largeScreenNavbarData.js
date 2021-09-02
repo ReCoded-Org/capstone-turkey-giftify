@@ -6,7 +6,7 @@ export const largeScreenNavbarData = [
   },
   {
     id: "b",
-    target: { pathname: "/", hash: "#search" },
+    target: "/search",
     name: "Search",
   },
   {

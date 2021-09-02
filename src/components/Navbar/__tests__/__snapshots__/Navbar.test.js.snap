@@ -26,7 +26,7 @@ exports[`Navbar rendered correctly 1`] = `
     </a>
     <a
       className="eachLinksInNavbar"
-      href="/#search"
+      href="/search"
       onClick={[Function]}
     >
       Search
