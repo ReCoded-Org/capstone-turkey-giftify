@@ -15,49 +15,48 @@ function Login() {
     setLogin({ ...login, [event.target.type]: event.target.value });
   };
 
-  const signInWithGoogle = async () => {
-    try {
-      const result = await auth.signInWithPopup(googleProvider);
-      const { user } = result;
-      const data = {
-        uid: user.uid,
-        firstName: user.displayName,
-        email: user.email,
-      };
-      const query = await db
-        .collection("users")
-        .where("uid", "==", user.uid)
-        .get();
+  // const signInWithGoogle = async () => {
+  //   try {
+  //     const result = await auth.signInWithPopup(googleProvider);
+  //     const { user } = result;
+  //     const data = {
+  //       userId: user.uid,
+  //       firstName: user.displayName
+  //     };
+  //     const query = await db
+  //       .collection("users")
+  //       .where("uid", "==", user.uid)
+  //       .get();
 
-      if (query.docs.length === 0) {
-        await db.collection("users").add(data);
-      }
-      return data;
-    } catch (error) {
-      return { error };
-    }
-  };
-  const signInWithFacebook = async () => {
-    try {
-      const result = await auth.signInWithPopup(facebookProvider);
-      const { user } = result;
-      const data = {
-        uid: user.uid,
-        firstName: user.displayName,
-        email: user.email,
-      };
-      const query = await db
-        .collection("users")
-        .where("uid", "==", user.uid)
-        .get();
-      if (query.docs.length === 0) {
-        await db.collection("users").add(data);
-      }
-      return data;
-    } catch (error) {
-      return { error };
-    }
-  };
+  //     if (query.docs.length === 0) {
+  //       await db.collection("users").add(data);
+  //     }
+  //     return data;
+  //   } catch (error) {
+  //     return { error };
+  //   }
+  // };
+  // const signInWithFacebook = async () => {
+  //   try {
+  //     const result = await auth.signInWithPopup(facebookProvider);
+  //     const { user } = result;
+  //     const data = {
+  //       userId: user.uid,
+  //       firstName: user.displayName
+  //     };
+  //     const query = await db
+  //       .collection("users")
+  //       .where("uid", "==", user.uid)
+  //       .get();
+  //     if (query.docs.length === 0) {
+  //       await db.collection("users").add(data);
+  //     }
+
+  //     return data;
+  //   } catch (error) {
+  //     return { error };
+  //   }
+  // };
 
   const signInWithEmailAndPassword = async (event) => {
     event.preventDefault();
