@@ -8,7 +8,7 @@ import AboutUs from "./containers/About/AboutUs";
 import Navbar from "./components/Navbar/Navbar";
 import HomePage from "./containers/HomePage/HomePage";
 import RequestItem from "./containers/RequestItem/RequestItem";
-import Login from "./containers/Login/Login"
+import Login from "./containers/Login/Login";
 
 function App() {
   return (

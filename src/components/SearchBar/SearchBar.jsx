@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./SearchBar.css";
-import {db} from "../../firebase";
+import { db } from "../../firebase";
 import Boards from "../boards/Boards";
 
 function SearchSection() {
