@@ -10,6 +10,7 @@ import HomePage from "./containers/HomePage/HomePage";
 import RequestItem from "./containers/RequestItem/RequestItem";
 import RequestsPage from "./components/RequestsPage/RequestsPage";
 import DonatersMessagePage from "./components/RequestsPage/DonatersMessagePage";
+import AddProduct from "./components/RequestsPage/AddProduct"
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
             path="/donatersMessagePage/:category/:id"
             component={DonatersMessagePage}
           />
+          <Route exact path="/addProduct" component={AddProduct} />
         </Router>
       </Container>
     </>

@@ -38,6 +38,17 @@
   height: 70%;
 }
 
+.card-link > svg{
+  font-size: 10em;
+}
+
+.addProductImg{
+  display: flex;
+	justify-content: center !important;
+	align-items: center;
+}
+/* RESPONSIVE DEGIL UGRAS */
+
 /* FIX CARD IMAGE HEIGHT */
 
 @media only screen and (min-width: 532px) and (max-width: 991px) {

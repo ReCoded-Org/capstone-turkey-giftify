@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import db from "./../../firebase";
 import { Card } from "react-bootstrap";
-import { ArrowRight } from "react-bootstrap-icons";
+import { ArrowRight, PlusCircle } from "react-bootstrap-icons";
 import { Link } from "react-router-dom";
 import "./RequestsPage.css";
 
@@ -51,6 +51,13 @@ const RequestsPage = () => {
 
   return (
     <div className="requstsPageContainer">
+      <Card className="cardInRequestPage">
+          <Card.Body className="CardUpperPart addProductImg">
+            <Card.Link as={ Link } to="addProduct">
+              <PlusCircle />
+            </Card.Link>
+          </Card.Body>
+        </Card>
       {Object.values(usersProducts).map((info) => (
         <Card key={info[0]} className="cardInRequestPage">
           <Card.Img variant="top" src={info[1]} />
