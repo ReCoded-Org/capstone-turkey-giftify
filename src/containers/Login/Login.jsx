@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import "./Login.css";
 import { Form, Button } from "react-bootstrap";
 import { useDispatch } from "react-redux";
-import { auth, googleProvider, facebookProvider, db } from "../../firebase";
+import { auth } from "../../firebase";
+// import { auth, googleProvider, facebookProvider, db } from "../../firebase";
+
 
 function Login() {
   const dispatch = useDispatch();
@@ -70,6 +72,10 @@ function Login() {
         type: "user/login",
         payload: { username: user.displayName, userId: user.uid },
       });
+      setLogin({
+        email: "",
+        password: ""
+      })
       return user;
     } catch (error) {
       return { error };
