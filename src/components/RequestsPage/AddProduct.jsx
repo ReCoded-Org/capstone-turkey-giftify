@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import db from "./../../firebase";
 import "./AddProduct.css";
 import { Button } from "react-bootstrap";
+import { useHistory } from "react-router-dom";
 
 const AddProduct = () => {
   const [userID, setUserID] = useState("2");
@@ -11,26 +12,18 @@ const AddProduct = () => {
   const [condition, setCondition] = useState("");
   const [image, setImage] = useState("");
   const [categoriesName, setCategoriesName] = useState([]);
+  const history = useHistory();
 
   const getCategories = async () => {
     const collection = await db.collection("categories").get();
     const arrayOfDocs = collection.docs.map((doc) => {
       return { id: doc.id, ...doc.data() };
     });
-
     setCategoriesName(arrayOfDocs);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(
-      "itemName: ",
-      itemName,
-      " productCategory: ",
-      productCategory,
-      " description: ",
-      description
-    );
     db.collection("categories")
       .doc(productCategory.value)
       .collection("items")
@@ -40,14 +33,9 @@ const AddProduct = () => {
         description,
         condition,
         image,
-      });
+      })
+      .then(history.push("/requestsPage"));
   };
-
-  // Adding a new doc to the collection
-  // db.collection("users").add({
-  //   fullname,
-  //   email,
-  // });
 
   const handleChange = (e) => {
     setProductCategory({ value: e.target.value });
