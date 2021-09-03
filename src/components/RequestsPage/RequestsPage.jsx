@@ -52,12 +52,12 @@ const RequestsPage = () => {
   return (
     <div className="requstsPageContainer">
       <Card className="cardInRequestPage">
-          <Card.Body className="CardUpperPart addProductImg">
-            <Card.Link as={ Link } to="addProduct">
-              <PlusCircle />
-            </Card.Link>
-          </Card.Body>
-        </Card>
+        <Card.Body className="CardUpperPart addProductImg">
+          <Card.Link as={Link} to="addProduct">
+            <PlusCircle />
+          </Card.Link>
+        </Card.Body>
+      </Card>
       {Object.values(usersProducts).map((info) => (
         <Card key={info[0]} className="cardInRequestPage">
           <Card.Img variant="top" src={info[1]} />
