@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddProduct rendered correctly 1`] = `
+<div>
+  <form
+    onSubmit={[Function]}
+  >
+    <label>
+      Product's Name:
+      <input
+        onChange={[Function]}
+        type="text"
+        value=""
+      />
+    </label>
+    <label>
+      Product's Category:
+      <select
+        onChange={[Function]}
+        value="books"
+      />
+    </label>
+    <label>
+      Product's Short Brief:
+      <input
+        onChange={[Function]}
+        type="text"
+        value=""
+      />
+    </label>
+    <label>
+      Product's Condition:
+      <input
+        onChange={[Function]}
+        type="text"
+        value=""
+      />
+    </label>
+    <label>
+      Product's Image:
+      <input
+        onChange={[Function]}
+        type="text"
+        value=""
+      />
+    </label>
+    <button
+      className="btn btn-primary"
+      disabled={false}
+      type="submit"
+    >
+      Submit
+    </button>
+  </form>
+</div>
+`;

@@ -25,7 +25,6 @@ function App() {
           <Route path="/about" component={About} />
           <Route path="/contactUs" component={ContactUs} /> */}
           <Route exact path="/about" component={AboutUs} />
-          <Route path="/" component={Footer} />
           <Route exact path="/requestsPage" component={RequestsPage} />
           <Route
             exact
@@ -33,6 +32,7 @@ function App() {
             component={DonatersMessagePage}
           />
           <Route exact path="/addProduct" component={AddProduct} />
+          <Route path="/" component={Footer} />
         </Router>
       </Container>
     </>

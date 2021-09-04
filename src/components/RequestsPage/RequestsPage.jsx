@@ -63,10 +63,13 @@ const RequestsPage = () => {
           <Card.Img variant="top" src={info[1]} />
           <Card.Body className="CardUpperPart">
             <Card.Title>{info[0]}</Card.Title>
-            <Card.Link>
-              <Link to={`/donatersMessagePage/${info[3]}/${info[2]}`}>
+            <Card.Link
+              as={Link}
+              to={`/donatersMessagePage/${info[3]}/${info[2]}`}
+            >
+              <span>
                 See Details <ArrowRight />
-              </Link>
+              </span>
             </Card.Link>
           </Card.Body>
         </Card>
