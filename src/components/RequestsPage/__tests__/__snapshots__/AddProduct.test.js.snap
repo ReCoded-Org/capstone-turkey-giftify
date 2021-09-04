@@ -1,12 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`AddProduct rendered correctly 1`] = `
-<div>
+<div
+  className="addProductMainDiv"
+>
   <form
     onSubmit={[Function]}
   >
     <label>
-      Product's Name:
+      <span>
+        Product's Image:
+      </span>
       <input
         onChange={[Function]}
         type="text"
@@ -14,43 +18,60 @@ exports[`AddProduct rendered correctly 1`] = `
       />
     </label>
     <label>
-      Product's Category:
+      <span>
+        Product's Name:
+      </span>
+      <input
+        onChange={[Function]}
+        type="text"
+        value=""
+      />
+    </label>
+    <label>
+      <span>
+        Product's Category:
+      </span>
       <select
         onChange={[Function]}
         value="books"
       />
     </label>
     <label>
-      Product's Short Brief:
-      <input
+      <span>
+        Product's Short Brief:
+      </span>
+      <textarea
         onChange={[Function]}
+        style={
+          Object {
+            "resize": "vertical",
+          }
+        }
         type="text"
         value=""
       />
     </label>
     <label>
-      Product's Condition:
+      <span>
+        Product's Condition:
+      </span>
       <input
         onChange={[Function]}
         type="text"
         value=""
       />
     </label>
-    <label>
-      Product's Image:
-      <input
-        onChange={[Function]}
-        type="text"
-        value=""
-      />
-    </label>
-    <button
-      className="btn btn-primary"
-      disabled={false}
-      type="submit"
+    <div
+      className="buttonDivAddProduct"
     >
-      Submit
-    </button>
+      <button
+        className="btn btn-primary"
+        disabled={false}
+        type="submit"
+      >
+        Add Product
+      </button>
+    </div>
   </form>
 </div>
 `;

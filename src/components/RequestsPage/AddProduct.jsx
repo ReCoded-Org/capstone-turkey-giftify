@@ -47,10 +47,18 @@ const AddProduct = () => {
   }, []);
 
   return (
-    <div>
+    <div className="addProductMainDiv">
       <form onSubmit={handleSubmit}>
         <label>
-          Product's Name:
+          <span>Product's Image:</span>
+          <input
+            type="text"
+            onChange={(e) => setImage(e.target.value)}
+            value={image}
+          />
+        </label>
+        <label>
+          <span>Product's Name:</span>
           <input
             type="text"
             onChange={(e) => setItemName(e.target.value)}
@@ -58,44 +66,39 @@ const AddProduct = () => {
           />
         </label>
         <label>
-          Product's Category:
+          <span>Product's Category:</span>
           <select value={productCategory.value} onChange={handleChange}>
-            {categoriesName.map((anObjectMapped) => {
+            {categoriesName.map((info) => {
               return (
-                <option key={anObjectMapped.id} value={anObjectMapped.id}>
-                  {anObjectMapped.id}
+                <option key={info.id} value={info.id}>
+                  {info.id.charAt(0).toUpperCase() + info.id.slice(1)}
                 </option>
               );
             })}
           </select>
         </label>
         <label>
-          Product's Short Brief:
-          <input
+          <span>Product's Short Brief:</span>
+          <textarea
             type="text"
             onChange={(e) => setDescription(e.target.value)}
+            style={{ resize: "vertical" }}
             value={description}
           />
         </label>
         <label>
-          Product's Condition:
+          <span>Product's Condition:</span>
           <input
             type="text"
             onChange={(e) => setCondition(e.target.value)}
             value={condition}
           />
         </label>
-        <label>
-          Product's Image:
-          <input
-            type="text"
-            onChange={(e) => setImage(e.target.value)}
-            value={image}
-          />
-        </label>
-        <Button variant="primary" type="submit">
-          Submit
-        </Button>
+        <div className="buttonDivAddProduct">
+          <Button variant="primary" type="submit">
+            Add Product
+          </Button>
+        </div>
       </form>
     </div>
   );
