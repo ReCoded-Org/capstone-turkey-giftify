@@ -5,6 +5,7 @@ import { Button } from "react-bootstrap";
 import { useHistory } from "react-router-dom";
 
 const AddProduct = () => {
+  // eslint-disable-next-line
   const [userID, setUserID] = useState("2");
   const [itemName, setItemName] = useState("");
   const [productCategory, setProductCategory] = useState({ value: "books" });
