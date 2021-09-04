@@ -3,8 +3,6 @@ import "./Login.css";
 import { Form, Button } from "react-bootstrap";
 import { useDispatch } from "react-redux";
 import { auth } from "../../firebase";
-// import { auth, googleProvider, facebookProvider, db } from "../../firebase";
-
 
 function Login() {
   const dispatch = useDispatch();
@@ -17,49 +15,6 @@ function Login() {
     setLogin({ ...login, [event.target.type]: event.target.value });
   };
 
-  // const signInWithGoogle = async () => {
-  //   try {
-  //     const result = await auth.signInWithPopup(googleProvider);
-  //     const { user } = result;
-  //     const data = {
-  //       userId: user.uid,
-  //       firstName: user.displayName
-  //     };
-  //     const query = await db
-  //       .collection("users")
-  //       .where("uid", "==", user.uid)
-  //       .get();
-
-  //     if (query.docs.length === 0) {
-  //       await db.collection("users").add(data);
-  //     }
-  //     return data;
-  //   } catch (error) {
-  //     return { error };
-  //   }
-  // };
-  // const signInWithFacebook = async () => {
-  //   try {
-  //     const result = await auth.signInWithPopup(facebookProvider);
-  //     const { user } = result;
-  //     const data = {
-  //       userId: user.uid,
-  //       firstName: user.displayName
-  //     };
-  //     const query = await db
-  //       .collection("users")
-  //       .where("uid", "==", user.uid)
-  //       .get();
-  //     if (query.docs.length === 0) {
-  //       await db.collection("users").add(data);
-  //     }
-
-  //     return data;
-  //   } catch (error) {
-  //     return { error };
-  //   }
-  // };
-
   const signInWithEmailAndPassword = async (event) => {
     event.preventDefault();
     try {
@@ -70,12 +25,12 @@ function Login() {
       const { user } = res;
       dispatch({
         type: "user/login",
-        payload: { username: user.displayName, userId: user.uid },
+        payload: { userId: user.uid },
       });
       setLogin({
         email: "",
-        password: ""
-      })
+        password: "",
+      });
       return user;
     } catch (error) {
       return { error };
