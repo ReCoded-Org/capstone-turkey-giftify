@@ -12,6 +12,7 @@ import RequestItem from "./containers/RequestItem/RequestItem";
 import SearchBar from "./components/SearchBar/SearchBar";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import SignUp from "./containers/SignUp/SignUp";
+import UserProfileLast from "./components/UserProfileLast/UserProfileLast";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route path="/contactUs" component={ContactUsPage} />
           <Route exact path="/signUp" component={SignUp} />
           <Route exact path="/about" component={AboutUs} />
+          <Route exact path="/userProfile" component={UserProfileLast} />
           <Route path="/" component={Footer} />
         </Router>
       </Container>
