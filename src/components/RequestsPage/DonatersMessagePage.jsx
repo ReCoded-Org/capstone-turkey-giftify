@@ -3,6 +3,7 @@ import "./DonatersMessagePage.css";
 import { useParams, useHistory } from "react-router-dom";
 import db from "./../../firebase";
 import { Gear, XCircle } from "react-bootstrap-icons";
+import { Button } from "react-bootstrap";
 
 const DonatersMessagePage = () => {
   const { category, id } = useParams();
@@ -179,8 +180,24 @@ const DonatersMessagePage = () => {
       <div className="messageArea">
         {Object.values(usersMessages).map((info) => (
           <div key={info[1]} className="donatersMessageText">
-            <span>User ID: {info[1]}</span>
+            <span>User ID: {info[1].slice(-10)}</span>
             <p>{info[0]}</p>
+            <Button
+              variant="primary"
+              type="submit"
+              onClick={() =>
+                db
+                  .collection("users")
+                  .doc(info[1])
+                  .get()
+                  .then((doc) => {
+                    return (window.location.href =
+                      "mailto:" + doc.data().email);
+                  })
+              }
+            >
+              Send Mail
+            </Button>
           </div>
         ))}
       </div>
