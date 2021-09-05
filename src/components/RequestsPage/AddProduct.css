@@ -1,0 +1,76 @@
+.addProductMainDiv {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  margin: 10% 0%;
+}
+
+.addProductMainDiv > form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: stretch;
+  background-color: #90e0ef;
+  width: 65%;
+  border-radius: 15px;
+}
+
+.addProductMainDiv > form > label {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: stretch;
+  width: 65%;
+  font-weight: bold;
+  font-size: 20px;
+}
+.addProductMainDiv > form > label > select,
+.addProductMainDiv > form > label > input,
+.addProductMainDiv > form > label > textarea {
+  width: 100%;
+}
+
+.addProductMainDiv > form > label > span {
+  margin: 3% 0%;
+}
+
+.buttonDivAddProduct {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: stretch;
+  margin: 5% 0%;
+}
+
+@media only screen and (min-width: 750px) and (max-width: 1009px) {
+  .addProductMainDiv > form > label {
+    width: 50%;
+    font-weight: bold;
+    font-size: 17.5px;
+  }
+
+  .addProductMainDiv > form {
+    width: 60%;
+  }
+}
+
+@media only screen and (min-width: 120px) and (max-width: 749px) {
+  .addProductMainDiv > form > label {
+    width: 80%;
+    font-weight: bold;
+    font-size: 17.5px;
+  }
+
+  .addProductMainDiv > form {
+    width: 85%;
+  }
+}
