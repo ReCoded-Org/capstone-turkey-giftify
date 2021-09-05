@@ -1,0 +1,75 @@
+.requstsPageContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  align-content: space-evenly;
+}
+
+.cardInRequestPage {
+  width: 30%;
+  margin: 1%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: stretch;
+  background: rgb(144, 224, 239);
+}
+
+.CardUpperPart {
+  background-color: #ade8f4;
+  width: 100%;
+}
+
+.card-title {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 34px;
+  text-align: center;
+}
+
+.card-img-top {
+  max-width: 350px;
+  height: 70%;
+}
+
+.addProductImg > .card-link > svg {
+  font-size: 10em;
+}
+
+.addProductImg {
+  display: flex;
+  justify-content: center !important;
+  align-items: center;
+}
+/* RESPONSIVE DEGIL UGRAS */
+
+/* FIX CARD IMAGE HEIGHT */
+
+@media only screen and (min-width: 532px) and (max-width: 991px) {
+  .cardInRequestPage {
+    width: 45%;
+    margin: 1%;
+  }
+}
+
+@media only screen and (min-width: 120px) and (max-width: 531px) {
+  .requstsPageContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: space-around;
+  }
+
+  .cardInRequestPage {
+    width: 85%;
+    margin: 1%;
+  }
+}
