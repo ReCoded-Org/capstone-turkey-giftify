@@ -1,4 +1,4 @@
-export default [
+export const cities = [
   "Adana",
   "Adıyaman",
   "Afyon",
