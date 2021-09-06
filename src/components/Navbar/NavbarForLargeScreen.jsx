@@ -7,7 +7,7 @@ import "firebase/auth";
 import { largeScreenNavbarData } from "../../data/Navbar/largeScreenNavbarData.js";
 
 const NavbarForLargeScreen = () => {
-  const { userId } = useSelector((state) => state.user);
+  const { userId, userName } = useSelector((state) => state.user);
   const displayProfile = userId === "" ? "none" : "inline-block";
   const displayLogin = userId === "" ? "inline-block" : "none";
   const dispatch = useDispatch();
@@ -68,8 +68,7 @@ const NavbarForLargeScreen = () => {
             Sign Up
           </Button>
         </Link>
-        <Link to="/signUp">
-          {/* link to profile  */}
+        <Link to="/userProfile">
           <Button
             variant="primary"
             style={{
@@ -78,7 +77,7 @@ const NavbarForLargeScreen = () => {
               display: displayProfile,
             }}
           >
-            Profile
+            {userName}
           </Button>
         </Link>
         <Link to="/">

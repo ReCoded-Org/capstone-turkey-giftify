@@ -1,5 +1,6 @@
 const initialState = {
   userId: "",
+  userName: "",
 };
 
 function userReducer(state = initialState, action) {
@@ -7,12 +8,13 @@ function userReducer(state = initialState, action) {
     case "user/login":
       return {
         ...state,
-        userId: action.payload.userId,
+        ...action.payload,
       };
     case "user/logout":
       return {
         ...state,
         userId: "",
+        userName: "",
       };
     default:
       return state;

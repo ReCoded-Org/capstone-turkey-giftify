@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Login.css";
 import { Form, Button } from "react-bootstrap";
 import { useDispatch } from "react-redux";
-import { auth } from "../../firebase";
+import { auth, db } from "../../firebase";
 
 function Login() {
   const dispatch = useDispatch();
@@ -23,6 +23,24 @@ function Login() {
         login.password
       );
       const { user } = res;
+      // Read additional user info from db
+      const docRef = await db.collection("users").doc(user.uid);
+      docRef
+        .get()
+        .then((doc) => {
+          if (doc.exists) {
+            dispatch({
+              type: "user/login",
+              payload: { userName: doc.data().displayName },
+            });
+          } else {
+            // doc.data() will be undefined in this case
+            alert("No such user!");
+          }
+        })
+        .catch((error) => {
+          alert("Couldn't access user from database:", error);
+        });
       dispatch({
         type: "user/login",
         payload: { userId: user.uid },
