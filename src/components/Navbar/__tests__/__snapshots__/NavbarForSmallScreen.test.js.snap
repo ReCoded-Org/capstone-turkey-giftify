@@ -29,7 +29,13 @@ Array [
       href="/"
       onClick={[Function]}
     >
-      LOGO
+      <img
+        alt="Logo"
+        className=""
+        height="70px"
+        src="navBarLogo.png"
+        width="180px"
+      />
     </a>
   </div>,
   <nav
