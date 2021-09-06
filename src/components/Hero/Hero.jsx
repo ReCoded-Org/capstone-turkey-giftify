@@ -1,7 +1,8 @@
 import React from "react";
 import "./Hero.css";
 import { BrowserRouter as Router, Link } from "react-router-dom";
-import { Button } from "react-bootstrap";
+import { Button, Image } from "react-bootstrap";
+import heroLogo from "../../images/heroLogo.png";
 
 function Hero() {
   return (
@@ -19,11 +20,10 @@ function Hero() {
           </p>
         </div>
         <div className="heroImg">
-          {/* an actual picture is needed */}
-          <img alt="giftify" src="#" />
+          <Image src={heroLogo} alt="giftify" fluid />
         </div>
       </div>
-      {/*try the button target*/}
+      {/* try the button target */}
       <div className="giftifyButton">
         <Router>
           <Link to="/donation/add_product_card">

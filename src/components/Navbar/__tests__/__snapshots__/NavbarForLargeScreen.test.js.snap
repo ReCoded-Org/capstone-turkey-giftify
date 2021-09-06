@@ -11,7 +11,10 @@ exports[`NavbarForLargeScreen rendered correctly 1`] = `
       href="/"
       onClick={[Function]}
     >
-      LOGO
+      <img
+        className=""
+        src="navBarLogo.png"
+      />
     </a>
   </div>
   <div
