@@ -15,6 +15,7 @@ import AddProduct from "./components/RequestsPage/AddProduct";
 import SearchBar from "./components/SearchBar/SearchBar";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import SignUp from "./containers/SignUp/SignUp";
+import Login from "./containers/Login/Login";
 import UserProfileLast from "./components/UserProfileLast/UserProfileLast";
 
 function App() {
@@ -40,6 +41,7 @@ function App() {
             component={DonatersMessagePage}
           />
           <Route exact path="/addProduct" component={AddProduct} />
+          <Route exact path="/login" component={Login} />
           <Route path="/" component={Footer} />
         </Router>
       </Container>
