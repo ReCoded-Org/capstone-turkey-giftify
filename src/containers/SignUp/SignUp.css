@@ -1,0 +1,20 @@
+.userForm {
+  margin: 20px;
+  padding: 10px;
+}
+
+.formContainer {
+  background-color: #caf0f8;
+  border-radius: 20px;
+}
+
+.button {
+}
+
+.bi-google {
+  margin: 5px;
+}
+
+.bi-facebook {
+  margin: 5px;
+}
