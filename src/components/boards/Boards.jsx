@@ -18,6 +18,7 @@ function Boards({ allItems, testSearchValue, setSingleCard }) {
         itemCondition: info.condition,
         productType: item,
         productImage: info.image,
+        itemDocID: info.itemDocID
       });
     });
   });
