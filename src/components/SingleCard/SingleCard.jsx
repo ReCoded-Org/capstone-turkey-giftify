@@ -46,38 +46,40 @@ function SingleCard({ itemsDetails }) {
   }, [itemsDetails.productType, userComments]);
 
   return (
-    <div className="productCard">
-      <div>
-        <img
-          className="productImage"
-          src={itemsDetails.productImage}
-          alt={itemsDetails.productName}
-        />
-      </div>
-      <div className="pruductDetails">
-        <h5>Product Name</h5>
-        <p>{itemsDetails.productName}</p>
-        <h5>Product Type</h5>
-        <p>{itemsDetails.productType}</p>
-        <h5>Product’s Short Brief</h5>
-        <p>{itemsDetails.ProductDescription}</p>
-        <h5>Product Condition</h5>
-        <p>{itemsDetails.itemCondition}</p>
-        <form onSubmit={handleSubmit}>
-          <label>
-            <h5>Why do you need?</h5>
-            <textarea
-              className="message"
-              type="message"
-              name="name"
-              data-gramm_editor="false"
-              value={inputUserMassge}
-              onChange={(e) => setInputUserMassge(e.target.value)}
-            />
-          </label>
-          <br />
-          <input className="submit" type="submit" value="Submit" />
-        </form>
+    <div>
+      <div className="productCard">
+        <div>
+          <img
+            className="productImage"
+            src={itemsDetails.productImage}
+            alt={itemsDetails.productName}
+          />
+        </div>
+        <div className="pruductDetails">
+          <h5>Product Name</h5>
+          <p>{itemsDetails.productName}</p>
+          <h5>Product Type</h5>
+          <p>{itemsDetails.productType}</p>
+          <h5>Product’s Short Brief</h5>
+          <p>{itemsDetails.ProductDescription}</p>
+          <h5>Product Condition</h5>
+          <p>{itemsDetails.itemCondition}</p>
+          <form onSubmit={handleSubmit}>
+            <label>
+              <h5>Why do you need?</h5>
+              <textarea
+                className="message"
+                type="message"
+                name="name"
+                data-gramm_editor="false"
+                value={inputUserMassge}
+                onChange={(e) => setInputUserMassge(e.target.value)}
+              />
+            </label>
+            <br />
+            <input className="submit" type="submit" value="Submit" />
+          </form>
+        </div>
       </div>
     </div>
   );

@@ -34,6 +34,22 @@ function Cards({
             setItemsDetails={setItemsDetails}
           />
         </Route>
+        <Route exact path="/search">
+          <CardsBySearch
+            allProducts={allProducts}
+            setSingleCard={setSingleCard}
+            setItemsDetails={setItemsDetails}
+            testSearchValue={testSearchValue}
+          />
+          <Categories
+            allProducts={allProducts}
+            allCategories={allCategories}
+            setSelectedItems={setSelectedItems}
+            selectedItems={selectedItems}
+            setSingleCard={setSingleCard}
+            setItemsDetails={setItemsDetails}
+          />
+        </Route>
         <Route path="/productDetails">
           <SingleCard itemsDetails={itemsDetails} />
         </Route>

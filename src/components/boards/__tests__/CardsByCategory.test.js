@@ -5,7 +5,26 @@ import renderer from "react-test-renderer";
 
 afterEach(cleanup);
 
+const allProducts = [
+  {
+    productName: "",
+    ProductDescription: "",
+    itemCondition: "",
+    productType: "",
+    productImage: "",
+  },
+  {
+    productName: "",
+    ProductDescription: "",
+    itemCondition: "",
+    productType: "",
+    productImage: "",
+  },
+];
+
 it("CardsByCategory rendered correctly", () => {
-  const tree = renderer.create(<CardsByCategory />).toJSON();
+  const tree = renderer
+    .create(<CardsByCategory allProducts={allProducts} />)
+    .toJSON();
   expect(tree).toMatchSnapshot();
 });

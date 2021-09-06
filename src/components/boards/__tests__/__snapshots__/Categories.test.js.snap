@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Categories rendered correctly 1`] = `
+Array [
+  <div
+    className="categories"
+  >
+    <button
+      className="oneCategory book"
+      onClick={[Function]}
+    >
+      book
+    </button>
+  </div>,
+  <div
+    className="categories"
+  >
+    <button
+      className="oneCategory clothing"
+      onClick={[Function]}
+    >
+      clothing
+    </button>
+  </div>,
+]
+`;
