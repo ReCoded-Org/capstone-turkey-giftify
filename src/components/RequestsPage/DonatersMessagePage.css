@@ -1,0 +1,165 @@
+.donatersMessageContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: stretch;
+  align-content: stretch;
+  width: 100%;
+}
+
+.mainProductDetails {
+  background: #90e0ef;
+  border-radius: 15px;
+  width: 45%;
+}
+
+.productDetails {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: stretch;
+  align-content: stretch;
+  margin: 5% 0%;
+}
+
+.productDetailsParentDiv {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.productDetailsChildDiv {
+  width: 85%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: stretch;
+}
+
+.productDetailsChildDiv > span {
+  font-weight: bold;
+  width: 100%;
+}
+
+.productDetailsParentDiv > p {
+  background: #f8f9fa;
+  border: 1px solid #006eff;
+  box-sizing: border-box;
+  border-radius: 15px;
+  padding: 3%;
+  width: 90%;
+}
+
+.productDetailsImage {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: stretch;
+  width: 100%;
+}
+
+.productDetailsImage > img {
+  width: 75%;
+  border-radius: 15px;
+  margin: 0% 0% 5% 0%;
+}
+
+.messageArea {
+  background: #90e0ef;
+  border-radius: 15px;
+  width: 45%;
+}
+
+.donatersMessageText {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: baseline;
+  align-content: stretch;
+  width: 100%;
+  margin: 5%;
+}
+
+.donatersMessageText > span {
+  margin: 0% 0% 1% 2%;
+  font-weight: bold;
+}
+
+.donatersMessageText > p {
+  background: #f8f9fa;
+  border: 1px solid #006eff;
+  box-sizing: border-box;
+  border-radius: 15px;
+  padding: 3%;
+  width: 90%;
+}
+
+.productDetailsChildDiv > svg,
+.productDetailsImage > svg,
+.productDeleteParentDiv > svg {
+  cursor: pointer;
+}
+
+.productDeleteParentDiv > svg {
+  margin-top: 4%;
+  font-size: 30px;
+}
+
+.productDeleteParentDiv > .productDetailsChildDiv,
+.productDeleteParentDiv {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: stretch;
+}
+
+.productDeleteParentDiv > .productDetailsChildDiv > span {
+  font-size: 25px;
+}
+
+.productDeleteParentDiv:hover {
+  border-radius: 50px;
+  background-image: linear-gradient(
+    to top,
+    #dbdcd7 0%,
+    #dddcd7 24%,
+    #e2c9cc 30%,
+    #e7627d 46%,
+    #b8235a 59%,
+    #801357 71%,
+    #3d1635 84%,
+    #1c1a27 100%
+  );
+  transition: 0.3s;
+  color: #ffffff;
+}
+
+@media only screen and (min-width: 120px) and (max-width: 531px) {
+  .donatersMessageContainer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: stretch;
+  }
+
+  .mainProductDetails {
+    width: 85%;
+  }
+
+  .messageArea {
+    margin-top: 5%;
+    width: 85%;
+  }
+}
