@@ -58,7 +58,6 @@ function SearchSection() {
     setInput("");
   }
 
-  
   return (
     <div>
       <h2 className="parag">Or would you like to search for yourself ?</h2>
