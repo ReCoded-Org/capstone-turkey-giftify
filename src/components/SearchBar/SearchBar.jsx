@@ -58,7 +58,7 @@ function SearchSection() {
     setInput("");
   }
 
-  console.log(allItems)
+  console.log(allItems);
 
   return (
     <div>
