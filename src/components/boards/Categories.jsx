@@ -10,9 +10,7 @@ function Categories({
   setSingleCard,
   setItemsDetails,
 }) {
-  return (
-    
-    allCategories.map((product, index) => {
+  return allCategories.map((product, index) => {
     return (
       <div key={index} className="categories">
         <button
@@ -35,8 +33,7 @@ function Categories({
         ) : null}
       </div>
     );
-  })
-  );
+  });
 }
 
 export default Categories;

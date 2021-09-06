@@ -54,9 +54,8 @@ function SearchSection() {
   function handleSubmit(event) {
     event.preventDefault();
     setTestSearchValue(input);
-    setSingleCard(false)
-    setInput("")
-
+    setSingleCard(false);
+    setInput("");
   }
 
   return (
@@ -80,8 +79,8 @@ function SearchSection() {
         allItems={allItems}
         input={input}
         testSearchValue={testSearchValue}
-        singleCard = {singleCard}
-        setSingleCard = {setSingleCard}
+        singleCard={singleCard}
+        setSingleCard={setSingleCard}
       />
     </div>
   );

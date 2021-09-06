@@ -2,43 +2,38 @@ import React, { useState } from "react";
 import Cards from "./Cards";
 import "./Board.css";
 
-function Boards({ allItems, testSearchValue, setSingleCard, singleCard }) {
+function Boards({ allItems, testSearchValue, setSingleCard }) {
   const [selectedItems, setSelectedItems] = useState("");
   const [itemsDetails, setItemsDetails] = useState({});
 
-  const allCategories = [];
   const allProducts = [];
+  const allCategories = [];
 
-  // All Products and Categories in the database
   Object.keys(allItems).map((item) => {
     allCategories.push(item);
     return allItems[item].map((info) => {
       return allProducts.push({
         productName: info.itemName,
-        productImage: info.image,
-        productType: item,
         ProductDescription: info.description,
         itemCondition: info.condition,
-        itemDocID: info.itemDocID,
+        productType: item,
+        productImage: info.image,
       });
     });
   });
 
   return (
     <div>
-      {
-        <Cards
-          itemsDetails={itemsDetails}
-          allCategories={allCategories}
-          setSelectedItems={setSelectedItems}
-          selectedItems={selectedItems}
-          singleCard={singleCard}
-          allProducts={allProducts}
-          setSingleCard={setSingleCard}
-          setItemsDetails={setItemsDetails}
-          testSearchValue={testSearchValue}
-        />
-      }
+      <Cards
+        allProducts={allProducts}
+        allCategories={allCategories}
+        testSearchValue={testSearchValue}
+        selectedItems={selectedItems}
+        setSelectedItems={setSelectedItems}
+        setSingleCard={setSingleCard}
+        itemsDetails={itemsDetails}
+        setItemsDetails={setItemsDetails}
+      />
     </div>
   );
 }

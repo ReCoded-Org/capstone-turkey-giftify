@@ -6,6 +6,6 @@ import renderer from "react-test-renderer";
 afterEach(cleanup);
 
 it("CardsByCategory rendered correctly", () => {
-  const tree = renderer.create(<CardsByCategory allCategories />).toJSON();
+  const tree = renderer.create(<CardsByCategory />).toJSON();
   expect(tree).toMatchSnapshot();
 });

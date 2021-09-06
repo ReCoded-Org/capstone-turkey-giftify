@@ -4,7 +4,7 @@ import { VscArrowRight } from "react-icons/vsc";
 import { Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-function ProductByCategory({
+function CardsByCategory({
   allProducts,
   selectedItems,
   setSingleCard,
@@ -13,7 +13,8 @@ function ProductByCategory({
   return (
     <Container>
       <div className="row cards">
-        {allProducts.filter((type) => type.productType.includes(selectedItems))
+        {allProducts
+          .filter((type) => type.productType.includes(selectedItems))
           .map((filteredItem, index) => {
             return (
               <div key={index} className="oneCard col-3">
@@ -42,4 +43,4 @@ function ProductByCategory({
   );
 }
 
-export default ProductByCategory;
+export default CardsByCategory;

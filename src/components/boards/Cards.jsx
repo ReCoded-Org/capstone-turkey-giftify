@@ -25,7 +25,6 @@ function Cards({
             setItemsDetails={setItemsDetails}
             testSearchValue={testSearchValue}
           />
-
           <Categories
             allProducts={allProducts}
             allCategories={allCategories}
@@ -35,8 +34,10 @@ function Cards({
             setItemsDetails={setItemsDetails}
           />
         </Route>
-
         <Route path="/productDetails">
+          <SingleCard itemsDetails={itemsDetails} />
+        </Route>
+        <Route path="/search/productDetails">
           <SingleCard itemsDetails={itemsDetails} />
         </Route>
       </Router>

@@ -7,7 +7,7 @@ afterEach(cleanup);
 
 it("Categories rendered correctly", () => {
   const tree = renderer
-    .create(<Categories allCategories />)
+    .create(<Categories allCategories allProducts />)
     .toJSON();
   expect(tree).toMatchSnapshot();
 });
