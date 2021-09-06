@@ -33,17 +33,10 @@ exports[`Navbar rendered correctly 1`] = `
     </a>
     <a
       className="eachLinksInNavbar"
-      href="/requests"
+      href="/requestsPage"
       onClick={[Function]}
     >
       Requests
-    </a>
-    <a
-      className="eachLinksInNavbar"
-      href="/donations"
-      onClick={[Function]}
-    >
-      Donations
     </a>
     <a
       className="eachLinksInNavbar"

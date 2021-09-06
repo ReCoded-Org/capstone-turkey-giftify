@@ -3,7 +3,6 @@ import {
   HouseDoor,
   Search,
   Gift,
-  Heart,
   InfoCircle,
   Envelope,
 } from "react-bootstrap-icons";
@@ -23,15 +22,9 @@ export const smallScreenNavbarData = [
   },
   {
     id: "c",
-    target: "/requests",
+    target: "/requestsPage",
     name: "Requests",
     component: <Gift />,
-  },
-  {
-    id: "d",
-    target: "/donations",
-    name: "Donations",
-    component: <Heart />,
   },
   {
     id: "e",
