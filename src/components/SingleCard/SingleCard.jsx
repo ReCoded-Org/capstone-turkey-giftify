@@ -5,9 +5,7 @@ import db from "../../firebase";
 function SingleCard({ itemsDetails }) {
   const [inputUserMassge, setInputUserMassge] = useState("");
   const [userComments, setUserComments] = useState([]);
-
   // whait for user logged in component
-
   // const [userId, setUserId] = useState("2");
 
   const handleSubmit = (event) => {
@@ -15,7 +13,7 @@ function SingleCard({ itemsDetails }) {
     db.collection("categories")
       .doc(itemsDetails.productType)
       .collection("items")
-      .doc(itemsDetails.ItemDocID)
+      .doc(itemsDetails.itemDocID)
       .collection("requests")
       .add({
         // userId: userId,
@@ -64,7 +62,7 @@ function SingleCard({ itemsDetails }) {
         <h5>Product’s Short Brief</h5>
         <p>{itemsDetails.ProductDescription}</p>
         <h5>Product Condition</h5>
-        <p>{itemsDetails.ItemCondition}</p>
+        <p>{itemsDetails.itemCondition}</p>
         <form onSubmit={handleSubmit}>
           <label>
             <h5>Why do you need?</h5>

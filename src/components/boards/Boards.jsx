@@ -1,151 +1,42 @@
 import React, { useState } from "react";
-import Cards from "../Cards/Cards";
+import Cards from "./Cards";
 import "./Board.css";
-import { VscArrowRight } from "react-icons/vsc";
 
-function Boards({ allItems, testSearchValue }) {
+function Boards({ allItems, testSearchValue, setSingleCard, singleCard }) {
   const [selectedItems, setSelectedItems] = useState("");
-  const [singleCard, setSingleCard] = useState(false);
   const [itemsDetails, setItemsDetails] = useState({});
 
-  //  filter Cards by cardBySelectedCategory
-  const items = Object.keys(allItems)
-    .filter((type) => type.includes(selectedItems))
-    .map((item, index) => {
-      return (
-        <div key={index} className="cards">
-          {allItems[item].map((info, index) => {
-            return (
-              <div key={index} className="oneCard">
-                <img
-                  className="itemImage"
-                  src={info.image}
-                  alt={info.itemName}
-                />
-                <p>
-                  <b>{info.itemName}</b>
-                </p>
-                <a
-                  href={info.itemName}
-                  onClick={(event) => {
-                    event.preventDefault();
-                    setSingleCard(true);
-                    setItemsDetails({
-                      productName: info.itemName,
-                      productImage: info.image,
-                      productType: item,
-                      ProductDescription: info.description,
-                      ItemCondition: info.condition,
-                      ItemDocID: info.itemDocID,
-                    });
-                  }}
-                >
-                  See Details <VscArrowRight />{" "}
-                </a>
-              </div>
-            );
-          })}
-        </div>
-      );
-    });
+  const allCategories = [];
+  const allProducts = [];
 
-  // Categories
-  const cardBySelectedCategory = Object.keys(allItems).map((categ, index) => {
-    return (
-      <div key={index} className="categories">
-        <button
-          id="oneCategory"
-          className={categ}
-          onClick={(event) => {
-            event.preventDefault();
-            setSelectedItems(categ);
-          }}
-          key={index}
-        >
-          {categ}
-        </button>
-        {categ === selectedItems ? items : null}
-      </div>
-    );
+  // All Products and Categories in the database
+  Object.keys(allItems).map((item) => {
+    allCategories.push(item);
+    return allItems[item].map((info) => {
+      return allProducts.push({
+        productName: info.itemName,
+        productImage: info.image,
+        productType: item,
+        ProductDescription: info.description,
+        itemCondition: info.condition,
+        itemDocID: info.itemDocID,
+      });
+    });
   });
-
-  // Filter Cards by search
-  const cardsBySearch = Object.keys(allItems)
-    .filter((value) => {
-      if (testSearchValue === "") {
-        return null;
-      } else if (value.toLowerCase().includes(testSearchValue.toLowerCase())) {
-        return allItems[value];
-      } else {
-        return null;
-      }
-    })
-    .map((item, index) => {
-      return (
-        <div key={index} className="cards">
-          {allItems[item]
-            .filter((value) => {
-              if (testSearchValue === "") {
-                return null;
-              } else if (
-                value.itemName
-                  .toLowerCase()
-                  .includes(testSearchValue.toLowerCase())
-              ) {
-                return value;
-              } else if (
-                value.condition
-                  .toLowerCase()
-                  .includes(testSearchValue.toLowerCase())
-              ) {
-                return value;
-              } else {
-                return value;
-              }
-            })
-            .map((info, index) => {
-              return (
-                <div key={index} className="oneCard">
-                  <img
-                    className="itemImage"
-                    src={info.image}
-                    alt={info.itemName}
-                  />
-                  <p>
-                    <b>{info.itemName}</b>
-                  </p>
-                  <a
-                    href={info.itemName}
-                    onClick={(event) => {
-                      event.preventDefault();
-                      setSingleCard(true);
-                      setItemsDetails({
-                        productName: info.itemName,
-                        productImage: info.image,
-                        productType: item,
-                        ProductDescription: info.description,
-                        ItemCondition: info.condition,
-                        ItemDocID: info.itemDocID,
-                      });
-                    }}
-                  >
-                    See Details <VscArrowRight />{" "}
-                  </a>
-                </div>
-              );
-            })}
-        </div>
-      );
-    });
 
   return (
     <div>
       {
         <Cards
           itemsDetails={itemsDetails}
-          cardBySelectedCategory={cardBySelectedCategory}
-          cardsBySearch={cardsBySearch}
+          allCategories={allCategories}
+          setSelectedItems={setSelectedItems}
+          selectedItems={selectedItems}
           singleCard={singleCard}
+          allProducts={allProducts}
+          setSingleCard={setSingleCard}
+          setItemsDetails={setItemsDetails}
+          testSearchValue={testSearchValue}
         />
       }
     </div>
