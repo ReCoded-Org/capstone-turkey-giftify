@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Container } from "react-bootstrap";
 import HomePageItems from "../../components/HomePageItems/HomePageItems";
 import "./HomePage.css";
-import { db } from "../../firebase";
+import db from "../../firebase";
 import Hero from "../../components/Hero/Hero";
 import SearchBar from "../../components/SearchBar/SearchBar";
 

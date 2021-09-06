@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Login.css";
 import { Form, Button } from "react-bootstrap";
 import { useDispatch } from "react-redux";
-import { auth, db } from "../../firebase";
+import db, { auth } from "../../firebase";
 
 function Login() {
   const dispatch = useDispatch();

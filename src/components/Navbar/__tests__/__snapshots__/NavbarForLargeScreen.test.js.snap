@@ -87,12 +87,13 @@ exports[`NavbarForLargeScreen rendered correctly 1`] = `
         style={
           Object {
             "borderRadius": "0.75rem",
+            "display": "inline-block",
             "marginBottom": "5%",
           }
         }
         type="button"
       >
-        Log In
+        Login
       </button>
     </a>
     <a
@@ -105,12 +106,52 @@ exports[`NavbarForLargeScreen rendered correctly 1`] = `
         style={
           Object {
             "borderRadius": "0.75rem",
+            "display": "inline-block",
             "marginBottom": "5%",
           }
         }
         type="button"
       >
         Sign Up
+      </button>
+    </a>
+    <a
+      href="/userProfile"
+      onClick={[Function]}
+    >
+      <button
+        className="btn btn-primary"
+        disabled={false}
+        style={
+          Object {
+            "borderRadius": "0.75rem",
+            "display": "none",
+            "marginBottom": "5%",
+          }
+        }
+        type="button"
+      >
+        
+      </button>
+    </a>
+    <a
+      href="/"
+      onClick={[Function]}
+    >
+      <button
+        className="btn btn-primary"
+        disabled={false}
+        onClick={[Function]}
+        style={
+          Object {
+            "borderRadius": "0.75rem",
+            "display": "none",
+            "marginBottom": "5%",
+          }
+        }
+        type="button"
+      >
+        Log Out
       </button>
     </a>
   </div>
