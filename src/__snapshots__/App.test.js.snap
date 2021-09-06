@@ -14,7 +14,10 @@ exports[`App rendered correctly 1`] = `
         href="/"
         onClick={[Function]}
       >
-        LOGO
+        <img
+          className=""
+          src="navBarLogo.png"
+        />
       </a>
     </div>
     <div
@@ -178,7 +181,8 @@ exports[`App rendered correctly 1`] = `
         >
           <img
             alt="giftify"
-            src="#"
+            className="img-fluid"
+            src="heroLogo.png"
           />
         </div>
       </div>
@@ -242,11 +246,9 @@ exports[`App rendered correctly 1`] = `
     >
       <img
         alt="brand logo"
-        height="65"
-        src="http://3.bp.blogspot.com/-VWpWYpPjnjM/T3QqWuvfWnI/AAAAAAAAD8c/k1X10hfXOY8/s1600/0e677912799a1a9f40593ac28f0b3ea8.png"
-        width="52"
+        className="footerLogo"
+        src="navBarLogo.png"
       />
-      Giftify!
     </a>
     <button
       aria-label="Toggle navigation"
