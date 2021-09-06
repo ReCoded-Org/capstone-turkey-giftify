@@ -11,6 +11,7 @@ const NavbarForLargeScreen = () => {
   const displayProfile = userId === "" ? "none" : "inline-block";
   const displayLogin = userId === "" ? "inline-block" : "none";
   const dispatch = useDispatch();
+
   const LogOut = () => {
     firebase
       .auth()
