@@ -6,7 +6,7 @@ function SingleCard({ itemsDetails }) {
   const [inputUserMassge, setInputUserMassge] = useState("");
   const [userComments, setUserComments] = useState([]);
   // whait for user logged in component
-  // const [userId, setUserId] = useState("2");
+  const [userId, setUserId] = useState("2");
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -16,7 +16,7 @@ function SingleCard({ itemsDetails }) {
       .doc(itemsDetails.itemDocID)
       .collection("requests")
       .add({
-        // userId: userId,
+        userId: userId,
         reason: inputUserMassge,
       })
       .then(() => {
@@ -36,7 +36,7 @@ function SingleCard({ itemsDetails }) {
           setUserComments(
             querySnapshot.docs.map((doc) => ({
               ...doc.data(),
-              // userId: doc.data().userId,
+              userId: doc.data().userId,
               readon: doc.data().reason,
             }))
           );
