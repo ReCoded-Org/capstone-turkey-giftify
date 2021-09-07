@@ -34,18 +34,31 @@
   border-radius: 20px;
 }
 
-.Search {
+.submit {
   height: 30px;
-  width: 100px;
-  border-radius: 13px;
+  border-radius: 20px;
   margin-top: 20px;
-  background-color: #023e8a;;
+  background-color: #023e8a;
   color: white;
-  font-style: normal;
 }
 
 .parag {
   color: white;
   text-align: center;
   margin-bottom: 5%;
+}
+
+.notFoundMassege {
+  color: #023e8a;
+  size: 2em;
+  background-color: white;
+  border-radius: 20px;
+  /* margin-top: 150 px; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin: 50px 300px 50px 300px;
 }
