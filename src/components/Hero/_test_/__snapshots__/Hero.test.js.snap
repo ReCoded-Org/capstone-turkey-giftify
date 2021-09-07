@@ -24,7 +24,8 @@ exports[`hero section renders corrrectly 1`] = `
     >
       <img
         alt="giftify"
-        src="#"
+        className="img-fluid"
+        src="heroLogo.png"
       />
     </div>
   </div>

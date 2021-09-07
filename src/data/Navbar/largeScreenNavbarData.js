@@ -11,13 +11,8 @@ export const largeScreenNavbarData = [
   },
   {
     id: "c",
-    target: "/requests",
+    target: "/requestsPage",
     name: "Requests",
-  },
-  {
-    id: "d",
-    target: "/donations",
-    name: "Donations",
   },
   {
     id: "e",

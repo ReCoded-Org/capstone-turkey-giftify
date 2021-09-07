@@ -11,7 +11,10 @@ exports[`Navbar rendered correctly 1`] = `
       href="/"
       onClick={[Function]}
     >
-      LOGO
+      <img
+        className=""
+        src="navBarLogo.png"
+      />
     </a>
   </div>
   <div
@@ -33,17 +36,10 @@ exports[`Navbar rendered correctly 1`] = `
     </a>
     <a
       className="eachLinksInNavbar"
-      href="/requests"
+      href="/requestsPage"
       onClick={[Function]}
     >
       Requests
-    </a>
-    <a
-      className="eachLinksInNavbar"
-      href="/donations"
-      onClick={[Function]}
-    >
-      Donations
     </a>
     <a
       className="eachLinksInNavbar"
@@ -59,20 +55,6 @@ exports[`Navbar rendered correctly 1`] = `
     >
       Contact Us
     </a>
-    <div
-      className="dropdownBasicButton dropdown"
-    >
-      <button
-        aria-expanded={false}
-        aria-haspopup={true}
-        className="dropdown-toggle btn btn-primary"
-        disabled={false}
-        onClick={[Function]}
-        type="button"
-      >
-        Language
-      </button>
-    </div>
   </div>
   <div
     className="navbarProfile"
