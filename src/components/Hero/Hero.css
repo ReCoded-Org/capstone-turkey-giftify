@@ -61,7 +61,7 @@ HTML {
 }
 
 .heroImg {
-  width: 48%;  
+  width: 48%;
 }
 
 .heroImg > img {
@@ -114,7 +114,6 @@ HTML {
     margin-top: 10%;
     margin-left: 2%;
   }
-
 
   .texts {
     width: 100%;
