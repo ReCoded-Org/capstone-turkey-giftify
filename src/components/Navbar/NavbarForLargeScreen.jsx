@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Button, Dropdown, DropdownButton } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 import { useSelector, useDispatch } from "react-redux";
 import firebase from "firebase/app";
 import "firebase/auth";
@@ -39,10 +39,6 @@ const NavbarForLargeScreen = () => {
             {info.name}
           </Link>
         ))}
-        <DropdownButton className="dropdownBasicButton" title="Language">
-          <Dropdown.Item href="#/action-1">TUR</Dropdown.Item>
-          <Dropdown.Item href="#/action-2">ENG</Dropdown.Item>
-        </DropdownButton>
       </div>
       <div className="navbarProfile">
         <Link to="/logIn">

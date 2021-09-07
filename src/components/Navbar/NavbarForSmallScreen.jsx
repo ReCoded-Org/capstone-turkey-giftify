@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import { List, GeoAlt } from "react-bootstrap-icons";
-import { Button, Dropdown, DropdownButton } from "react-bootstrap";
+import { List } from "react-bootstrap-icons";
+import { Button } from "react-bootstrap";
 import { smallScreenNavbarData } from "./../../data/Navbar/smallScreenNavbarData.js";
 
 const NavbarForSmallScreen = () => {
@@ -71,17 +71,6 @@ const NavbarForSmallScreen = () => {
               </Link>
             </li>
           ))}
-          <li className="navLi navLiLang">
-            <GeoAlt style={{ color: "black" }} />
-            <DropdownButton className="dropdownBasicButton" title="Language">
-              <Dropdown.Item href="#/action-1" onClick={showSidebar}>
-                TUR
-              </Dropdown.Item>
-              <Dropdown.Item href="#/action-2" onClick={showSidebar}>
-                ENG
-              </Dropdown.Item>
-            </DropdownButton>
-          </li>
         </ul>
       </nav>
     </>

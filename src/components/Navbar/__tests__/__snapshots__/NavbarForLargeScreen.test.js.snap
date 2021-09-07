@@ -59,20 +59,6 @@ exports[`NavbarForLargeScreen rendered correctly 1`] = `
     >
       Contact Us
     </a>
-    <div
-      className="dropdownBasicButton dropdown"
-    >
-      <button
-        aria-expanded={false}
-        aria-haspopup={true}
-        className="dropdown-toggle btn btn-primary"
-        disabled={false}
-        onClick={[Function]}
-        type="button"
-      >
-        Language
-      </button>
-    </div>
   </div>
   <div
     className="navbarProfile"
