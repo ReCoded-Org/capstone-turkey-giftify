@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { List } from "react-bootstrap-icons";
 import { Button } from "react-bootstrap";
 import { smallScreenNavbarData } from "./../../data/Navbar/smallScreenNavbarData.js";
+import navBarLogo from "../../images/navBarLogo.png";
 
 const NavbarForSmallScreen = () => {
   const [sidebar, setSidebar] = useState(false);
@@ -33,7 +34,7 @@ const NavbarForSmallScreen = () => {
           <List onClick={showSidebar} />
         </Link>
         <Link to="/" className="navbarMobileLogo">
-          LOGO
+          <Image src={navBarLogo} alt="Logo" width="180px" height="70px" />
         </Link>
       </div>
       <nav ref={boxRef} className={sidebar ? "navMenu active" : "navMenu"}>

@@ -29,7 +29,7 @@ HTML {
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
   align-content: stretch;
   margin-top: 5%;
 }
@@ -60,11 +60,11 @@ HTML {
 }
 
 .heroImg {
-  background: linear-gradient(180deg, #4b99ff 0%, #ff8a8a 100%);
-  border-radius: 40px;
-  width: 17vw;
-  height: 17vw;
   margin-right: 5%;
+}
+
+.heroImg > img {
+  border-radius: 40px;
 }
 
 .giftifyButton {

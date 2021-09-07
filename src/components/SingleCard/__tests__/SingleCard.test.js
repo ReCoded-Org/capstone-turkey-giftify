@@ -1,11 +1,11 @@
 import React from "react";
-import Cards from "./../Cards";
+import SingleCard from "../SingleCard";
 import { cleanup } from "@testing-library/react";
 import renderer from "react-test-renderer";
 
 afterEach(cleanup);
 
-it("Cards rendered correctly", () => {
-  const tree = renderer.create(<Cards />).toJSON();
+it("Single Card Page rendered correctly", () => {
+  const tree = renderer.create(<SingleCard itemsDetails />).toJSON();
   expect(tree).toMatchSnapshot();
 });

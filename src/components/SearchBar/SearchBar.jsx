@@ -7,6 +7,7 @@ function SearchSection() {
   const [allItems, setAllItems] = useState([]);
   const [input, setInput] = useState("");
   const [testSearchValue, setTestSearchValue] = useState("");
+  const [singleCard, setSingleCard] = useState(false);
 
   useEffect(() => {
     async function fetchData() {
@@ -19,10 +20,21 @@ function SearchSection() {
                 .collection("categories")
                 .doc(doc.id)
                 .collection("items");
+              const itemData = [];
+              const nArray = [];
+
               docRef.get().then((querySnapshot) => {
                 querySnapshot.forEach((item) => {
+                  nArray.push(item.id);
+                  const object = item.data();
+                  object["itemDocID"] = item.id;
+                  itemData.push(object);
+
                   setAllItems((prevState) => {
-                    return { ...prevState, [doc.id]: [item.data()] };
+                    return {
+                      ...prevState,
+                      [doc.id]: itemData,
+                    };
                   });
                 });
               });
@@ -42,6 +54,8 @@ function SearchSection() {
   function handleSubmit(event) {
     event.preventDefault();
     setTestSearchValue(input);
+    setSingleCard(false);
+    setInput("");
   }
 
   return (
@@ -65,6 +79,8 @@ function SearchSection() {
         allItems={allItems}
         input={input}
         testSearchValue={testSearchValue}
+        singleCard={singleCard}
+        setSingleCard={setSingleCard}
       />
     </div>
   );

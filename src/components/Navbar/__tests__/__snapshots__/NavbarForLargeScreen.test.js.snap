@@ -11,7 +11,10 @@ exports[`NavbarForLargeScreen rendered correctly 1`] = `
       href="/"
       onClick={[Function]}
     >
-      LOGO
+      <img
+        className=""
+        src="navBarLogo.png"
+      />
     </a>
   </div>
   <div
@@ -33,17 +36,10 @@ exports[`NavbarForLargeScreen rendered correctly 1`] = `
     </a>
     <a
       className="eachLinksInNavbar"
-      href="/requests"
+      href="/requestsPage"
       onClick={[Function]}
     >
       Requests
-    </a>
-    <a
-      className="eachLinksInNavbar"
-      href="/donations"
-      onClick={[Function]}
-    >
-      Donations
     </a>
     <a
       className="eachLinksInNavbar"
