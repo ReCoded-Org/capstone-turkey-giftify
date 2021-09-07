@@ -212,9 +212,9 @@ exports[`HomePageItems renders correctly 1`] = `
           />
         </label>
         <input
-          className="submit"
+          className="Search"
           type="submit"
-          value="Submit"
+          value="Search"
         />
       </form>
       <div>
