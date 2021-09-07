@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Form, Button, Container } from "react-bootstrap";
 import firebase from "firebase/app";
 import "firebase/auth";
-import cities from "../../data/SignUp/cities";
+import { cities } from "../../data/SignUp/cities";
 import db from "../../firebase";
 import "./SignUp.css";
 
