@@ -1,0 +1,102 @@
+.productCard {
+  border-radius: 10px;
+  background-color: #90e0ef;
+  display: flex;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font: 1em;
+  margin: 10%;
+  padding: 3%;
+  flex-direction: row;
+}
+
+.pruductDetails p {
+  background-color: #f8f9fa;
+  border-style: ridge;
+  border-width: 1px;
+  border-color: #006eff;
+  border-radius: 5px;
+  padding: 1%;
+}
+
+.pruductDetails {
+  margin-left: 5%;
+  width: 60%;
+}
+
+.productCard form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.submit {
+  height: 30px;
+  border-radius: 20px;
+  margin: 4% 40% 0% 40%;
+  background-color: #023e8a;
+  color: white;
+}
+
+.message {
+  padding: 1%;
+  width: 100%;
+  border-color: #006eff;
+  border-radius: 10px;
+  background-color: white;
+  color: black;
+}
+
+.productImage {
+  margin-right: 10%;
+  border-radius: 5%;
+  width: 250px;
+}
+
+@media only screen and (min-width: 120px) and (max-width: 531px) {
+  .productCard {
+    margin: 10%;
+    padding: 5%;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1em;
+  }
+
+  .submit {
+    margin: 10% 30% 10% 30%;
+  }
+
+  .productImage {
+    margin-right: 10%;
+    border-radius: 5%;
+    width: 150px;
+    margin-bottom: 40px;
+  }
+
+  .pruductDetails {
+    margin-left: 0%;
+  }
+}
+
+@media only screen and (min-width: 120px) and (max-width: 767px) {
+  .productCard {
+    margin: 10%;
+    padding: 5%;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1em;
+  }
+
+  .productImage {
+    margin-right: 10%;
+    border-radius: 5%;
+    width: 200px;
+    margin-bottom: 40px;
+  }
+
+  .pruductDetails {
+    margin-left: 0%;
+  }
+}

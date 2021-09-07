@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import { List, GeoAlt } from "react-bootstrap-icons";
-import { Button, Dropdown, DropdownButton } from "react-bootstrap";
+import { List } from "react-bootstrap-icons";
+import { Button, Image } from "react-bootstrap";
 import { smallScreenNavbarData } from "./../../data/Navbar/smallScreenNavbarData.js";
+import navBarLogo from "../../images/navBarLogo.png";
 
 const NavbarForSmallScreen = () => {
   const [sidebar, setSidebar] = useState(false);
@@ -33,7 +34,7 @@ const NavbarForSmallScreen = () => {
           <List onClick={showSidebar} />
         </Link>
         <Link to="/" className="navbarMobileLogo">
-          LOGO
+          <Image src={navBarLogo} alt="Logo" width="180px" height="70px" />
         </Link>
       </div>
       <nav ref={boxRef} className={sidebar ? "navMenu active" : "navMenu"}>
@@ -71,17 +72,6 @@ const NavbarForSmallScreen = () => {
               </Link>
             </li>
           ))}
-          <li className="navLi navLiLang">
-            <GeoAlt style={{ color: "black" }} />
-            <DropdownButton className="dropdownBasicButton" title="Language">
-              <Dropdown.Item href="#/action-1" onClick={showSidebar}>
-                TUR
-              </Dropdown.Item>
-              <Dropdown.Item href="#/action-2" onClick={showSidebar}>
-                ENG
-              </Dropdown.Item>
-            </DropdownButton>
-          </li>
         </ul>
       </nav>
     </>

@@ -8,10 +8,9 @@
 
 .cards {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  margin: 2%;
+  margin: 1%;
 }
 
 .oneCard {
@@ -45,7 +44,7 @@
   margin: 2%;
 }
 
-#oneCategory {
+.oneCategory {
   height: 120px;
   width: 50%;
   color: black;

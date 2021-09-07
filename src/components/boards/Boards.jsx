@@ -1,116 +1,40 @@
 import React, { useState } from "react";
-import Cards from "../Cards/Cards";
+import Cards from "./Cards";
 import "./Board.css";
-import { VscArrowRight } from "react-icons/vsc";
 
-function Boards({ allItems, testSearchValue }) {
+function Boards({ allItems, testSearchValue, setSingleCard }) {
   const [selectedItems, setSelectedItems] = useState("");
+  const [itemsDetails, setItemsDetails] = useState({});
 
-  //  filter Cards by category
-  const items = Object.keys(allItems)
-    .filter((type) => type.includes(selectedItems))
-    .map((item, index) => {
-      return (
-        <div key={index} className="cards">
-          {allItems[item].map((info) => {
-            return (
-              <div key={index} className="oneCard">
-                <img
-                  className="itemImage"
-                  src={info.image}
-                  alt={info.itemName}
-                />
-                <p>
-                  <b>{info.itemName}</b>
-                </p>
-                <a href="#link">
-                  See Details <VscArrowRight />{" "}
-                </a>
-              </div>
-            );
-          })}
-        </div>
-      );
+  const allProducts = [];
+  const allCategories = [];
+
+  Object.keys(allItems).map((item) => {
+    allCategories.push(item);
+    return allItems[item].map((info) => {
+      return allProducts.push({
+        productName: info.itemName,
+        ProductDescription: info.description,
+        itemCondition: info.condition,
+        productType: item,
+        productImage: info.image,
+        itemDocID: info.itemDocID,
+      });
     });
-
-  // Categories
-  const category = Object.keys(allItems).map((categ, index) => {
-    return (
-      <div key={index} className="categories">
-        <button
-          id="oneCategory"
-          className={categ}
-          onClick={(event) => {
-            event.preventDefault();
-            setSelectedItems(categ);
-          }}
-          key={index}
-        >
-          {categ}
-        </button>
-        {categ === selectedItems ? items : null}
-      </div>
-    );
   });
-
-  // Filter Cards by search
-  const cardsBySearch = Object.keys(allItems)
-    .filter((value) => {
-      if (testSearchValue === "") {
-        return null;
-      } else if (value.toLowerCase().includes(testSearchValue.toLowerCase())) {
-        return allItems[value];
-      } else {
-        return null;
-      }
-    })
-    .map((item, index) => {
-      return (
-        <div key={index} className="cards">
-          {allItems[item]
-            .filter((value) => {
-              if (testSearchValue === "") {
-                return null;
-              } else if (
-                value.itemName
-                  .toLowerCase()
-                  .includes(testSearchValue.toLowerCase())
-              ) {
-                return value;
-              } else if (
-                value.condition
-                  .toLowerCase()
-                  .includes(testSearchValue.toLowerCase())
-              ) {
-                return value;
-              } else {
-                return value;
-              }
-            })
-            .map((info) => {
-              return (
-                <div key={index} className="oneCard">
-                  <img
-                    className="itemImage"
-                    src={info.image}
-                    alt={info.itemName}
-                  />
-                  <p>
-                    <b>{info.itemName}</b>
-                  </p>
-                  <a href="#link">
-                    See Details <VscArrowRight />{" "}
-                  </a>
-                </div>
-              );
-            })}
-        </div>
-      );
-    });
 
   return (
     <div>
-      <Cards category={category} cardsBySearch={cardsBySearch} />
+      <Cards
+        allProducts={allProducts}
+        allCategories={allCategories}
+        testSearchValue={testSearchValue}
+        selectedItems={selectedItems}
+        setSelectedItems={setSelectedItems}
+        setSingleCard={setSingleCard}
+        itemsDetails={itemsDetails}
+        setItemsDetails={setItemsDetails}
+      />
     </div>
   );
 }

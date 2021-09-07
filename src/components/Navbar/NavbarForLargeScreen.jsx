@@ -1,10 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Button, Dropdown, DropdownButton } from "react-bootstrap";
+import { Button, Image } from "react-bootstrap";
 import { useSelector, useDispatch } from "react-redux";
 import firebase from "firebase/app";
 import "firebase/auth";
 import { largeScreenNavbarData } from "../../data/Navbar/largeScreenNavbarData.js";
+import navBarLogo from "../../images/navBarLogo.png";
 
 const NavbarForLargeScreen = () => {
   const { userId, userName } = useSelector((state) => state.user);
@@ -31,7 +32,9 @@ const NavbarForLargeScreen = () => {
   return (
     <div className="navbar">
       <div className="navbarLogo">
-        <Link to="/">LOGO</Link>
+        <Link to="/">
+          <Image src={navBarLogo} />
+        </Link>
       </div>
       <div className="navbarLinks">
         {largeScreenNavbarData.map((info) => (
@@ -39,10 +42,6 @@ const NavbarForLargeScreen = () => {
             {info.name}
           </Link>
         ))}
-        <DropdownButton className="dropdownBasicButton" title="Language">
-          <Dropdown.Item href="#/action-1">TUR</Dropdown.Item>
-          <Dropdown.Item href="#/action-2">ENG</Dropdown.Item>
-        </DropdownButton>
       </div>
       <div className="navbarProfile">
         <Link to="/logIn">
