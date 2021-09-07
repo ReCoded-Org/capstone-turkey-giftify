@@ -21,9 +21,9 @@ exports[`SearchBar rendered correctly 1`] = `
       />
     </label>
     <input
-      className="Search"
+      className="submit"
       type="submit"
-      value="Search"
+      value="Submit"
     />
   </form>
   <div>
