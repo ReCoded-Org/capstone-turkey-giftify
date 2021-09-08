@@ -19,9 +19,12 @@ HTML {
 
 .hero {
   background-color: #ade8f4;
-  width: 75%;
+  width: 65%;
   border-radius: 20px;
-  margin-left: 15%;
+  justify-content: center;
+  justify-items: center;
+  align-self: center;
+  padding: 3%;
 }
 
 .upperPart {
@@ -31,12 +34,10 @@ HTML {
   justify-content: space-between;
   align-items: center;
   align-content: stretch;
-  margin-top: 5%;
 }
 
 .texts {
   width: 65%;
-  padding-left: 5%;
 }
 
 .texts > h2 {
@@ -60,11 +61,12 @@ HTML {
 }
 
 .heroImg {
-  margin-right: 5%;
+  width: 48%;
 }
 
 .heroImg > img {
   border-radius: 40px;
+  margin-top: 5%;
 }
 
 .giftifyButton {
@@ -105,11 +107,27 @@ HTML {
 @media (min-width: 768px) and (max-width: 1024px) {
   .hero {
     width: 100%;
-    border-radius: 0%;
+  }
+
+  .heroImg {
+    width: 50%;
+    margin-top: 10%;
+    margin-left: 2%;
+  }
+
+  .texts {
+    width: 100%;
+  }
+
+  .texts > h2 {
+    font-size: 60px;
+    width: 100%;
   }
 
   .texts > p {
-    width: 80%;
+    font-size: 25px;
+    width: 100%;
+    line-height: 26pt;
   }
 }
 
@@ -117,17 +135,12 @@ HTML {
 @media only screen and (min-width: 120px) and (max-width: 767px) {
   .hero {
     width: 100%;
-    border-radius: 0%;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    align-content: stretch;
   }
 
   .heroImg {
-    display: none;
+    width: 50%;
+    margin-top: 20%;
+    margin-left: 2%;
   }
 
   .texts > h2 {
@@ -137,11 +150,19 @@ HTML {
     font-weight: 500;
     line-height: 48px;
     letter-spacing: -0.4000000059604645px;
-    text-align: left;
   }
 
   .texts {
-    width: 80%;
-    padding-left: 20%;
+    width: 100%;
+  }
+
+  .texts > h2 {
+    font-size: 35px;
+    width: 100%;
+  }
+
+  .texts > p {
+    font-size: 20px;
+    width: 100%;
   }
 }
