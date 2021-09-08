@@ -34,14 +34,15 @@
   border-radius: 20px;
 }
 
-.submit {
+.Search {
   height: 30px;
-  border-radius: 20px;
+  width: 100px;
+  border-radius: 13px;
   margin-top: 20px;
   background-color: #023e8a;
   color: white;
+  font-style: normal;
 }
-
 .parag {
   color: white;
   text-align: center;

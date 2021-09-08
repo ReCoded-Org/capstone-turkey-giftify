@@ -72,7 +72,7 @@ function SearchSection() {
             value={input}
           />
         </label>
-        <input className="submit" type="submit" value="Submit" />
+        <input className="Search" type="submit" value="Search" />
       </form>
 
       <Boards
